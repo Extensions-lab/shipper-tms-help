@@ -1,10 +1,9 @@
 ---
-title: "Time Slots"
-description: "Time Slots settings."
+title: "Time Slots in TMS"
+description: "Define time slot profiles to standardize loading/unloading windows, align with customer/vendor/location hours, and assist scheduling on Transport Requests and Orders."
 ---
 
 # Time Slots
-
 
 ## Overview
 

@@ -1,3 +1,8 @@
+---
+title: "Map Location in TMS"
+description: "Map Location master data with address, coordinates, source links (customers, vendors, locations, addresses), airport/GLN/time zone, map settings, geocoding, handling time, distance matrix."
+---
+
 # MAP Location
 
 The Map Location entity is a comprehensive geospatial master data table in the Transportation Management System (TMS) that manages precise geographical coordinates and address information for transportation planning and execution.
@@ -85,7 +90,7 @@ Audit Trail:
 
 ## Notes
 
-MAP Locations are usually points on the map that correspond to customers, vendors, warehouses, or their office addresses—in such cases, the MAP Location is linked to the corresponding address by filling in fields like Source Type, Source No., etc. However, there are situations where a MAP Location is not linked to any specific entity. For example, it could represent ports, hubs, airports, etc., which may be part of a route but not belong to any customer, vendor, or warehouse. In such cases, it's recommended to manually assign their codes during creation.
+MAP Locations are usually points on the map that correspond to customers, vendors, warehouses, or their office addresses; in such cases, the MAP Location is linked to the corresponding address by filling in fields like Source Type, Source No., etc. However, there are situations where a MAP Location is not linked to any specific entity. For example, it could represent ports, hubs, airports, etc., which may be part of a route but not belong to any customer, vendor, or warehouse. In such cases, it's recommended to manually assign their codes during creation.
 
 ## How to create Map Location
 
@@ -123,3 +128,5 @@ By default, TMS uses the MAP Provider as the source for distance and transportat
 This is done using the Distance Matrix in the MAP Location card. By default, the system filters the list by the "From Map Location Code", which is set to the MAP Location code of the current card. For proper configuration, you need to fill in the "To Map Location Code", along with the Distance and Duration fields.
 
 ![Setup Image](resources/maplocation/pics/maplocationDistanceMatrix.png)
+
+

@@ -1,3 +1,8 @@
+---
+title: "Google Maps Integration in TMS"
+description: "Google Maps integration in TMS: enter API key and enable Maps JavaScript, Directions, Geocoding, Distance Matrix services for geocoding, route planning, distance and duration calculations."
+---
+
 # Google MAPs Integration
 
 TMS utilizes the Google Maps service for access to mapping services for geocoding addresses, route planning, and determining distances and transport durations.

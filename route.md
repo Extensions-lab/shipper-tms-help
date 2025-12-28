@@ -1,3 +1,8 @@
+---
+title: "Routes in TMS"
+description: "Route master data groups customers geographically, stores default carrier/vehicle/driver, scheduler sort/blocking, cascading defaults into Transport Requests and Transport Orders."
+---
+
 # Routes
 
 The Route entity is a fundamental master data component within the Transportation Management System that serves as a geographic and operational grouping mechanism for organizing customers and optimizing delivery operations.

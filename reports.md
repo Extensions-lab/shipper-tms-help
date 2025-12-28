@@ -1,3 +1,8 @@
+---
+title: "TMS Printing Forms"
+description: "Overview of TMS document reports: Loading Manifest, Packing List, Bill of Lading, Delivery Note, Summary Delivery Notes, Returns, and CMR for transport orders and drops."
+---
+
 # TMS Documents
 
 - **Loading Manifest**: Prints a concise manifest showing vehicle, driver, route, and the ordered loading/unloading stops with items, quantities, weights, and addresses to guide efficient loading and delivery.

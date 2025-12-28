@@ -1,3 +1,8 @@
+---
+title: "Use Case: Sales Order to Transport Request"
+description: "Shipper scenario: create a Transport Request from a sales order so transportation can plan pickup, vehicle, time slots, and include it in a Transport Order."
+---
+
 # Use Case: Create Transport Request from Sales Order (Shipper)
 
 ## Problem

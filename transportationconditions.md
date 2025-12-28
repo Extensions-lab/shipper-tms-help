@@ -1,3 +1,8 @@
+---
+title: "Transportation Conditions Setup and Planning"
+description: "Configure transportation condition attributes in TMS so mixed-condition items split into separate transport requests and enable truck planning by compartmented vehicles."
+---
+
 # Transportation Conditions
 
 The TMS allows you to consider different transportation conditions and manage truck planning accordingly.

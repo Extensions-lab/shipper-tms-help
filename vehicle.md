@@ -1,3 +1,8 @@
+---
+title: "Vehicle Master Data in TMS"
+description: "Vehicle master data in TMS covering identification, capacity via logistic unit type, carrier/driver links, insurance, default map location, scheduling, and audit info."
+---
+
 # Vehicle
 
 The Vehicle entity is a comprehensive master data table in the Transportation Management System (TMS) that manages complete vehicle profiles for transportation operations.

@@ -1,3 +1,8 @@
+---
+title: "TMS Setup Guide"
+description: "TMS Setup overview: status control, transport condition attribute, capacity checks (weight, volume, logistic units), auto-create transport requests, cost allocation defaults."
+---
+
 # Setup
 
 On the TMS Setup page, the core settings for the TMS module are established, such as default types for created documents, document accounting features, numbering, etc.
@@ -38,7 +43,7 @@ Parameters that are not selected will not be displayed on pages or included in t
 
 ### Transport Requests and Transport Order
 
-Shipper scenation specific settings
+ Shipper scenario-specific settings
 
 - **Transport Request Nos.** : Specifies the number series code used for assigning numbers to transport requests by default.
 - **Delivery Nos.** : Specifies the number series code used to assign numbers to carrier or Transport Orders.

@@ -1,3 +1,8 @@
+---
+title: "Driver Master Data in TMS"
+description: "Driver master data in TMS: personal and contact info, carrier and default vehicle, licenses and compliance (medical, ADR), PoD app login, scheduling flags, and audit fields for assignments."
+---
+
 # Driver
 
 The Driver entity is a comprehensive master data table in the Transportation Management System (TMS) that manages complete driver profiles for transportation operations.

@@ -1,3 +1,8 @@
+---
+title: "Load Management for Shippers"
+description: "Load Management tool for shippers: plan periods, view truck capacity, assign/remove transport requests, balance weight/volume/footage/logistic units, and prevent overloads in TMS."
+---
+
 # Load Management for Shippers
 
 The Load Management Tool is a comprehensive planning and optimization system designed for efficient cargo delivery operations in the Transportation Management System (TMS) extension for Microsoft Dynamics 365 Business Central for Shippers.

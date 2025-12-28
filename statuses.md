@@ -1,3 +1,8 @@
+---
+title: "Status Profiles in TMS"
+description: "Status profiles control allowed actions on forwarding and freight orders—approval, route/date edits, posting, invoicing, settlement checks, required attachments, list highlighting."
+---
+
 # Statuses
 
 The status system is a core tool for managing and controlling transportation processes. It defines the set of steps a transportation request goes through within a company—from initial request approval, document preparation, coordination, approval, profit calculation, to cost collection from third-party providers (such as carriers), and more. These are not statuses of the physical movement of goods, but rather statuses of the overall process—from request to final invoicing.
@@ -46,7 +51,7 @@ You can activate verification by setting a flag in the field of the correspondin
 - **Shipper/Consignee Change** : Specifies if shipper or consignee details can be edited when the order is at this status.
 - **Lines Change** : Specifies if lines (content of the Forwarding Order) can be added, removed, or modified at this status.
 - **Date Planning** : Specifies if planning dates can be changed for an order at this status.
-- **Rount Planning** : Specifies if the route (stages) can be adjusted at this status.
+- **Route Planning** : Specifies if the route (stages) can be adjusted at this status.
 - **Delete Document** : Specifies if the order can be fully deleted at this status.
 - **Logistic Units Build** : Specifies if logistic units can be built or assembled at this status.
 - **Create Freight Order** : Specifies if a freight order can be created from the forwarding order at this status. This means that the system allows you to assign a performer (carrier) to the stages of a Forwarding Order—that is, the party who will actually carry out the transportation.
@@ -58,7 +63,7 @@ You can activate verification by setting a flag in the field of the correspondin
 - **Settlement** : Specifies if settlement lines can be added at this status [details](settlement.md).
 - **Settlement Invoice Lines** : Specifies if invoice settlement lines can be created at this status.
 - **Settlement Cost Lines** : Specifies if cost settlement lines can be created at this status.
-- **Line Style** : Specifies the visual style used to display or highlight documents in Forwarding Order Lisp page at this status.
+- **Line Style** : Specifies the visual style used to display or highlight documents in Forwarding Order List page at this status.
 - **Extended Control** : Specifies if additional document controls or attachments are enforced at this status [details](attachmentcontrol.md).
 
 ![Setup Image](resources/statuses/pics/statuses6.png)

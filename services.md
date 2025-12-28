@@ -1,3 +1,8 @@
+---
+title: "TMS Services for LSP"
+description: "TMS services for the LSP scenario: maintain a service catalog, map to Business Central items for billing and settlements, invoice clients, and access setup from TMS menu/search."
+---
+
 # Services
 
 Services are used in TMS for the LSP scenario to issue invoices to the customer and to record the services provided to them.

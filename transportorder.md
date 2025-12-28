@@ -1,3 +1,8 @@
+---
+title: "Transport Order in TMS"
+description: "Defines how transportation is executed—carrier, vehicle, driver, route, and stops—combining transport requests, optimizing loading/unloading, and managing distance/time checks."
+---
+
 # Transport Order
 
 is a document that details HOW the transportation will be carried out. It specifies the carrier, driver, and vehicle. The Transport Order represents the actual journey of the truck, outlining the stops where loading or unloading will take place.

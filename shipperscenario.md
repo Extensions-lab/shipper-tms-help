@@ -1,3 +1,8 @@
+---
+title: "Shipper Scenario in TMS"
+description: "End-to-end shipper flow in TMS using transport requests, logistic units, transport orders, and load management to plan and execute delivery of sales/purchase/transfer orders."
+---
+
 # Shipper Scenario
 
 if you are a Shipper company that manages the transportation process of its sales (and purchase) orders and uses either its own transport with its drivers or hires, as well as uses third-party carriers.

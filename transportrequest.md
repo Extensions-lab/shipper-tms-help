@@ -1,3 +1,8 @@
+---
+title: "Transport Request in TMS"
+description: "Defines what needs to be transported, grouping sales, purchase, and transfer orders by address and capturing shipper/consignee, routing, and planning data for pickup and delivery."
+---
+
 # Transport Request
 
 The Transport Request is a core document in the Transportation Management System (TMS) that consolidates sales, purchase, and transfer orders based on delivery addresses. It serves as a single entity for managing transportation logistics, specifying pickup and delivery locations, and designating shipper and consignee information.

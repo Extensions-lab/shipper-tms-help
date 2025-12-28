@@ -1,3 +1,8 @@
+---
+title: "Buy TMS Licenses"
+description: "How to buy and assign TMS licenses: purchase via AppSource plan selection and billing setup, then assign or unassign licenses to users in Microsoft 365 admin center."
+---
+
 # Transportation Management System (TMS) - Buy Licenses
 
 Purchase and assign licenses. Immediately after installation, TMS is not available to users and is not visible in the Business Central menu, therefore, it is necessary to purchase TMS licenses. This can be done from the TMS page on AppSource by selecting the pricing plan that best suits your company. Then, assign licenses to users who will work with TMS in the Microsoft 365 Admin Center.

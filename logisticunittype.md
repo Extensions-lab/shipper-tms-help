@@ -1,3 +1,8 @@
+---
+title: "Logistic Unit Type in TMS"
+description: "Logistic Unit Type master data: template for containers/pallets with dimensions, weight/volume/footage limits, mixing rules, temperature attribute, numbering/SSCC settings for logistics control."
+---
+
 # Logistic Unit Type
 
 Logistic Unit Type is a master data entity that defines standardized container specifications for logistics operations. It serves as a template for creating actual logistic units (containers, pallets, trailers, etc.) by specifying their physical dimensions (internal/external length, width, height), weight capacities (tare, payload, maximum), volume limits, and operational constraints.
@@ -60,14 +65,15 @@ Transport Conditions Attribute
 
 Internal sizes
 
-- **Internal Length** Specifies the internal length of the unit''s usable space for placing goods.
-- **Internal Width** Specifies the internal width of the unit''s usable area, ensuring items fit properly.
+- **Internal Length** Specifies the internal length of the unit's usable space for placing goods.
+- **Internal Width** Specifies the internal width of the unit's usable area, ensuring items fit properly.
 - **Internal Height** Specifies the internal height available for items within the unit (from base to top).
 - **Internal Volume** Specifies the total inner volume of the logistic unit, used to calculate fill capacity.
 
 External sizes
 
-- **Length** Specifies the unit''s external length dimension, used in volume and space calculations.
+- **Length** Specifies the unit's external length dimension, used in volume and space calculations.
 - **Width** Specifies the external width of the logistic unit for dimension-based calculations.
 - **Height** Specifies the external height of the logistic unit, from its base to the top edge.
-- **Unit Volume** Specifies the external volume of this unit, from length × width × height measurements.
+- **Unit Volume** Specifies the external volume of this unit, from length x width x height measurements.
+

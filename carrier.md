@@ -1,3 +1,8 @@
+---
+title: "Carrier Master Data in TMS"
+description: "Carrier master data in TMS: identification, BC source link, mode of transport, defaults for vehicle/driver/unit type, blocking/scheduler controls, tracking URLs, performance metrics, audit fields."
+---
+
 # Carrier
 
 The Carrier entity is a comprehensive master data table in the Transportation Management System (TMS) that manages transportation service providers and their operational configurations.

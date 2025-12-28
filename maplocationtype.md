@@ -1,3 +1,8 @@
+---
+title: "Map Location Type in TMS"
+description: "Map Location Type master data: codes and defaults for customers, vendors, locations, ship-to/order addresses, contacts; airport flag; audit fields; drives default map location behavior in TMS."
+---
+
 # MAP Location Type
 
 The Map Location Type is a configuration entity within the Transportation Management System that categorizes and defines different types of map locations used throughout the TMS. This entity serves as a master data table that allows administrators to classify map locations based on their purpose and characteristics.

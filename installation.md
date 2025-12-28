@@ -1,3 +1,8 @@
+---
+title: "Shipper TMS Installation"
+description: "Install Shipper TMS via AppSource or directly inside Business Central: search for Shipper TMS, open the app card, and install from AppSource."
+---
+
 # Installation
 
 There are several ways to install Shipper TMS. The first is from the AppSource page, and the second is directly within Business Central.

@@ -1,3 +1,8 @@
+---
+title: "Product Master Data in TMS"
+description: "Product master data in TMS: identification (code, description, GTIN), freight class, weight/volume/dimensions with base conversions and validation, blocking, audit fields for logistics planning."
+---
+
 # Product
 
 The Product entity is a comprehensive master data table within the Transportation Management System that defines and manages all products or items handled through TMS operations. This entity serves as the central repository for product information required for transportation planning, freight calculations, and logistics operations.

@@ -1,3 +1,8 @@
+---
+title: "Shipper TMS for Microsoft Dynamics 365 Business Central"
+description: "Shipper TMS for Microsoft Dynamics 365 Business Central: overview, prerequisites, installation, how transport requests and transport orders work, key tools, settings, reports."
+---
+
 # Transportation Management System for Microsoft Dynamics 365 Business Central
 
 Help and Documentation of the [Shipper TMS on AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
@@ -48,7 +53,7 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 
 
 ## Tools
-- **Load Management** Load Management is a tool designed for planning and scheduling cargo delivery. It allows users to allocate transportation requests to specific vehicles and routes, ensuring efficient delivery operations [deails](shipperloadmanagement.md).
+- **Load Management** Load Management is a tool designed for planning and scheduling cargo delivery. It allows users to allocate transportation requests to specific vehicles and routes, ensuring efficient delivery operations [details](shipperloadmanagement.md).
 
 
 ## FAQ
@@ -61,7 +66,7 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 - **Transportation Conditions** Settings for managing different transportation conditions [details](transportationconditions.md)
 - **Routes** - [details](route.md)
 - **Route Sequence** -  [details](routesequence.md)
-- **Tme Slots** -  [details](timeslots.md)
+- **Time Slots** -  [details](timeslots.md)
 - **Compartments** - vehicle compartments control
 - **Logistic Units Types** : is an item of any composition intended for transportation. Logistic units take many forms: a single box containing a limited number of products, a pallet with multiple products, or an intermodal container containing multiple pallets [details](logisticunittype.md).
 - **Map Locations**. Map Locations is a directory of map-based locations utilized for precise pinpointing using geolocation services. Map Locations are employed for route mapping, distance calculations, and estimating transportation durations. Map Locations can be linked to the addresses of clients and suppliers. Useful if we have our own fleet [details](maplocation.md).

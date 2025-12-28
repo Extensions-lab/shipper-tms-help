@@ -1,3 +1,8 @@
+---
+title: "Assign Permission Sets to Users"
+description: "Assign TMS permissions: add TMA/TMAC USER sets for operators, TMA/TMAC ADMIN for admins, and TMA API for external access (API/Power BI)."
+---
+
 # Assign Permission Sets to Users
 
 ## Assign user permissions
