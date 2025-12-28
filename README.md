@@ -1,6 +1,6 @@
 # Transportation Management System for Microsoft Dynamics 365 Business Central
 
-Help and Documentation of the [TMS on AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
+Help and Documentation of the [Shipper TMS on AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
 
 ## Introduction
 
@@ -58,7 +58,7 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 
 ### General
 
-- **Transportation Conditions** Settings for managing different transportation conditions.
+- **Transportation Conditions** Settings for managing different transportation conditions [details](transportationconditions.md)
 - **Routes** - [details](route.md)
 - **Route Sequence** -  [details](routesequence.md)
 - **Compartments** - vehicle compartments control
