@@ -41,7 +41,7 @@ Default Resource Assignments:
 
 - **Default Vehicle No.** : Vehicle number automatically used on freight orders for this carrier. This vehicle will be automatically added to the document when the corresponding carrier is selected (if the Vehicle No. field in document was empty).
 - **Default Vehicle Name** : Name of the default vehicle assigned to freight orders (auto-populated)
-- **Default Driver No.** : Driver assigned by default to freight/delivery orders using this carrier. This driver will be automatically added to the document when the corresponding carrier is selected (if the Driver No. field in document was empty).
+- **Default Driver No.** : Driver assigned by default to freight/Transport Orders using this carrier. This driver will be automatically added to the document when the corresponding carrier is selected (if the Driver No. field in document was empty).
 - **Default Driver Name** : Name of the default driver operating shipments (auto-populated)
 - **Default Unit Type Code** : Default logistic unit type (e.g., container) for this carrier's shipments
 - **Default Unit Type Description** : Details about the chosen logistic unit type (auto-populated)

@@ -5,12 +5,12 @@ This tool serves as a centralized platform for logistics managers to allocate tr
 The system operates on two primary entities:
 
 - [Transport Requests](transportrequest.md) (representing purchase or sales orders that need to be fulfilled)
-- [Delivery Orders](deliveryorder.md) (representing the delivery vehicles/trucks along with their associated routes and capacity constraints).
+- [Transport Orders](transportorder.md) (representing the delivery vehicles/trucks along with their associated routes and capacity constraints).
 
 The Load Management interface features a three-panel layout:
 
 - filter panel displays the selected planning period.
-- the main panel displays available Delivery Orders (trucks) with their current capacity status (loaded weight, volume, footage, and logistic units), vehicle specifications, assigned carriers, drivers, and routes.
+- the main panel displays available Transport Orders (trucks) with their current capacity status (loaded weight, volume, footage, and logistic units), vehicle specifications, assigned carriers, drivers, and routes.
 - The **In Truck** panel displays transport requests that have already been allocated to the selected delivery vehicle, allowing for capacity monitoring and load optimization.
 - The **Pending Transport Requests** panel shows unassigned transportation demands with detailed pickup and delivery information, cargo specifications, and scheduling requirements (document ready for delivery).
 
@@ -33,7 +33,7 @@ The period control panel is hidden by default to save vertical screen space. To 
 
 ![Setup Image](resources/shipperloadmanagement/pics/loadmanagement2.png)
 
-The Period Selector window helps you see whether there are any unassigned Transport Requests and the corresponding Delivery Orders created for them within the selected period, using the values in the fields with the same names.
+The Period Selector window helps you see whether there are any unassigned Transport Requests and the corresponding Transport Orders created for them within the selected period, using the values in the fields with the same names.
 
 ![Setup Image](resources/shipperloadmanagement/pics/loadmanagement3.png)
 
@@ -41,7 +41,7 @@ Use the "Previous Period" and "Next Period" buttons in the main menu for quick n
 
 ## Main Panel
 
-The main panel displays a list of Delivery Orders — i.e., trucks—for the planned period. A Delivery Order is considered part of the planning period if the Transport Requests it contains fall within that period.
+The main panel displays a list of Transport Orders — i.e., trucks—for the planned period. A Transport Order is considered part of the planning period if the Transport Requests it contains fall within that period.
 
 The fields Loaded Weight, Loaded Volume, Loaded Footage, and Loaded Logistic Units show the truck’s load based on each parameter.
 The list of controlled parameters (e.g., weight or volume) is defined in [TMS Setup](setup.md#control). For example, if only weight needs to be monitored, you just need to enable the "Control Weight" parameter in TMS Setup.
@@ -50,7 +50,7 @@ The weight and dimensional parameters and limitations, as well as the transport 
 
 ## In Truck
 
-The In Truck section contains the list of Transport Requests that will be delivered by the truck selected in the upper section. At any time, a Transport Request (and therefore the sales order represented by that Transport Request) can be removed from the Delivery Order by clicking **Delete from Truck**.
+The In Truck section contains the list of Transport Requests that will be delivered by the truck selected in the upper section. At any time, a Transport Request (and therefore the sales order represented by that Transport Request) can be removed from the Transport Order by clicking **Delete from Truck**.
 
 ![Setup Image](resources/shipperloadmanagement/pics/loadmanagement4.png)
 
@@ -58,11 +58,11 @@ The In Truck section contains the list of Transport Requests that will be delive
 
 This section shows the Transport Requests that need to be processed/shipped within the analyzed period (filtered by the Load Date of the Transport Request).
 
-To place requests into a Delivery Order:
+To place requests into a Transport Order:
 
-- In the upper section, select the required Delivery Order.
+- In the upper section, select the required Transport Order.
 - In the lower section, select one (or multiple using Ctrl) Transport Requests.
-- Click **Add To Delivery Order**.
+- Click **Add To Transport Order**.
 
 ![Setup Image](resources/shipperloadmanagement/pics/loadmanagement5.png)
 

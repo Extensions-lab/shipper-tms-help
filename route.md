@@ -4,12 +4,16 @@ The Route entity is a fundamental master data component within the Transportatio
 
 Routes enable logistics managers to define predefined paths or service areas that group customers geographically for efficient transportation planning and carrier assignment.
 
-Each route contains essential operational information including a unique code identifier, descriptive text, and default resource assignments such as carrier, vehicle, and driver that are automatically applied when creating delivery orders or transport requests for customers assigned to that route.
+Each route contains essential operational information including a unique code identifier, descriptive text, and default resource assignments such as carrier, vehicle, and driver that are automatically applied when creating Transport Orders or transport requests for customers assigned to that route.
 
-The Route entity integrates deeply with the TMS workflow through automatic default assignments - when a customer is assigned to a route, the system automatically populates carrier, vehicle, and driver information in delivery orders and transport requests, streamlining the order creation process.
+The Route entity integrates deeply with the TMS workflow through automatic default assignments - when a customer is assigned to a route, the system automatically populates carrier, vehicle, and driver information in Transport Orders and transport requests, streamlining the order creation process.
 Routes also support scheduling functionality with a sort order field that determines the sequence in which routes appear in the TMS scheduler, and a blocking mechanism that can prevent routes from being included in scheduling activities.
 
-The Routes page provides capabilities, displaying route information alongside a count of assigned customers with drill-down functionality to view the customer list. Routes are referenced throughout the TMS system in delivery orders, transport requests, and customer master data, making them essential for maintaining consistent transportation operations, optimizing resource utilization, and ensuring efficient geographic coverage across the transportation network.
+The Routes page provides capabilities, displaying route information alongside a count of assigned customers with drill-down functionality to view the customer list. Routes are referenced throughout the TMS system in Transport Orders, transport requests, and customer master data, making them essential for maintaining consistent transportation operations, optimizing resource utilization, and ensuring efficient geographic coverage across the transportation network.
+
+## Route Sequence
+
+If you need to explicitly specify the priority or the sequence in which customers (drops) are visited along a route, you can directly enter this information in the [Route Sequence](routesequence.md) field.
 
 ## Fields Description
 
@@ -31,11 +35,7 @@ Scheduling Control Fields:
 
 The table includes automatic validation logic in the "Def. Carrier No." field that cascades default vehicle and driver assignments from the carrier when a carrier is selected.
 
-## Notes
-
-The Route directory is used in the Shipper scenario of TMS.
-
 ## Use case
 
 A typical route usage scenario. A default route is set for the customer, and this route is inherited by the created document (for example, a sales order). The route code is then passed on to the generated Transport Request.
-The route code can then be used when selecting documents in the created Delivery Order (using the Get Documents function) or when creating a Delivery Order from a list of documents (e.g., sales orders) by filtering on the route field.
+The route code can then be used when selecting documents in the created Transport Order (using the Get Documents function) or when creating a Transport Order from a list of documents (e.g., sales orders) by filtering on the route field.

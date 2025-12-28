@@ -1,0 +1,15 @@
+# TMS Documents
+
+- **Loading Manifest**: Prints a concise manifest showing vehicle, driver, route, and the ordered loading/unloading stops with items, quantities, weights, and addresses to guide efficient loading and delivery.
+
+- **Packing List Report** provides a concise, per-drop summary of all goods included in a Transport Order. It shows key delivery information (carrier, driver, vehicle, route) and, for each stop, the addresses, notes, and totals such as weight, volume, and number of logistic units. When enabled, it also lists detailed item lines (items, quantities, weights, volumes, GTINs). Use it to guide loading and unloading, verify shipped contents, and share clear, structured information with drivers, warehouses, and consignees throughout the delivery process.
+
+- **Bill of Lading** report provides a per-drop (stop) shipment document for a Transport Order, using the route’s unload points. It compiles company details, carrier/driver/vehicle information (including registration, mode of transport, route number, waybill and external tracking references), and key delivery metrics such as total distance and duration. For each stop, it shows the sequence/drop number, waypoint/action, scheduled date/time, comments, source document references, and aggregated cargo figures (weight, volume, and footage). It also details shipper and consignee addresses and contacts for the specific drop, along with load/unload notes and priorities. When logistic units are involved, the report lists each unit with barcode, type, weight, and volume, plus per-drop totals (gross/net weight, total volume, line count, and quantity). The report is produced from the Transport Order page via “Bill Of Lading” and is rendered with a Word layout for sharing with the carrier and consignee.
+
+- **Delivery Note** - A Delivery Note is an accompanying document that the seller (or a warehouse/carrier) provides together with the shipment to confirm what exactly has been dispatched and in what quantities, and what is being delivered. Its main purpose is goods receipt: the recipient checks the items actually received against what is listed on the Delivery Note and usually signs a copy (or confirms electronically) as proof of receipt. The form also allows for notes about the quantities received or comments from the driver.
+
+- **Summary Delivery Notes** - A general task for the driver listing all the stops (drops) they need to visit, with a comment for each location.
+
+- **Returns** - document for returned items. 
+
+- **CMR** - A Blank CMR is an international road consignment note used for truck transport between countries that apply the CMR Convention (Convention on the Contract for the International Carriage of Goods by Road). Simply put, the CMR is the main document that confirms the contract of carriage by road, describes the goods and transport conditions, and accompanies the shipment during transit. In this case, the report is used for printing on standard pre-colored templates that already contain the document layout. The report itself only adds the necessary information about the consignor (sender) and the consignee (recipient).

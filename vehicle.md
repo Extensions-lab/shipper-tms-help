@@ -45,7 +45,7 @@ Carrier and Driver Association:
 
 Location:
 
-- **Def. Map Location** : Default map location for the vehicle's usual position, such as a parking area or depot. This location will be automatically added to the Delivery Order. This can be useful when the route is planned not from the loading point (warehouse), but from the truck's parking location, allowing for more accurate route and delivery time planning [details](maplocation.md).
+- **Def. Map Location** : Default map location for the vehicle's usual position, such as a parking area or depot. This location will be automatically added to the Transport Order. This can be useful when the route is planned not from the loading point (warehouse), but from the truck's parking location, allowing for more accurate route and delivery time planning [details](maplocation.md).
 
 Vehicle Identification:
 

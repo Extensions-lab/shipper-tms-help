@@ -1,0 +1,218 @@
+name: CreateTransportRequest
+description: Test recording
+telemetryId: a42f90cb-e34b-4de4-b2d9-484234b07a93
+start:
+  profile: BUSINESS MANAGER
+steps:
+  - type: navigate
+    target:
+      - page: Business Manager Role Center
+      - action: Sales Orders
+    description: Navigate to <caption>Sales Orders</caption>
+  - type: page-shown
+    source:
+      page: Sales Order List
+    modal: false
+    runtimeId: bm3
+    description: Page <caption>Sales Orders</caption> was shown.
+  - type: invoke
+    target:
+      - page: Sales Order List
+        runtimeRef: bm3
+      - action: Control_New
+    invokeType: New
+    description: Invoke New on <caption>New</caption>
+  - type: page-shown
+    source:
+      page: Sales Order
+    modal: false
+    runtimeId: bzh
+    description: Page <caption>New - Sales Order</caption> was shown.
+  - type: focus
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - field: Sell-to Customer Name
+    description: Focus <caption>Customer Name</caption>
+  - type: invoke
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - field: Sell-to Customer Name
+    invokeType: Lookup
+    description: Invoke Lookup on <caption>Customer Name</caption>
+  - type: page-shown
+    source:
+      page: lookup:Sell-to Customer Name
+    modal: false
+    runtimeId: b1mt
+    description: Page <caption>Select</caption> was shown.
+  - type: set-current-row
+    target:
+      - page: lookup:Sell-to Customer Name
+        runtimeRef: b1mt
+      - repeater: repeater
+    targetRecord:
+      relative: 1
+    description: Set current row in <caption>repeater</caption>
+  - type: invoke
+    target:
+      - page: lookup:Sell-to Customer Name
+        runtimeRef: b1mt
+      - repeater: repeater
+    parameters:
+      AlwaysCommit: true
+    description: Invoke row on <caption>repeater</caption>
+  - type: page-closed
+    source:
+      page: lookup:Sell-to Customer Name
+    runtimeId: b1mt
+    description: Page <caption>Select</caption> was closed.
+  - type: input
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - part: SalesLines
+      - page: Sales Order Subform
+      - repeater: Control1
+      - field: No.
+    value: ""
+    isFilterAsYouType: true
+    description: Input <value></value> into <caption>No.</caption>
+  - type: focus
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - part: SalesLines
+      - page: Sales Order Subform
+      - repeater: Control1
+      - field: No.
+    description: Focus <caption>No.</caption>
+  - type: page-shown
+    source:
+      page: lookup:No.
+    modal: false
+    runtimeId: b1ow
+    description: Page <caption>Select</caption> was shown.
+  - type: set-current-row
+    target:
+      - page: lookup:No.
+        runtimeRef: b1ow
+      - repeater: repeater
+    targetRecord:
+      relative: 3
+    description: Set current row in <caption>repeater</caption>
+  - type: invoke
+    target:
+      - page: lookup:No.
+        runtimeRef: b1ow
+      - repeater: repeater
+    parameters:
+      AlwaysCommit: true
+    description: Invoke row on <caption>repeater</caption>
+  - type: page-closed
+    source:
+      page: lookup:No.
+    runtimeId: b1ow
+    description: Page <caption>Select</caption> was closed.
+  - type: input
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - part: SalesLines
+      - page: Sales Order Subform
+      - repeater: Control1
+      - field: Location Code
+    value: ""
+    isFilterAsYouType: true
+    description: Input <value></value> into <caption>Location Code</caption>
+  - type: page-shown
+    source:
+      page: lookup:Location Code
+    modal: false
+    runtimeId: b1pp
+    description: Page <caption>Select</caption> was shown.
+  - type: invoke
+    target:
+      - page: lookup:Location Code
+        runtimeRef: b1pp
+      - repeater: repeater
+    parameters:
+      AlwaysCommit: true
+    description: Invoke row on <caption>repeater</caption>
+  - type: page-closed
+    source:
+      page: lookup:Location Code
+    runtimeId: b1pp
+    description: Page <caption>Select</caption> was closed.
+  - type: input
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - part: SalesLines
+      - page: Sales Order Subform
+      - repeater: Control1
+      - field: Quantity
+    value: "10"
+    description: Input <value>10</value> into <caption>Quantity</caption>
+  - type: focus
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - part: SalesLines
+    description: Focus <caption>Lines</caption>
+  - type: invoke
+    target:
+      - page: Sales Order
+        runtimeRef: bzh
+      - action: TMAS Create Transport Request
+    parameters: {}
+    description: Invoke <caption>Create Transport Request</caption>
+  - type: page-shown
+    source:
+      page: null
+      automationId: 8da61efd-0002-0003-0507-0b0d1113171d
+      caption: Confirm
+    modal: true
+    runtimeId: b1q9
+    description: Page <caption>Confirm</caption> was shown.
+  - type: invoke
+    target:
+      - page: null
+        automationId: 8da61efd-0002-0003-0507-0b0d1113171d
+        caption: Confirm
+        runtimeRef: b1q9
+    invokeType: Yes
+    description: Invoke Yes on <caption>Confirm</caption>
+  - type: page-closed
+    source:
+      page: null
+    runtimeId: b1q9
+    description: Page <caption>Confirm</caption> was closed.
+  - type: page-shown
+    source:
+      page: null
+      automationId: 8da61efd-0002-0003-0507-0b0d1113171d
+      caption: Confirm
+    modal: true
+    runtimeId: b1qf
+    description: Page <caption>Confirm</caption> was shown.
+  - type: invoke
+    target:
+      - page: null
+        automationId: 8da61efd-0002-0003-0507-0b0d1113171d
+        caption: Confirm
+        runtimeRef: b1qf
+    invokeType: Yes
+    description: Invoke Yes on <caption>Confirm</caption>
+  - type: page-closed
+    source:
+      page: null
+    runtimeId: b1qf
+    description: Page <caption>Confirm</caption> was closed.
+  - type: page-shown
+    source:
+      page: TMAS Transport Request
+    modal: false
+    runtimeId: b1qo
+    description: Page <caption>Transport Request</caption> was shown.

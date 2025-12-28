@@ -69,7 +69,7 @@ A Transport Request is used in the shipper scenario to initiate and manage the t
 
 This approach is convenient when dealing with relatively small and similar orders that can be easily grouped together for transportation.
 
-When the document is released—that is, when the order status is changed to "Released"—one or more Transport Requests will be generated automatically. This means the order is handed over to transportation and can be included in a Delivery Order. To enable this, make sure the "Auto Create Transport Request for Sale" option is activated in the TMS Settings [details](setup.md).
+When the document is released—that is, when the order status is changed to "Released"—one or more Transport Requests will be generated automatically. This means the order is handed over to transportation and can be included in a Transport Order. To enable this, make sure the "Auto Create Transport Request for Sale" option is activated in the TMS Settings [details](setup.md).
 
 Result: one order – one transport request (if all line items have the same warehouse).
 
@@ -81,7 +81,7 @@ The simplest way to send orders for transportation is by selecting one or more d
 
 Result: one transport request will be created for each selected order (if all line items have the same warehouse).
 
-From any list of source documents, the Transportation Status and Transportation Documents fields allow you to determine whether the document has been sent to the TMS module for transportation, if a delivery order has been created, and whether this applies to the entire document or only certain lines.
+From any list of source documents, the Transportation Status and Transportation Documents fields allow you to determine whether the document has been sent to the TMS module for transportation, if a Transport Order has been created, and whether this applies to the entire document or only certain lines.
 
 ![Setup Image](resources/transportrequest/pics/tr15.png)
 
@@ -89,7 +89,7 @@ From any list of source documents, the Transportation Status and Transportation 
 
 This approach is useful when handling large orders that cannot be delivered all at once or need to be delivered on a regular schedule.
 
-This method is useful when it’s clear that a large order cannot be delivered all at once and needs to be split into parts that will be delivered at different times or by different carriers. In this case, the order is manually divided into parts and assigned to different Transport Requests, which in turn are assigned to different Delivery Orders.
+This method is useful when it’s clear that a large order cannot be delivered all at once and needs to be split into parts that will be delivered at different times or by different carriers. In this case, the order is manually divided into parts and assigned to different Transport Requests, which in turn are assigned to different Transport Orders.
 
 Menu path:
 
@@ -149,7 +149,7 @@ Posted Documents Card and List Page:
 - **Status** The current processing status of the transport request that controls the document workflow and editing permissions. Possible values are:
   - Open: Document is being prepared and can be modified
   - Released: Document is finalized and ready for delivery assignment  
-  - Delivery: Document has been assigned to a delivery order and cannot be deleted
+  - Delivery: Document has been assigned to a Transport Order and cannot be deleted
 
 ### Route and Zone Information
 

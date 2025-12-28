@@ -34,7 +34,7 @@ Carrier Association:
 
 Vehicle Assignment:
 
-- **Default Vehicle No.** : Vehicle number the driver typically operates in TMS. This field can be filled in so that when a driver is selected in the Delivery Order, the vehicle is automatically selected.
+- **Default Vehicle No.** : Vehicle number the driver typically operates in TMS. This field can be filled in so that when a driver is selected in the Transport Order, the vehicle is automatically selected.
 - **Default Vehicle Name** : Name or label for the driver's main vehicle resource (auto-populated)
 
 Contact Information:
@@ -75,7 +75,7 @@ Fuel Management:
 
 Proof-of Delivery (POD) Mobile App Integration:
 
-- **PoD User E-mail** : Driver's email used to log in to the Proof of Delivery application. This field links an organization’s user, who may not necessarily have access to Business Central, with a driver’s card. As a result, when the user logs into the mobile Power App (Proof-Of-Delivery), they will only see Delivery Orders assigned to that specific driver.
+- **PoD User E-mail** : Driver's email used to log in to the Proof of Delivery application. This field links an organization’s user, who may not necessarily have access to Business Central, with a driver’s card. As a result, when the user logs into the mobile Power App (Proof-Of-Delivery), they will only see Transport Orders assigned to that specific driver.
 - **PoD User Full Name** : Name displayed for the driver's PoD user account in TMS
 
 Visual Identification:

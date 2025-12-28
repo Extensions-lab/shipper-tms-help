@@ -42,9 +42,9 @@ Time Slot Profiles are extensively used in Transport Requests for:
 - **Load Time Slot Profile Code**: Defines available loading windows at pickup locations
 - **Unload Time Slot Profile Code**: Defines available unloading windows at delivery locations
 
-### Delivery Order Management
+### Transport Order Management
 
-In Delivery Orders, time slots are used to:
+In Transport Orders, time slots are used to:
 
 - Schedule specific delivery times for each stop
 - Provide assist edit functionality for selecting from predefined time windows
@@ -79,7 +79,7 @@ When creating a Transport Request:
 
 ### 4. Delivery Scheduling
 
-- In Delivery Orders, use the assist edit functionality on "Scheduled Date and Time" fields
+- In Transport Orders, use the assist edit functionality on "Scheduled Date and Time" fields
 - Select from available time slots based on the assigned Time Slot Profile
 
 The system automatically calculates estimated arrival times considering transportation duration.
