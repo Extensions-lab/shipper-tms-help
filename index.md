@@ -3,15 +3,9 @@ title: "Shipper TMS for Microsoft Dynamics 365 Business Central"
 description: "Shipper TMS for Microsoft Dynamics 365 Business Central: overview, prerequisites, installation, how transport requests and transport orders work, key tools, settings, reports."
 ---
 
-# Shipper TMS Documentation
-
-Welcome to the Shipper TMS help site. 
+# Shipper TMS Documentation 
 
 ![](resources/index/index-logo.png)
-
-## Appsource
-
-[Shipper TMS on AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
 
 ## Introduction
 
@@ -22,11 +16,9 @@ if you are a Shipper company that manages the transportation process of its sale
 
 ## Installation
 
-The TMS configuration process involves the creation and editing of TMS directories and entities to ensure optimal alignment of the TMS module with the company's business processes.
+Solution is available on [AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
 
-TMS comprises two main components: the core TMS and the Logistic Units extension. The core TMS utilizes functions provided by Logistic Units, which offers functionality for handling pallets and containers and features its own configuration system.
-
-- Installation for Business Central On-line [See detailed instruction](installation.md)
+- Installation process for Business Central On-line [See detailed instruction](installation.md)
 
 ## How it works
 
