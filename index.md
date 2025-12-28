@@ -9,16 +9,12 @@ description: "Shipper TMS for Microsoft Dynamics 365 Business Central: overview,
 
 ## Introduction
 
-TMS is a comprehensive solution intended to streamline the transportation processes, including order management, scheduling, and tracking of shipments.
-
-The Shipper TMS solution is ideal for scenario:
-if you are a Shipper company that manages the transportation process of its sales, purchase and transfer orders and uses either its own transport with its drivers or hires, as well as uses third-party carriers [details](shipperscenario.md).
+Run your own deliveries like a pro—without leaving Business Central. This TMS turns sales, purchase, and transfer orders into clear transport tasks, then helps you group orders into optimal truckloads, assign the right vehicle/driver/carrier in seconds, map and time every stop, and keep weight/volume/conditions under control. 
+A visual board shows which orders ride on which truck, in what sequence they unload, and whether capacity or time windows are at risk. Perfect for manufacturers, distributors, and retailers that ship with their own fleet or hired carriers and want planning, execution, and data in one place—fast, reliable, and built for shippers.
 
 ## Installation
 
-Solution is available on [AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview)
-
-- Installation process for Business Central On-line [See detailed instruction](installation.md)
+Solution is available on [AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview). Installation process for Business Central On-line [See detailed instruction](installation.md)
 
 ## How it works
 
@@ -50,7 +46,7 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 ### General
 
 - **Transportation Conditions** Settings for managing different transportation conditions [details](transportationconditions.md)
-- **Routes** - [details](route.md)
+- **Routes**. Routes are used for the logical grouping of customer addresses by geographical attribute to facilitate the assignment of a set of customer orders to a specific truck or carrier [details](route.md).
 - **Route Sequence** - [details](routesequence.md)
 - **Time Slots** -  [details](timeslots.md)
 - **Compartments** - vehicle compartments control
@@ -61,7 +57,6 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 - **Carriers**. A directory of third-party carriers that provide transportation services to our company [details](carrier.md).
 - **Vehicles**. A directory of transportation vehicles, either owned by our company or by third-party carriers [details](vehicle.md).
 - **Drivers**. Configuration of the directory for drivers, whether from our company or external [details](driver.md).
-- **Routes**. Routes are used for the logical grouping of customer addresses by geographical attribute to facilitate the assignment of a set of customer orders to a specific truck or carrier [details](route.md).
 - **Setup** : General settings of the TMS  [details](setup.md).
 
 ## Printing Forms, Documents, and Reports
