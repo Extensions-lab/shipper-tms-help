@@ -1,4 +1,10 @@
+---
+title: "Time Slots"
+description: "Time Slots settings."
+---
+
 # Time Slots
+
 
 ## Overview
 
