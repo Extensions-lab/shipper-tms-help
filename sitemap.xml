@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://stms.extensions-lab.com/</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/installation.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/transportrequest.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/transportorder.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/usecase-salesorder-transportrequest.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/shipperloadmanagement.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/faq.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/transportationconditions.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/route.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/routesequence.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/timeslots.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/logisticunittype.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/maplocation.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/maplocationtype.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/googlemapintegration.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/carrier.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/vehicle.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/driver.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/setup.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/reports.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/buylicenses.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stms.extensions-lab.com/assignpermissionsets.html</loc>
+  <lastmod>2025-12-28T15:59:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
