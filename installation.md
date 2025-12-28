@@ -16,3 +16,11 @@ Search Shipper TMS
 ![Setup Image](resources/installation/pics/installation2.png)
 
 Open TMS card page and click "Install from AppSource"
+
+
+## After Installation
+
+After installing the TMS extension, several steps must be completed to make TMS available to users.
+
+- Purchase and assign licenses. [See detailed instruction](buylicenses.md)
+- Assign permission set to users [See detailed instruction](assignpermissionsets.md)

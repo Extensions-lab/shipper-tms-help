@@ -2,7 +2,7 @@
 
 Welcome to the Shipper TMS help site.
 
-[Go to web version](https://stms.extensions-force.com)
+[Go to web version](https://stms.extensions-lab.com)
 
 
 ## Notes
