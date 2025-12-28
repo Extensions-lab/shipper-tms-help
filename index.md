@@ -20,10 +20,6 @@ TMS is a comprehensive solution intended to streamline the transportation proces
 The Shipper TMS solution is ideal for scenario:
 if you are a Shipper company that manages the transportation process of its sales, purchase and transfer orders and uses either its own transport with its drivers or hires, as well as uses third-party carriers [details](shipperscenario.md).
 
-## Prerequisites
-
-- Microsoft Dynamics 365 Business Central [product page](https://www.microsoft.com/en-us/dynamics-365/products/business-central). TMS is an add-on extension for Business Central that builds on its core modules—such as Customers, Sales, Vendors, Purchasing, and Warehousing—using them as a solid foundation while adding only the features necessary for transportation management.
-
 ## Installation
 
 The TMS configuration process involves the creation and editing of TMS directories and entities to ensure optimal alignment of the TMS module with the company's business processes.
@@ -63,7 +59,7 @@ That is, one large order can be transported by multiple trucks (one Transport Re
 
 - **Transportation Conditions** Settings for managing different transportation conditions [details](transportationconditions.md)
 - **Routes** - [details](route.md)
-- **Route Sequence** -  [details](routesequence.md)
+- **Route Sequence** - [details](routesequence.md)
 - **Time Slots** -  [details](timeslots.md)
 - **Compartments** - vehicle compartments control
 - **Logistic Units Types** : is an item of any composition intended for transportation. Logistic units take many forms: a single box containing a limited number of products, a pallet with multiple products, or an intermodal container containing multiple pallets [details](logisticunittype.md).
