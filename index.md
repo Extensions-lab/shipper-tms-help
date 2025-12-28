@@ -3,7 +3,7 @@ title: "Shipper TMS for Microsoft Dynamics 365 Business Central"
 description: "Shipper TMS for Microsoft Dynamics 365 Business Central: overview, prerequisites, installation, how transport requests and transport orders work, key tools, settings, reports."
 ---
 
-# Shipper TMS Documentation 
+# Shipper TMS for Microsoft Dynamics 365 Business Central 
 
 ![](resources/index/index-logo.png)
 
