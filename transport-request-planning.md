@@ -15,7 +15,7 @@ Use it when you need to:
 - move quantities between Open requests,
 - release or reopen all related requests from one page.
 
-![Transport Request Planning Worksheet](resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
+![Transport Request Planning Worksheet](/resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
 
 ## How the page is organized
 
