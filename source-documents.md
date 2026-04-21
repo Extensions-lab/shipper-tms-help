@@ -43,6 +43,12 @@ Use this path when the remaining eligible lines can become Transport Requests wi
 4. Confirm the result.
 5. Open **Transport Requests** to review the created request.
 
+Expected result:
+
+- Shipper TMS creates one or more Transport Requests for remaining eligible quantities.
+- The created requests are linked to the source document.
+- The source document **Transportation Status** is updated to show transport-request progress.
+
 ## Split source lines across requests
 
 Use this path when only part of the document should be planned now or when one document must become several transport requests.
@@ -55,6 +61,23 @@ Use this path when only part of the document should be planned now or when one d
 6. Release the requests when they are ready for planning.
 
 For the full workflow, see [Transport Request Planning Worksheet](transport-request-planning.md).
+
+## Create Transport Orders from a source document
+
+Use **Create Transport Orders** only after the source document already has eligible **Released** Transport Requests.
+
+1. Open the source document.
+2. Choose **Transport Requests** and confirm that at least one linked request is **Released**.
+3. Return to the source document.
+4. Choose **Create Transport Orders**.
+5. Confirm the prompts shown by the system.
+6. Open **Transport Orders** from the same source document to review the created orders.
+
+Expected result:
+
+- Shipper TMS creates separate Transport Orders for eligible released requests that are not already assigned.
+- Requests that are still **Open** or already in **Transport** are skipped.
+- Each created Transport Order can be opened for carrier, vehicle, driver, route, and warehouse planning.
 
 ## Transportation Status values
 
@@ -74,6 +97,16 @@ For the full workflow, see [Transport Request Planning Worksheet](transport-requ
 - **Split Order for Transportation** is for partial quantities and controlled distribution.
 - Posted documents are useful when transport planning starts after posting.
 - Customer, vendor, location, ship-to, and order-address map data improve automatic route creation.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| **Create Transport Request** is unavailable | The source document must be released and must still contain eligible unassigned quantities. |
+| No Transport Request was created | Check that source lines are item lines with remaining quantity and a usable location/address context. |
+| **Create Transport Orders** is unavailable | At least one linked Transport Request must be **Released** and not already assigned to a Transport Order. |
+| Only some quantities were planned | Open **Transport Request Planning** and review already distributed quantities. |
+| The route or address looks wrong | Check customer, vendor, location, ship-to, order address, and map location defaults. |
 
 ## Related
 

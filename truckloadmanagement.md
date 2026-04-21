@@ -27,6 +27,16 @@ Use Truck Load Management when you want to:
 - add requests directly to a selected truck,
 - release a finished load.
 
+Do not start here if you only need to choose an external carrier. Use [Carrier Selection](carrierselection.md) on a Transport Order for that flow.
+
+## Before you start
+
+- Configure **Truck Load Time Slot Profile** in [TMS Setup](setup.md).
+- Create vehicles and assign carrier, vehicle unit type, depot, capacity, and default driver when used.
+- Create drivers if driver assignment is required before release.
+- Transport Requests must be **Released** before they can appear as candidates.
+- Capacity controls, compartments, and transportation conditions should be configured before go-live if your process enforces them.
+
 ## Main sections
 
 | Section | Purpose |
@@ -42,10 +52,13 @@ Use Truck Load Management when you want to:
 3. Select a truck slot in the upper list.
 4. Review **Status**, **Next Step**, **Load %**, capacity columns, and conflicts.
 5. If the slot has no Transport Order, choose **Create Load**.
+   Shipper TMS creates an Open Transport Order for the selected truck slot.
 6. In **Eligible Transport Requests**, select one or more requests.
 7. Choose **Add to Selected Truck**.
+   The requests are added to the slot's Transport Order if they pass eligibility checks.
 8. Open the load with **Next Step**, **Load %**, or **Open Transport Order**.
 9. When the load is ready, choose **Release Load**.
+   The linked Transport Order changes from **Open** to **Released** when validation succeeds.
 
 ## Candidate modes
 
@@ -73,6 +86,17 @@ Common blockers include:
 - compartment or transportation-condition rules are not valid.
 
 Fix the blocker, refresh the page, and release again.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| No truck slots are shown | Check planning period, time-slot profile, vehicle setup, carrier filter, vehicle unit type, depot filter, and whether the vehicle is blocked for scheduling. |
+| Candidate requests are missing | Confirm requests are **Released**, inside the planning period, and compatible with the selected slot filters. |
+| A candidate is blocked | Use **All With Reasons** or **Blocked Only** to see the reason. |
+| **Add to Selected Truck** fails | The target slot and Transport Order must be selectable and open; capacity, compartment, and transportation-condition rules must allow the move. |
+| **Release Load** fails | Resolve missing order, non-open order, missing requests, missing driver, conflict, overload, or compartment/condition blockers. |
+| The linked order looks wrong | Use **Repair Truck Load Links** only when stale slot/order links must be rebuilt. |
 
 ## Move or remove work
 

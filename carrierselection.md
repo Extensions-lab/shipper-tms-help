@@ -34,6 +34,12 @@ Make sure these items are in place:
 8. Confirm that **Carrier No.** and **Carrier Name** are updated on the order.
 9. If automatic charge creation is enabled, review [Transport Charges](transport-charges.md).
 
+Expected result:
+
+- The selected carrier is written to the Transport Order.
+- If the carrier is vendor-based and **Auto Create Charge Line** is enabled, Shipper TMS creates transport charge lines from the carrier selection entries.
+- If automatic charge creation is not enabled, the carrier is selected but charges must be created or reviewed manually.
+
 ## What the comparison can include
 
 The calculation can include:
@@ -49,18 +55,16 @@ When you apply the result, the selected carrier is written back to the Transport
 
 If **Auto Create Charge Line** is enabled, Shipper TMS can also create charge lines on the order.
 
-## If no good result appears
+## Troubleshooting
 
-Check these items:
-
-- the Transport Order is **Open**,
-- carrier selection is enabled,
-- the carrier is not blocked,
-- the route has the stops you expect,
-- map locations and distance data are usable,
-- carrier start and end map locations are correct,
-- the carrier has rates for the relevant geography,
-- rate-type mapping is complete.
+| Problem | What to check |
+|---|---|
+| The action is unavailable | The Transport Order must be **Open**, and **Carrier Selection Enabled** must be turned on in TMS Setup. |
+| No carrier appears | The carrier must not be blocked and must have matching rates or valid comparison data for the route. |
+| Amount is zero or unexpected | Check distance, empty return setup, flat fee, load/unload fees, and origin/destination filters. |
+| The wrong carrier start or end point is used | Review **Start MAP Location No.** and **End MAP Location No.** on the carrier. |
+| Charge lines are missing | Check **Auto Create Charge Line**, carrier source vendor, and **Carrier Rate Types Mapping**. |
+| A mapping error appears | Add a mapping for each carrier selection entry type that can create a charge line. |
 
 ## Related
 

@@ -18,6 +18,16 @@ Use a Transport Request before you build the trip in a [Transport Order](transpo
 
 ![Transport Request example showing load point, unload point, and route actions](resources/transportrequest/tr5.png)
 
+## Before you start
+
+Make sure that:
+
+- [TMS Setup](setup.md) has **Transport Request Nos.** filled.
+- The source document has eligible item quantities that are not already fully assigned to transport.
+- Unposted sales, purchase, and transfer documents are **Released** before you create requests from them.
+- The request has **Load Date And Time** and **Unload Date And Time** before you release it.
+- Map locations or complete addresses exist if you want route display, distance, or duration.
+
 ## What a Transport Request contains
 
 A Transport Request can contain:
@@ -63,11 +73,16 @@ For supported document types, see [Source Documents](source-documents.md).
 3. Fill or adjust load and unload date/time values while the request is still **Open**.
 4. Review **Lines**.
 5. If you need to add more source lines, choose **Get Source Documents** while the request is **Open**.
+   The selected released source lines are added to the request.
 6. If map locations are filled, choose **Show Route**.
+   The route opens on the configured map provider.
 7. Choose **Transport Time & Distance** to calculate distance and duration.
+   The request stores the distance and transport duration returned by the map provider.
 8. Choose **Estimate** when logistic unit estimation should be rebuilt.
 9. Choose **Release** when the request is ready for planning.
+   The status changes to **Released** and the request becomes available for Transport Order planning.
 10. Choose **Assign to Transport Order** when you want to place this request into an existing Transport Order.
+    The request status changes to **Transport** after it is added to the selected order.
 11. If the request is already assigned, choose **Show Transport** to open the related order.
 
 Use the list page when you want to release, reopen, or assign multiple requests at the same time.
@@ -91,6 +106,18 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 2. Review addresses, route, dates, and totals.
 3. Release the request.
 4. Assign it to a Transport Order directly or through a planning tool.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| **Release** fails | Fill **Load Date And Time** and **Unload Date And Time**. |
+| **Get Source Documents** is unavailable | The request must be **Open**. |
+| The request does not appear in planning pages | Only **Released** requests are available for planning. A request in **Transport** is already assigned. |
+| **Assign to Transport Order** is unavailable | The request must be **Released**. |
+| **Show Route** fails | Check shipper and consignee map locations, coordinates, and map provider setup. |
+| Distance or duration is empty | Configure a map provider and verify that both route endpoints can be geocoded. |
+| You cannot delete the request | Requests in **Transport** status must be removed from the Transport Order first. |
 
 ## Related
 

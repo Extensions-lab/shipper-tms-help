@@ -34,6 +34,11 @@ Posting removes the live order and stores the result in posted history.
 4. Open the card.
 5. Review lines, route stops, charges, and execution entries.
 
+Expected result:
+
+- You can review the final posted route, resources, source document links, charges, and execution history.
+- The posted order is read-only. Use related finance or source documents for financial correction processes.
+
 ## What you can do
 
 | Action | Use it for |
@@ -49,6 +54,15 @@ Posting removes the live order and stores the result in posted history.
 - Use the posted order for audit and customer-service questions.
 - Financial corrections should be handled through the related sales, purchase, or finance documents.
 - Execution attachments may be available through execution entries, depending on your PoD and telematics setup.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| The posted order is missing | Confirm the live Transport Order was posted. Released or In Progress orders are still live documents. |
+| A user cannot edit the posted order | Posted Transport Orders are read-only by design. |
+| Execution entries are missing | Check whether execution events were recorded before posting or synchronized from telematics. |
+| Charges do not match finance expectations | Review posted charges and the related sales or purchase documents used for billing or self-billing. |
 
 ## Related
 

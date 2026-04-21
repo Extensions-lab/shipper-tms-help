@@ -15,7 +15,14 @@ Use it when you need to:
 - move quantities between Open requests,
 - release or reopen all related requests from one page.
 
-![Transport Request Planning Worksheet](/resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
+![Transport Request Planning Worksheet](resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
+
+## Before you start
+
+- The source document must be released when it is an unposted sales, purchase, or transfer document.
+- Source lines must still have remaining quantity that can be assigned to transport.
+- Use this worksheet before creating Transport Orders if one source document must become several requests.
+- Existing requests must be **Open** before you add or move quantities to them.
 
 ## How the page is organized
 
@@ -33,6 +40,12 @@ Use it when you need to:
 4. Choose **New Transport Request**.
 5. Review the created request number or request count.
 6. Release the request when it is ready for planning.
+
+Expected result:
+
+- Shipper TMS creates one or more Transport Requests for the selected quantities.
+- Source line balances update so users can see distributed and remaining quantities.
+- Released requests become available in Transport Order planning.
 
 ## Add quantities to an existing request
 
@@ -70,6 +83,16 @@ Use this when an Open Transport Request already exists for the same source docum
 - You can move quantities only to Open requests.
 - Released requests must be reopened before you change their lines.
 - Requests already assigned to a Transport Order cannot be reopened from this worksheet.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| Quantity cannot be entered | Check **Remaining Qty.** and whether the source line is eligible for transport. |
+| Existing request cannot be selected | Only **Open** requests can receive added or moved quantities. |
+| **Release All** does not release a request | The request must have required load and unload date/time values. |
+| **Reopen All** skips a request | Requests already assigned to a Transport Order cannot be reopened from the worksheet. |
+| Balances do not look current | Choose **Refresh** to recalculate source and distribution quantities. |
 
 ## Related
 

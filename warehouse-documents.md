@@ -30,11 +30,27 @@ Shipper TMS can create:
 5. Open **Show Warehouse Shipments** or **Show Warehouse Receipts**.
 6. Process the warehouse documents according to your warehouse workflow.
 
+Expected result:
+
+- Warehouse shipments are created for eligible outbound source lines when the loading location requires shipment handling.
+- Warehouse receipts are created for eligible inbound source lines when the unloading location requires receipt handling.
+- If documents already exist, Shipper TMS opens the existing documents instead of creating duplicates.
+
 ## What happens if documents already exist
 
 If warehouse documents already exist, Shipper TMS opens the existing documents instead of creating duplicates.
 
 The same applies when posted warehouse shipment or receipt records already exist for the Transport Order.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| **Create Warehouse Documents** is unavailable | The Transport Order must be **Released**. |
+| No shipment is created | The shipper must be a location that requires shipment handling, and the source line must still be eligible for warehouse shipment. |
+| No receipt is created | The consignee must be a location that requires receive handling, and the source line must still be eligible for warehouse receipt. |
+| Existing documents open instead of new ones | A warehouse or posted warehouse document is already linked to the Transport Order. |
+| Quantities are lower than expected | Business Central warehouse logic uses outstanding warehouse quantities, not the original source quantity. |
 
 ## Related
 

@@ -51,6 +51,10 @@ Use **Create Transport Request** for the normal one-step creation flow. Use **Tr
 
 Yes. That is exactly what **Transport Request Planning** is for.
 
+### Why can I not release a Transport Request?
+
+The request must have **Load Date And Time** and **Unload Date And Time**.
+
 ## Transport Orders
 
 ### When should we create a Transport Order directly?
@@ -64,6 +68,18 @@ Most planning changes require the order to be in **Open** status.
 ### Why is **Carrier Selection** unavailable?
 
 The order must be **Open**, and **Carrier Selection Enabled** must be turned on in **Shipper TMS Setup**.
+
+### Why can I not post a Transport Order?
+
+The order must be **In Progress**, must contain transport lines, and charge lines must be linked or posted correctly.
+
+### Why can I not change a Transport Order?
+
+Most planning changes require **Open** status. Reopen the order if it is **Released**.
+
+### Why are warehouse documents not created?
+
+The Transport Order must be **Released**, and the linked loading or unloading location must require warehouse shipment or receipt handling. Source lines must still have outstanding warehouse quantity.
 
 ## Planning pages
 
@@ -80,6 +96,28 @@ Use:
 
 Truck Load Management is centered on the vehicle slot. Driver Load Management is centered on the driver slot.
 
+### Why does Truck Load Management show no candidates?
+
+Check the planning period, slot filters, request status, route or depot filters, and whether the request is already assigned to a Transport Order.
+
+### Why can I not release a truck load?
+
+Common blockers are missing Transport Order, non-open Transport Order, no requests on the load, missing required driver, slot conflict, overload, or invalid compartment and transportation-condition rules.
+
+## Carrier rates and charges
+
+### Why does Carrier Selection show no carrier?
+
+Check that the carrier is not blocked, rates match the route geography, map locations and distance data are usable, and rate-type mapping is complete when charge creation is expected.
+
+### Why did Carrier Selection choose the carrier but not create charges?
+
+Automatic charge creation requires **Auto Create Charge Line**, a vendor-based carrier, and rate type mappings with item charge numbers.
+
+### Why does transport posting mention charge lines?
+
+Posting checks whether charge lines are linked or whether linked sales, purchase, or transfer charge lines still need to be posted. Resolve the charge links before posting the Transport Order.
+
 ## Telematics
 
 ### Which telematics providers are supported?
@@ -89,6 +127,21 @@ Shipper TMS supports Geotab, Samsara, and Webfleet.
 ### Can different carriers use different providers?
 
 Yes. Each carrier can point to its own **Telematics Setup Code**.
+
+## Glossary
+
+| Term | Meaning |
+|---|---|
+| Transport Request | Planning demand: what must be moved, from where, to where, and when. |
+| Transport Order | Execution document for one trip, load, or delivery run. |
+| Source document | Sales, purchase, transfer, or posted Business Central document that creates transport demand. |
+| Carrier | External or internal transport service provider. |
+| Vehicle | Truck, van, trailer, or other equipment used for transport. |
+| Driver | Person assigned to execute or support a trip. |
+| Map Location | Geocoded place used for route display, distance, and duration. |
+| Logistic Unit Type | Capacity profile for pallets, containers, or other loading units. |
+| Execution Entry | Status event, delivery update, attachment, picture, or proof-of-delivery fact. |
+| Posted Transport Order | Read-only transport history after the Transport Order is posted. |
 
 ## Related
 

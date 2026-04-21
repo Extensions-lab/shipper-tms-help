@@ -21,6 +21,15 @@ Use Driver Load Management when you need to:
 - detect double-booking or overlapping work,
 - resolve driver-specific conflicts.
 
+Use Truck Load Management when the main question is what a specific vehicle should carry. Use Driver Load Management when the main question is whether a driver is available and correctly assigned.
+
+## Before you start
+
+- Configure **Truck Load Time Slot Profile** in [TMS Setup](setup.md).
+- Create drivers and link them to carriers when carrier-specific driver filtering is used.
+- Create vehicles and default driver assignments if your company relies on default fleet planning.
+- Make sure vehicle and driver records are not blocked.
+
 ## What the page shows
 
 Each row represents one **driver slot**:
@@ -45,7 +54,9 @@ Use this window when the question is about driver availability or driver workloa
 6. Select a driver slot.
 7. Check **Default Vehicle**, **Assigned Vehicle**, **Status**, **Next Step**, **Load %**, and conflict columns.
 8. If the driver has no vehicle for the slot, choose **Assign Vehicle**.
+   The driver slot receives a manual vehicle assignment if the target vehicle is available.
 9. If the wrong vehicle was assigned manually, choose **Clear Assigned Vehicle**.
+   The manual assignment is removed if the vehicle slot does not already carry a load.
 10. Choose **Open Selected Load** to review the load connected to that driver.
 11. If there is a conflict, choose **Show Driver Conflicts** and review the cause.
 12. Use **Open Transport Order** when you need to adjust the execution document itself.
@@ -70,6 +81,16 @@ If you need to move work from one driver to another, open the selected load and 
 4. If needed, choose **Assign Vehicle**.
 5. Choose **Open Selected Load** to inspect the linked work.
 6. If the slot shows a conflict, choose **Show Driver Conflicts** and resolve it.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| A driver is missing | Check driver setup, carrier filter, planning period, time slot, depot filter, and blocked status. |
+| **Assign Vehicle** fails | The selected vehicle must have a truck slot for the same date and time slot and must not be occupied by a blocking assignment. |
+| **Clear Assigned Vehicle** fails | You cannot clear the assignment if the related vehicle slot already has a load. |
+| Conflict count is not zero | Use **Show Driver Conflicts** and resolve overlapping assignments or availability problems. |
+| **Open Selected Load** opens nothing | The driver slot may not yet have a linked Transport Order. Plan the vehicle load first. |
 
 ## Related
 

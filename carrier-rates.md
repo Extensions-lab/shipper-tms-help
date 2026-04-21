@@ -69,6 +69,12 @@ Avoid duplicate overlapping rates unless your carrier-pricing policy intentional
 4. Confirm that the carrier appears.
 5. Review the calculated amount and cost breakdown.
 
+Expected result:
+
+- The carrier appears as a selectable option when the route matches the rate filters.
+- The cost breakdown shows the rate components that apply to the route.
+- Applying the carrier updates the Transport Order carrier fields.
+
 ## Troubleshooting
 
 | Problem | Check |
@@ -77,6 +83,7 @@ Avoid duplicate overlapping rates unless your carrier-pricing policy intentional
 | Amount is zero | No matching rate exists or only a fallback comparison row was created |
 | Rate is too high or too low | Distance, empty-return setup, fees, and geographic filters |
 | Auto charge line is missing | **Auto Create Charge Line** and **Carrier Rate Types Mapping** in TMS Setup |
+| Mapping error when applying a carrier | Every selected rate type that creates a charge must have an item charge mapping |
 
 ## Related
 

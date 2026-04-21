@@ -27,6 +27,11 @@ Use report actions from the Transport Order after the trip has enough data to pr
 5. Print or send the document according to your company process.
 6. If the wrong layout prints, ask an administrator to review **Report Selection - Transportation Management System** or run **Set default reports** in [TMS Setup](setup.md).
 
+Expected result:
+
+- The document uses the current Transport Order data: route stops, carrier, vehicle, driver, and request lines.
+- The printed layout follows the active Business Central report selection for Transportation Management System reports.
+
 ## Where to print them
 
 1. Open a **Transport Order**.
@@ -50,6 +55,15 @@ Use report actions from the Transport Order after the trip has enough data to pr
 - Default report mappings can be reset from **Shipper TMS Setup** with **Set default reports**.
 - **CMR No.** can be generated from the number series configured in setup.
 - If your company uses custom layouts, the printed result depends on the active report selection.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| The wrong layout prints | Review report selection or run **Set default reports** in Shipper TMS Setup. |
+| CMR number is missing | Fill **CMR Nos.** in TMS Setup before assigning or printing CMR numbers. |
+| A printed document misses route or load details | Review Transport Order route stops, request lines, carrier, vehicle, and driver before printing. |
+| A user cannot print | Check Business Central report permissions and Shipper TMS user permissions. |
 
 ## Related
 

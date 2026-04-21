@@ -36,6 +36,12 @@ An execution entry can include:
 3. Review the event list.
 4. Open attachments or pictures when available.
 
+Expected result:
+
+- The page shows recorded execution events for the selected transport document.
+- Attachments and pictures can be opened when the event includes proof or supporting files.
+- Posted orders keep execution history for later customer-service and audit review.
+
 ## Attachments and pictures
 
 Use attachments for evidence such as:
@@ -58,6 +64,15 @@ For status setup, see [Statuses and Status Profiles](statuses.md).
 - Execution entries help dispatchers answer “what happened?” after a delivery event.
 - Telematics providers may update execution facts when the provider supports the data.
 - Attachments should not contain unnecessary personal data.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| No entries are shown | Confirm that execution statuses, PoD, telematics, or API integration have actually written events for the order. |
+| Attachments are missing | Check whether the event was created with an attachment and whether the integration user has permission to attachment data. |
+| Status values are not what users expect | Review the **Transport Execution Status Profile** in TMS Setup and the related status setup. |
+| Telematics events are missing | Check carrier telematics setup, vehicle mapping, and sync job results. |
 
 ## Related
 

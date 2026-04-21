@@ -47,6 +47,26 @@ Complete these items before planners start working:
 8. Select the **Map Provider** and enter the required key.
 9. Choose **Check TMS Settings**.
 
+Expected result:
+
+- Transport Requests and Transport Orders can be numbered.
+- Planners can release requests and create orders without missing setup errors.
+- Route, distance, carrier selection, warehouse, PoD, and telematics features are enabled only when their required setup exists.
+
+## Setup by process
+
+| If your company uses | Set up these areas |
+|---|---|
+| Basic request and order planning | Number series, default mode of transport, source document behavior |
+| Capacity control | Weight, volume, footage, logistic unit controls, item data, vehicle capacity |
+| Own fleet planning | Vehicles, drivers, truck-load time-slot profile, depots, driver requirement |
+| External carrier selection | Carriers, carrier rates, carrier selection enabled, carrier rate type mapping |
+| Warehouse execution | Business Central warehouse setup, source document locations, Transport Order release process |
+| Route and distance | Map provider, API key, map locations, distance matrix |
+| Truck-aware routing | Azure Maps, vehicle routing profiles, vehicle unit types |
+| Proof of delivery | Transport execution status profile and status setup |
+| Telematics | Telematics provider setup, carrier setup code, vehicle and driver mapping |
+
 ## Settings most teams use
 
 | Area | What to review |
@@ -101,6 +121,25 @@ If carrier selection is enabled but rate-type mapping is missing, **Check TMS Se
 4. Create a test [Transport Request](transportrequest.md).
 5. Create a test [Transport Order](transportorder.md).
 6. Run **Get Transport Time & Distance** on the request or order.
+
+Expected result:
+
+- No setup validation error appears.
+- Test documents receive numbers from the configured number series.
+- Distance and duration update when the route and map provider are valid.
+- The planning page that your team uses shows the test request or order in the expected period.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| A request or order number is not assigned | Fill **Transport Request Nos.** or **Transport Order Nos.** and confirm the number series allows automatic numbering. |
+| Users cannot open TMS pages | Assign Shipper TMS permission sets and verify license access. |
+| Carrier Selection is unavailable | Turn on **Carrier Selection Enabled** and keep the Transport Order **Open**. |
+| Carrier Selection creates no charge lines | Turn on **Auto Create Charge Line**, configure rate type mapping, and use a vendor-based carrier. |
+| Truck Load Management has no slots | Fill **Truck Load Time Slot Profile** and review vehicle scheduling setup. |
+| Distance does not calculate | Check map provider, API key, mode of transport, map locations, and coordinates. |
+| Posting is blocked by charges | Review default charge assignment type, transport charge source links, and unposted source charge lines. |
 
 ## Related
 

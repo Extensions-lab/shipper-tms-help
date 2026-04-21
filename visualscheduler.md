@@ -30,6 +30,13 @@ Typical grouping options include:
 - Shipper
 - Transport Condition
 
+## Before you start
+
+- Transport Requests should have load and unload date/time values.
+- Requests must be **Released** before they can be assigned to Transport Orders.
+- Transport Orders must be **Open** before visual rescheduling or request assignment can change them.
+- Use Truck Load Management or Driver Load Management first when resource slots must be validated before scheduling.
+
 ## Main interactions
 
 Depending on status and current context, planners can:
@@ -54,10 +61,13 @@ Use this window when timing and visual grouping matter more than field-by-field 
    - **Transport Condition** when special handling matters.
 3. Review unassigned Transport Requests and grouped Transport Orders on the timeline.
 4. Drag an eligible request to change its timing.
+   The request timing changes when the document status allows it.
 5. Resize the request edge when you need to change the unload timing.
 6. Drag a request into an **Open** Transport Order when it should travel with that order.
+   The request is assigned to the order and the order route is refreshed.
 7. Double-click or use the context menu to open the related document.
 8. Use multi-select and create a Transport Order when several eligible requests should become one trip.
+   A new Transport Order is created for the selected released requests.
 9. Choose **Refresh** after changes made outside the scheduler.
 
 If a request or order cannot be moved, check the document status. Released or In Progress orders are intentionally protected from visual rescheduling.
@@ -70,6 +80,16 @@ Use Visual Scheduler when you want to:
 - review work by route, vehicle, or driver,
 - make quick timing adjustments,
 - group eligible requests visually before creating the trip.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| A request cannot be moved | Check request status and whether the timing fields are protected by the current workflow. |
+| A request cannot be dropped into an order | The target Transport Order must be **Open**, and the request must be eligible for assignment. |
+| An order cannot be changed visually | Released and In Progress orders are protected from visual planning changes. |
+| Timeline looks incomplete | Check the visible period, grouping option, filters, and whether documents have planning dates. |
+| Changes made elsewhere are missing | Choose **Refresh**. |
 
 ## Related
 

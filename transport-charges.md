@@ -24,6 +24,12 @@ Transport charges can support:
 3. Add or review charge lines.
 4. Use **Show Assignment** when the amount must be distributed.
 
+Expected result:
+
+- The Transport Order shows the carrier cost or customer re-billing amount.
+- Assigned amounts explain how the charge is distributed across requests, stops, or source document lines.
+- Posting is easier to validate because unassigned or unlinked charges are visible before execution is completed.
+
 ## Charge line fields
 
 | Field | Use |
@@ -75,6 +81,16 @@ Transport charges can support:
 - Use **Clear Amount to Assign** before rebuilding an allocation from another method.
 - Use **Show Item Charge Assignment** to inspect the Business Central item-charge distribution.
 - Posting the Transport Order can be blocked by unlinked or unposted charge lines.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| The assigned amount is not zero after allocation | Reopen **Show Assignment**, review **Amount to Assign**, and apply or adjust the remaining amount. |
+| Distance allocation looks wrong | Run **Get Transport Time & Distance** or **Update Distances** before suggesting by distance. |
+| Self-billing document is not created | Check carrier vendor setup, charge type, source link, and required Business Central purchase setup. |
+| Sales rebilling is not created | Check customer, source sales document status, charge type, and item charge setup. |
+| Transport Order posting is blocked | Resolve charge lines where the source link is inactive or where linked sales, purchase, or transfer charge lines are still unposted. |
 
 ## Related
 

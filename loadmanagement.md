@@ -20,6 +20,15 @@ Load Management is best when:
 - you work with compartments,
 - you want to move requests between Transport Orders in one worksheet.
 
+Use Truck Load Management instead when the planner starts from a specific vehicle, date, and time slot.
+
+## Before you start
+
+- Transport Requests must be **Released**.
+- [TMS Setup](setup.md) must have Transport Request and Transport Order number series.
+- Create vehicles, carriers, routes, and compartments first if your planning process depends on them.
+- Set the planning period so the request pool and the planning tree show the same operating window.
+
 ## How the page is organized
 
 The page has two working areas:
@@ -48,7 +57,9 @@ Use this window when you start from the list of unplanned requests.
 3. Select one or more released requests that must be planned.
 4. In **Transport Order Planning**, select the target Transport Order or compartment.
 5. Choose **Assign to Selected**.
+   The selected requests are added to the chosen order or compartment.
 6. If no suitable Transport Order exists, select the requests and choose **Assign to New**.
+   Shipper TMS creates a new Open Transport Order and assigns the selected requests.
 7. Review the lower tree to confirm where the requests were placed.
 8. If the plan does not look right, select another target and reassign the request as needed.
 9. Choose **Refresh** after changes made from another page.
@@ -81,6 +92,16 @@ Use this page instead of Truck Load Management when the planner thinks "which re
 - The lower tree can show compartment-based planning when the vehicle configuration supports it.
 - Use this page when you think in documents first.
 - Use [Truck Load Management](truckloadmanagement.md) when you think in truck slots first.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| A request is missing from the upper list | Confirm the request is **Released**, inside the planning period, and not already assigned to a Transport Order. |
+| **Assign to Selected** does not do what you expect | Select both the pending request and a valid target order or compartment. |
+| The target order cannot be changed | The target Transport Order must be **Open** for planning changes. |
+| Capacity looks wrong | Review item weights/volumes, logistic unit estimates, vehicle capacity, and compartment setup. |
+| The page looks stale after changes elsewhere | Choose **Refresh**. |
 
 ## Related
 
