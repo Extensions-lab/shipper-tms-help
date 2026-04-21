@@ -1,48 +1,57 @@
 ---
-title: "Map Location Type in TMS"
-description: "Map Location Type master data: codes and defaults for customers, vendors, locations, ship-to/order addresses, contacts; airport flag; audit fields; drives default map location behavior in TMS."
+title: "Map Location Types"
+description: "Create Map Location Types to classify customer, vendor, depot, port, hub, and airport locations in Shipper TMS."
 ---
 
-# MAP Location Type
+# Map Location Types
 
-The Map Location Type is a configuration entity within the Transportation Management System that categorizes and defines different types of map locations used throughout the TMS. This entity serves as a master data table that allows administrators to classify map locations based on their purpose and characteristics.
+Use **Map Location Types** to classify locations by business purpose, such as:
 
-The Map Location Type includes a unique code identifier and description, along with several boolean flags that determine default behavior for different source entities in the system.
+- customer delivery point,
+- vendor pickup point,
+- warehouse,
+- hub,
+- port,
+- airport.
 
-The key functionality includes setting default location types for various Business Central entities such as Customers, Vendors, Locations, Ship-to Addresses, Order Addresses, and Contacts.
+This helps keep newly created Map Locations consistent.
 
-Each type can be marked as the default for one or more of these entity types, with the system ensuring only one default per entity type through validation triggers.
+## How to work in this page
 
-Additionally, location types can be specifically marked as "Airport" types, which enables specialized TMS logic for aviation-related locations. The entity also includes standard audit fields for tracking modifications, including timestamps and user identification.
+Use this page when you need consistent defaults for new Map Locations.
 
-The Map Location Type List page provides a simple administrative interface for managing these location type definitions, allowing users to view and edit all the configuration options in a tabular format. This system enables flexible categorization of map locations while maintaining data integrity and providing clear defaults for different business scenarios within the transportation management workflow.
+1. Create one type for each real category your planners use.
+2. Use readable codes such as `CUSTOMER`, `VENDOR`, `DEPOT`, `PORT`, or `AIRPORT`.
+3. Turn on a default flag only when new locations from that source should automatically receive this type.
+4. Do not turn on multiple defaults for the same source category unless you intentionally want the latest change to replace the previous default.
+5. Turn on **Airport** only for types that represent airports.
 
-## Fields Description
+## Create a location type
 
-Primary Fields:
+1. Search for **Map Location Types**.
+2. Choose **New**.
+3. Fill in **Code** and **Description**.
+4. Turn on the default flag only for the entity types where this should be the default.
 
-- **Code** : Unique identifier for the map location type
-- **Description** : Descriptive text for the location type
+## Default flags
 
-Default Assignment Fields:
+Use the default flags carefully:
 
-- **Default For Location** : Sets this type as default for standard Location entities
-- **Default for Customer** : Sets this type as default for Customer-related map locations
-- **Default for Ship-to Address** : Sets this type as default for customer ship-to addresses
-- **Default for Vendor** :  Sets this type as default for Vendor-based map locations
-- **Default for Order Address** : Sets this type as default for vendor order addresses
-- **Default for Contact** : Sets this type as default for Contact-related map locations
+| Field | Meaning |
+|---|---|
+| **Default for Customer** | Used when a new Map Location is created from a customer |
+| **Default for Vendor** | Used when a new Map Location is created from a vendor |
+| **Default For Location** | Used when a new Map Location is created from a warehouse/location |
+| **Default for Ship-to Address** | Used when created from a ship-to address |
+| **Default for Order Address** | Used when created from an order address |
+| **Default for Contact** | Used when created from a contact |
 
-Specialization Fields:
+Only one type should normally be the default for each source type.
 
-- **Airport** : Indicates if this type represents an airport, enabling specialized TMS logic
+## Airport flag
 
-Audit Fields:
+Turn on **Airport** only for location types that represent airports. This enables airport-specific behavior in Map Location handling.
 
-- **Last Modified Date Time** : Local timestamp of last record modification
-- **Last Modified Date Time (UTC)** : - UTC timestamp of last record modification
-- **Last Modified UserID** : - User who last modified the record
+## Related
 
-## Page
-
-![Setup Image](resources/maplocationtype/pics/maplocationtype.png)
+- [Map Locations](maplocation.md)

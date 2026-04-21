@@ -1,46 +1,67 @@
 ---
-title: "Routes in TMS"
-description: "Route master data groups customers geographically, stores default carrier/vehicle/driver, scheduler sort/blocking, cascading defaults into Transport Requests and Transport Orders."
+title: "Routes"
+description: "Use routes to group transportation work by geography and to default resources in Shipper TMS."
 ---
 
 # Routes
 
-The Route entity is a fundamental master data component within the Transportation Management System that serves as a geographic and operational grouping mechanism for organizing customers and optimizing delivery operations.
+Use **Routes** to group customers, vendors, ship-to addresses, order addresses, and locations into logical transportation corridors.
 
-Routes enable logistics managers to define predefined paths or service areas that group customers geographically for efficient transportation planning and carrier assignment.
+A route in Shipper TMS is not a turn-by-turn map path. It is a planning label that helps you:
 
-Each route contains essential operational information including a unique code identifier, descriptive text, and default resource assignments such as carrier, vehicle, and driver that are automatically applied when creating Transport Orders or transport requests for customers assigned to that route.
+- group demand,
+- filter requests,
+- default carrier, vehicle, and driver values,
+- plan by route in Visual Scheduler.
 
-The Route entity integrates deeply with the TMS workflow through automatic default assignments - when a customer is assigned to a route, the system automatically populates carrier, vehicle, and driver information in Transport Orders and transport requests, streamlining the order creation process.
-Routes also support scheduling functionality with a sort order field that determines the sequence in which routes appear in the TMS scheduler, and a blocking mechanism that can prevent routes from being included in scheduling activities.
+## How to work in this page
 
-The Routes page provides capabilities, displaying route information alongside a count of assigned customers with drill-down functionality to view the customer list. Routes are referenced throughout the TMS system in Transport Orders, transport requests, and customer master data, making them essential for maintaining consistent transportation operations, optimizing resource utilization, and ensuring efficient geographic coverage across the transportation network.
+Use the route list when you maintain planning areas or recurring delivery corridors.
 
-## Route Sequence
+1. Add one row per logical route.
+2. Use **Code** for a short route identifier that planners recognize.
+3. Use **Description** to make the route understandable in filters and planning boards.
+4. Set default carrier, vehicle, and driver only when that route normally uses the same resources.
+5. Use **Scheduler Sort Order** to place common routes near the top of scheduler views.
+6. Use **Block for Scheduling** when the route should not appear as a planning resource.
+7. Drill down from **No. of Customers** when you want to review customers assigned to the route.
 
-If you need to explicitly specify the priority or the sequence in which customers (drops) are visited along a route, you can directly enter this information in the [Route Sequence](routesequence.md) field.
+## Create a route
 
-## Fields Description
+1. Search for **Routes**.
+2. Add a new row.
+3. Fill in **Code** and **Description**.
+4. If needed, set:
+   - **Default Carrier No.**
+   - **Default Vehicle No.**
+   - **Default Driver No.**
+5. Set **Scheduler Sort Order** if you use route-based scheduling.
+6. Enable **Block for Scheduling** only if the route should not appear in scheduler views.
 
-Primary Identification Fields:
+## Assign a route to master data
 
-- **Code** : Unique route code used to group customers geographically for TMS deliveries
-- **Description** : Descriptive label for the route to help identify its coverage in TMS
+Set **Default Route No.** on:
 
-Default Resource Assignment Fields:
+- **Customer**
+- **Vendor**
+- **Ship-to Address**
+- **Order Address**
+- **Location**
 
-- **Def. Carrier No.** : Default carrier assigned to shipments along this TMS route [about carrier](carrier.md)
-- **Def. Vehicle No.** : Vehicle typically handling deliveries for this route [about vehicle](vehicle.md)
-- **Def. Driver No.** : Driver commonly responsible for shipments on this route [about driver](driver.md)
+You can also set **Route Sequence** on the same records if the stop order usually follows a fixed sequence.
 
-Scheduling Control Fields:
+## How route defaults are used
 
-- **Scheduler Sort Order** : Numerical order used to sort resources in the TMS scheduler
-- **Block for Scheduling** : Whether this route is blocked from TMS scheduling activities
+Route values flow through the process like this:
 
-The table includes automatic validation logic in the "Def. Carrier No." field that cascades default vehicle and driver assignments from the carrier when a carrier is selected.
+1. The route is copied from master data to the source document.
+2. The route is copied from the source document to the **Transport Request**.
+3. If you set a route on a **Transport Order** and the carrier is still blank, the route's default carrier, vehicle, and driver can be applied.
+4. When you run **Get Transport Requests**, the route can be used as a filter.
 
-## Use case
+## Related
 
-A typical route usage scenario. A default route is set for the customer, and this route is inherited by the created document (for example, a sales order). The route code is then passed on to the generated Transport Request.
-The route code can then be used when selecting documents in the created Transport Order (using the Get Documents function) or when creating a Transport Order from a list of documents (e.g., sales orders) by filtering on the route field.
+- [Route Sequence](routesequence.md)
+- [Transport Request](transportrequest.md)
+- [Transport Order](transportorder.md)
+- [Visual Scheduler](visualscheduler.md)

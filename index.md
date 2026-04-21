@@ -1,64 +1,85 @@
 ---
-title: "Shipper TMS for Microsoft Dynamics 365 Business Central"
-description: "Shipper TMS for Microsoft Dynamics 365 Business Central: overview, prerequisites, installation, how transport requests and transport orders work, key tools, settings, reports."
+title: "Shipper TMS"
+description: "User documentation for Shipper TMS, a transportation management extension for Microsoft Dynamics 365 Business Central."
 ---
 
-# Shipper TMS for Microsoft Dynamics 365 Business Central 
+# Shipper TMS for Microsoft Dynamics 365 Business Central
 
-![](resources/index/index-logo.png)
+Shipper TMS helps manufacturers, distributors, and retailers plan and control their own deliveries without leaving Business Central.
 
-## Introduction
+Use it to:
 
-Run your own deliveries like a pro—without leaving Business Central. This TMS turns sales, purchase, and transfer orders into clear transport tasks, then helps you group orders into optimal truckloads, assign the right vehicle/driver/carrier in seconds, map and time every stop, and keep weight/volume/conditions under control. 
-A visual board shows which orders ride on which truck, in what sequence they unload, and whether capacity or time windows are at risk. Perfect for manufacturers, distributors, and retailers that ship with their own fleet or hired carriers and want planning, execution, and data in one place—fast, reliable, and built for shippers.
+- create transport demand from business documents,
+- build loads and trips,
+- assign carrier, vehicle, and driver,
+- control capacity,
+- print transport documents,
+- connect telematics providers.
 
-## Installation
+![Shipper TMS logo](resources/index/index-logo.png)
 
-Solution is available on [AppSource](https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.extensionsforcelimited1647259189111%7CAID.tms-shippers%7CPAPPID.83e2e47e-de69-46f5-8e03-347521beda86?tab=Overview). Installation process for Business Central On-line [See detailed instruction](installation.md)
+## Start here
 
-## How it works
+If you are setting up the solution for the first time, follow this order:
 
-Any document (sales, purchase, transfer orders) is passed to transportation by creating one or more Transport Requests.
+1. [Install Shipper TMS](installation.md)
+2. [Buy licenses](buylicenses.md)
+3. [Assign permission sets](assignpermissionsets.md)
+4. [Complete TMS Setup](setup.md)
+5. [Create a Transport Request from a Sales Order](usecase-salesorder-transportrequest.md)
+6. [Create your first Transport Order](usecase-create-first-transport-order.md)
 
-- **Transport Request** : is a transportation request based on internal company documents, such as purchase orders, sales orders, or transfer orders. It defines **WHAT** : needs to be transported, where the goods are to be picked up, and where they need to be delivered, while also specifying the shipper and the consignee [details](transportrequest.md).
+## Core concepts
 
-Based on the Transport Requests, the truck(s) for transportation are created — this is handled by the Transport Order.
+| Topic | What it explains |
+|---|---|
+| [Transport Request](transportrequest.md) | The planning document that captures what must be moved |
+| [Transport Order](transportorder.md) | The execution document for the actual trip |
+| [Products](product.md) | TMS product master data when your process uses it |
+| [Statuses and Status Profiles](statuses.md) | Custom execution-status setup for controlled workflows |
 
-- **Transport Order** : is a document that details **HOW** : the transportation will be carried out. It specifies the carrier, driver, and vehicle. The Transport Order represents the actual journey of the truck, outlining the stops where loading or unloading will take place [details](transportorder.md).
+## Planning tools
 
-The relationship between Transport Requests and Transport Orders is many-to-many.
-That is, one large order can be transported by multiple trucks (one Transport Request → many Transport Orders), and conversely, one truck can carry multiple orders (one Transport Order → many Transport Requests).
+| Tool | Best for |
+|---|---|
+| [Load Management](loadmanagement.md) | Request-first planning |
+| [Truck Load Management](truckloadmanagement.md) | Truck-first planning |
+| [Driver Load Management](driverloadmanagement.md) | Driver-first planning |
+| [Visual Scheduler](visualscheduler.md) | Timeline-based planning |
+| [Carrier Selection](carrierselection.md) | Carrier comparison on a Transport Order |
+
+## Setup and master data
+
+| Topic | What it covers |
+|---|---|
+| [TMS Setup](setup.md) | Core system settings |
+| [Carriers](carrier.md) | Transport service providers |
+| [Vehicles](vehicle.md) | Fleet and capacity-driving vehicle records |
+| [Drivers](driver.md) | Driver records and defaults |
+| [Routes](route.md) | Geographic route grouping |
+| [Route Sequence](routesequence.md) | Preferred stop order |
+| [Map Locations](maplocation.md) | Geocoded stop records |
+| [Map Location Types](maplocationtype.md) | Classification of map locations |
+| [Zones](zones.md) | Internal zones and telematics geofences |
+| [Time Slots and Delivery Schedules](timeslots.md) | Automatic date and time logic |
+| [Transportation Conditions](transportationconditions.md) | Separation of incompatible cargo |
+| [Logistic Unit Types](logisticunittype.md) | Capacity-related equipment profiles |
+| [Map Providers](mapproviders.md) | Google Maps and Azure Maps setup |
+| [Google Maps Integration](googlemapintegration.md) | Google-specific key setup |
+| [Azure Maps Integration](azuremapsintegration.md) | Azure-specific account and key setup |
+
+## Execution and integration
+
+| Topic | What it covers |
+|---|---|
+| [Reports and Documents](reports.md) | Transport printouts and forms |
+| [Telematics](telematics.md) | Geotab, Samsara, and Webfleet integration |
 
 ## Use cases
 
-- Create Transport Request from Sales Order (Shipper) [details](usecase-salesorder-transportrequest.md).
-
-
-## Tools
-- **Load Management** Load Management is a tool designed for planning and scheduling cargo delivery. It allows users to allocate transportation requests to specific vehicles and routes, ensuring efficient delivery operations [details](shipperloadmanagement.md).
-
+- [Use case: Create a Transport Request from a Sales Order](usecase-salesorder-transportrequest.md)
+- [Use case: Create your first Transport Order](usecase-create-first-transport-order.md)
 
 ## FAQ
-[FAQ](faq.md) about TMS.
 
-## Settings
-
-### General
-
-- **Transportation Conditions** Settings for managing different transportation conditions [details](transportationconditions.md)
-- **Routes**. Routes are used for the logical grouping of customer addresses by geographical attribute to facilitate the assignment of a set of customer orders to a specific truck or carrier [details](route.md).
-- **Route Sequence** - [details](routesequence.md)
-- **Time Slots** -  [details](timeslots.md)
-- **Compartments** - vehicle compartments control
-- **Logistic Units Types** : is an item of any composition intended for transportation. Logistic units take many forms: a single box containing a limited number of products, a pallet with multiple products, or an intermodal container containing multiple pallets [details](logisticunittype.md).
-- **Map Locations**. Map Locations is a directory of map-based locations utilized for precise pinpointing using geolocation services. Map Locations are employed for route mapping, distance calculations, and estimating transportation durations. Map Locations can be linked to the addresses of clients and suppliers. Useful if we have our own fleet [details](maplocation.md).
-- **Map Location Types**. A directory of location types on the map, such as Client, Vendor, Port, Gateway, Hub, etc [details](maplocationtype.md).
-- **Map Provider services** : integration. Configuration of Google Maps and TMS integration. It is needed for distance and duration estimation  [details](googlemapintegration.md)
-- **Carriers**. A directory of third-party carriers that provide transportation services to our company [details](carrier.md).
-- **Vehicles**. A directory of transportation vehicles, either owned by our company or by third-party carriers [details](vehicle.md).
-- **Drivers**. Configuration of the directory for drivers, whether from our company or external [details](driver.md).
-- **Setup** : General settings of the TMS  [details](setup.md).
-
-## Printing Forms, Documents, and Reports
-
-[Available printing forms](reports.md)
+- [Frequently asked questions](faq.md)

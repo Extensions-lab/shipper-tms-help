@@ -1,32 +1,49 @@
 ---
-title: "Shipper TMS Installation"
-description: "Install Shipper TMS via AppSource or directly inside Business Central: search for Shipper TMS, open the app card, and install from AppSource."
+title: "Installation"
+description: "Install Shipper TMS from AppSource into Microsoft Dynamics 365 Business Central."
 ---
 
 # Installation
 
-## Prerequisites
+Use this guide to install **Shipper TMS** in your Business Central environment.
 
-- Microsoft Dynamics 365 Business Central [product page](https://www.microsoft.com/en-us/dynamics-365/products/business-central). TMS is an add-on extension for Business Central that builds on its core modules—such as Customers, Sales, Vendors, Purchasing, and Warehousing—using them as a solid foundation while adding only the features necessary for transportation management.
+![Search for Shipper TMS in Extension Marketplace](resources/installation/pics/installation1.png)
 
-## Steps
+## Before you start
 
-There are several ways to install Shipper TMS. The first is from the AppSource page, and the second is directly within Business Central.
+- You need a Business Central environment where apps can be installed.
+- You need admin rights in Business Central.
+- Your users will also need Shipper TMS licenses and permission sets after installation.
 
-The easiest way to install TMS is directly from within Business Central. Just search for the AppSource page.
+## Install the app
 
-![Setup Image](resources/installation/pics/installation1.png)
+1. Open Business Central.
+2. Use **Tell Me** and search for **Extension Marketplace** or **AppSource**.
+3. Search for **Shipper TMS**.
+4. Open the app card.
+5. Choose **Install** or **Get it now**, depending on the AppSource flow shown in your tenant.
+6. Follow the on-screen prompts until installation is complete.
 
-Search Shipper TMS
+![Open the Shipper TMS app card in AppSource](resources/installation/pics/installation2.png)
 
-![Setup Image](resources/installation/pics/installation2.png)
+## What to do next
 
-Open TMS card page and click "Install from AppSource"
+After installation, complete these tasks in order:
 
+1. [Buy licenses](buylicenses.md)
+2. [Assign permission sets](assignpermissionsets.md)
+3. [Complete TMS Setup](setup.md)
 
-## After Installation
+## Verify the installation
 
-After installing the TMS extension, several steps must be completed to make TMS available to users.
+1. Use **Tell Me**.
+2. Search for **Shipper TMS Setup**.
+3. Open the page.
 
-- Purchase and assign licenses. [See detailed instruction](buylicenses.md)
-- Assign permission set to users [See detailed instruction](assignpermissionsets.md)
+If the page opens, the extension is installed correctly.
+
+## Related
+
+- [Buy licenses](buylicenses.md)
+- [Assign permission sets](assignpermissionsets.md)
+- [TMS Setup](setup.md)

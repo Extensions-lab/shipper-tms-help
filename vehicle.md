@@ -1,103 +1,81 @@
 ---
-title: "Vehicle Master Data in TMS"
-description: "Vehicle master data in TMS covering identification, capacity via logistic unit type, carrier/driver links, insurance, default map location, scheduling, and audit info."
+title: "Vehicles"
+description: "Maintain vehicles in Shipper TMS for capacity checks, depot defaults, driver defaults, scheduling, and telematics."
 ---
 
-# Vehicle
+# Vehicles
 
-The Vehicle entity is a comprehensive master data table in the Transportation Management System (TMS) that manages complete vehicle profiles for transportation operations.
-It contains extensive vehicle information including:
+Use **Vehicles** to define the trucks, trailers, vans, and other equipment used in transportation planning.
 
-- basic identification (vehicle number, name, type, model, manufacturer, year, color)
-- technical specifications (VIN number, registration details
-- engine specifications with type, number, power, and model)
-- capacity and logistics data (unit type with internal dimensions and volume measurements)
-- carrier and driver associations (linked carrier and default driver assignments)
-- insurance coverage (main policy, CASCO, and VMTPLI policy numbers)
-- fixed asset integration for financial tracking
-- operational settings (scheduler preferences and blocking status)
+The vehicle record affects:
 
-The entity supports multiple vehicle types (car, truck, trailer, container) and engine types (diesel, petrol, electric, unknown) through extensible enums, includes photo management capabilities, and features comprehensive card and list pages for vehicle management.
+- capacity control,
+- default driver assignment,
+- default depot handling,
+- scheduling visibility,
+- telematics mapping.
 
-The Vehicle entity serves as the central repository for fleet management within the TMS, enabling effective vehicle assignment, capacity planning, maintenance scheduling, compliance tracking, and operational management while supporting integration with financial systems through fixed asset linkage and providing detailed technical specifications for transportation planning and execution.
+## How to work in this page
 
-## Fields Description
+Use the vehicle card to keep planning capacity and resource assignment accurate.
 
-Basic Identification:
+1. Fill **General** with vehicle name, unit type, model, and depot.
+2. In **Carrier**, select the carrier that owns or operates the vehicle.
+3. In **Defaults**, set **Default Driver No.** if the same driver usually uses this vehicle.
+4. Maintain registration and VIN values if you use compliance reporting or telematics matching.
+5. Use **Fixed Asset** only if the vehicle should be linked to a Business Central fixed asset.
+6. In **Scheduler**, set **Scheduler Sort Order** or **Block for Scheduling**.
+7. If telematics is used, choose **Telematics Mapping** to link the vehicle to the external provider record.
+8. Use **Show Location**, **Position History**, and **Telematics Log** only after the vehicle mapping exists.
 
-- **No.** : Unique identifier for this vehicle, assigned from a number series or entered manually
-- **Name** : Vehicle's name for easy recognition within TMS
-- **Vehicle Type** : Category of this vehicle (car, truck, trailer, container) for classification within TMS
+## Create a vehicle
 
-Unit Type and Capacity:
+1. Search for **Vehicles**.
+2. Choose **New**.
+3. Fill in **No.**, **Name**, and **Carrier No.**.
+4. Set **Unit Type Code**.
+5. If needed, set **Default Driver No.**.
+6. If the vehicle starts from a depot, set **Depot**.
+7. If the vehicle should not appear in planning tools, enable **Block for Scheduling**.
 
-- **Unit Type Code** : Logistic unit type, outlining capacity and cargo parameters for this vehicle [details](logisticunittype.md)
-- **Unit Type Description** : Describes the logistic unit type, clarifying the capacity details (auto-populated)
-- **Unit Type - Linear UoM** : Measurement unit for the vehicle's linear dimensions (e.g., length) (auto-populated)
-- **Unit Type - Internal Length** : Available internal length for cargo within this vehicle (auto-populated)
-- **Unit Type - Internal Width** : Available internal width for cargo in this vehicle (auto-populated)
-- **Unit Type - Internal Height** : Available internal height for cargo in this vehicle (auto-populated)
-- **Unit Type - Internal Volume** : Total internal volume for cargo in this vehicle (auto-populated)
-- **Unit Type - Volume** : Total volume capacity of this vehicle based on its unit type (auto-populated)
-- **Unit Type - Volume UoM** : Unit of measure for this vehicle's volume capacity (auto-populated)
+## Why Unit Type matters
 
-Carrier and Driver Association:
+The most important field on the vehicle card is **Unit Type Code**.
 
-- **Carrier No.** : Carrier who owns or operates this vehicle (mandatory field) [details](carrier.md)
-- **Carrier Name** : Name of the carrier that operates or owns this vehicle (auto-populated)
-- **Default Driver No.** : Primary driver who is normally assigned to operate this vehicle [details](driver.md)
-- **Default Driver Name** : Name of the primary driver assigned to operate this vehicle (auto-populated)
+That value defines the equipment profile used for:
 
-Location:
+- weight capacity,
+- volume capacity,
+- footage,
+- logistic unit capacity,
+- compartment setup when applicable.
 
-- **Def. Map Location** : Default map location for the vehicle's usual position, such as a parking area or depot. This location will be automatically added to the Transport Order. This can be useful when the route is planned not from the loading point (warehouse), but from the truck's parking location, allowing for more accurate route and delivery time planning [details](maplocation.md).
+Without the right unit type, capacity checks and truck-aware planning are much less reliable.
 
-Vehicle Identification:
+## Fields that matter most
 
-- **VIN No.** : Vehicle identification number (VIN), a unique manufacturing code for this vehicle
-- **Registration No.** : Official registration plate or number assigned to this vehicle
-- **Registration Date** : Date on which this vehicle was officially registered
+| Field | Why it matters |
+|---|---|
+| **Carrier No.** | Ties the vehicle to the carrier that owns or operates it |
+| **Unit Type Code** | Drives capacity and equipment behavior |
+| **Default Driver No.** | Suggests a driver automatically |
+| **Depot** | Can be used as the vehicle's default base location |
+| **Registration No.** / **VIN No.** | Useful for telematics matching and compliance |
+| **Block for Scheduling** | Hides the vehicle from scheduler-based planning |
 
-Engine Specifications:
+## What happens on a Transport Order
 
-- **Engine No.** : Unique engine serial number for this vehicle
-- **Engine Power** : Vehicle's engine output, typically measured in horsepower or kilowatts
-- **Engine Model** : Model of the vehicle's engine
-- **Engine Type** : Engine category (diesel, gasoline, electric) of this vehicle
+When you assign a vehicle on a Transport Order:
 
-Vehicle Details:
+- the vehicle name is filled,
+- the vehicle type information can flow into the order,
+- the default driver can be suggested,
+- depot-related route behavior can be applied when configured.
 
-- **Model** : Vehicle's model, used for reference in TMS
-- **Manufacturer** : Company or brand that produced this vehicle
-- **Year** : Manufacturing or model year of this vehicle
-- **Color** : Primary color of this vehicle
+## Related
 
-Additional Information:
-
-- **Comment** : Extra notes or observations about this vehicle. This comment is not copied to any TMS documents.
-
-Insurance Coverage:
-
-- **CASCO Insurance Policy No.** : CASCO policy, offering voluntary coverage for damages or theft of this vehicle
-- **Insurance Policy No.** : Main insurance policy number covering this vehicle
-- **VMTPLI No.** : VMTPLI policy, covering voluntary third-party liability in case of accidents
-
-Fixed Asset Integration:
-
-- **Fixed Asset No.** : Links this vehicle to a fixed asset record for financial or depreciation tracking
-- **Fixed Asset Decription** : Describes the fixed asset record linked to this vehicle (auto-populated)
-
-Operational Settings:
-
-- **Scheduler Sort Order** : Position of this vehicle in scheduling, with lower values appearing first
-- **Block for Scheduling** : Indicates if this vehicle is disallowed from scheduling for maintenance or unavailability
-
-Visual and Media:
-
-- **Picture** : Image or photo associated with this vehicle
-
-Audit Trail:
-
-- **Last Modified Date Time** : When this vehicle record was last updated
-- **Last Modified Date Time (UTC)** : Last updated date/time in Coordinated Universal Time
-- **Last Modified UserID** : User who last made changes to this vehicle record
+- [Truck Load Management](truckloadmanagement.md)
+- [Drivers](driver.md)
+- [Carriers](carrier.md)
+- [Logistic Unit Types](logisticunittype.md)
+- [Transport Order](transportorder.md)

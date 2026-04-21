@@ -1,132 +1,93 @@
 ---
-title: "Map Location in TMS"
-description: "Map Location master data with address, coordinates, source links (customers, vendors, locations, addresses), airport/GLN/time zone, map settings, geocoding, handling time, distance matrix."
+title: "Map Locations"
+description: "Create and maintain Map Locations for geocoding, route display, distance calculations, zones, and planning in Shipper TMS."
 ---
 
-# MAP Location
+# Map Locations
 
-The Map Location entity is a comprehensive geospatial master data table in the Transportation Management System (TMS) that manages precise geographical coordinates and address information for transportation planning and execution.
-It contains extensive location data including:
+Use **Map Locations** to store the real geographic point used by transportation planning.
 
-- basic identification (location number, description, type classification)
-- complete address information (street address, city, postal code, country/region with automatic validation and lookup capabilities)
-- geographical coordinates (latitude, longitude, altitude with high precision for GPS calculations)
-- Business Central integration (source type linking to customers, vendors, locations, contacts, ship-to addresses, and order addresses with automatic data population)
-- specialized location features (IATA airport codes with automatic coordinate lookup, Global Location Numbers for EDI integration, time zone specifications)
-- map display settings (zoom level, view type, Google Place ID for enhanced mapping)
-- operational parameters (handling time for loading/unloading, position validation status)
-- geocoding capabilities (API call results, position verification, wizard creation tracking)
+A Map Location can represent:
 
-The entity supports flexible integration with existing Business Central entities through an extensible source type enum, includes comprehensive address validation and postal code lookup functionality, features Google Maps integration with geocoding and distance matrix capabilities, and provides both card and list pages with map visualization and geocoding actions.
+- a customer delivery point,
+- a vendor pickup point,
+- a warehouse,
+- a depot,
+- a port, hub, or airport,
+- or any other stop used in transport.
 
-The Map Location entity serves as the central geospatial repository for transportation operations within the TMS, enabling precise route planning, distance calculations, delivery scheduling, and location-based logistics management while supporting seamless integration with existing Business Central master data and providing advanced mapping capabilities for enhanced transportation visibility and efficiency.
+![Create a default Map Location from a source record](resources/maplocation/pics/maplocationNew.png)
 
-You can create any number of map points (MAP Locations) for any Business Central entity.
+## How to work in this page
 
-## Fields Description
+Use the Map Location card to keep address, coordinates, and zone data correct.
 
-Basic Identification:
+1. Fill **Description** and **Type Code** so planners understand what the point represents.
+2. If the location is linked to a customer, vendor, ship-to address, order address, location, or contact, fill the **Link to system** fields.
+3. Review the copied address and contact information.
+4. Choose **Geocode address** when the location has an address but no coordinates.
+5. Choose **Show on map** to review the map point.
+6. Choose **Assign Zone** when zones are configured and the point should be linked to a zone.
+7. Choose **Distance Matrix** when a manual distance or duration is needed for this point.
+8. If the map point is not exact, open the map and use the exact-place actions to move the marker.
 
-- **No.** : Unique identifier for this map location in TMS. The number series for MAP Locations is configured in the TMS Setup [details](setup.md).
-- **Description** : Brief description or label for this map location in TMS
-- **Type Code** : Location category, such as an airport, port, or warehouse [details](maplocationtype.md)
-Address Information:
-- **Address** : Street address for this map location (e.g., street and house number)
-- **Address 2** : Additional address details, such as suite or building information
-- **Country/Region Code** : Country or region associated with this map location
-- **City** : City in which this map location is found
-- **Post Code** : Postal code used for routing or shipping references
-- **County** : County, district, or province for this address
+## Create a Map Location manually
 
-Specialized Identifiers:
+1. Search for **Map Locations**.
+2. Choose **New**.
+3. Fill in:
+   - **Description**
+   - **Type Code**
+   - address fields
+4. Choose **Geocode address**.
+5. Review the coordinates.
+6. If needed, choose **Assign Zone**.
 
-- **GLN** : Global Location Number used for EDI or supply chain documents (with validation)
-- **Contact** : Contact person's name for this location in TMS
-- **Phone No.** : Primary telephone number for this map location
+## Create a Map Location from an entity
 
-Time and Location Services:
+You can also create a Map Location from:
 
-- **Time Zone** : Time zone to use for scheduling and timeline accuracy at this location
-- **Airport Code** : IATA airport code if this location is an airport (with automatic coordinate lookup)
+- **Customer**
+- **Ship-to Address**
+- **Vendor**
+- **Order Address**
+- **Location**
+- **Contact**
 
-Geographical Coordinates:
+When you create the location from the source record, Shipper TMS fills the source link and copies the address values automatically.
 
-- **Latitude** : GPS latitude coordinate for map-based calculations (10 decimal places)
-- **Longitude** : GPS longitude coordinate for routing or distance calculations (10 decimal places)
-- **Altitude** : Elevation above sea level for this location (10 decimal places)
+## Fine-tune the coordinates
 
-Map Display Settings:
+If the geocoded point is close but not exact:
 
-- **Map Zoom Level** : Default zoom level for map displays at this location
-- **Map View Type** : Default map view type (e.g., satellite or terrain)
-- **Position Is Set** : Whether the location's coordinates have been set by a map service
-- **Last API Call Result** : Outcome of the last geocoding or map API request for this location
-- **Google Place ID** : Unique identifier assigned by Google for this place
+1. Open the map viewer for the location.
+2. Choose **Set the Exact Place**.
+3. Move the marker to the correct point.
+4. Choose **Save Exact Place**.
+5. If needed, use **Cancel Exact Place** instead of saving.
 
-Creation Tracking:
+## Use zones with a Map Location
 
-- **Created by Wizard** : Whether this location was automatically created by a wizard
+If your company uses [Zones](zones.md):
 
-Business Central Integration:
+1. Make sure the Map Location has coordinates.
+2. Choose **Assign Zone**.
+3. Review the proposed zone and save it.
 
-- **Source Type** : Type of linked entity (undefined, customer, ship-to address, vendor, order address, location, contact)
-- **Source No.** : Record identifier of the entity linked to this map location (with automatic data population)
-- **Source Code** : Secondary code for addresses (ship-to or order address) linked to this location
-- **Source Name** : Name or label of the linked source entity (auto-populated)
+This is useful when the stop should carry a zone or geofence reference instead of only raw coordinates.
 
-Operational Parameters:
+## When to use Distance Matrix
 
-- **Handling Time** : Additional time needed at this location for loading, unloading, or other tasks
+Use **Distance Matrix** when you need to store a manual distance or duration between two points, for example:
 
-System Configuration:
+- port-to-port moves,
+- locations where a provider route is not usable,
+- company-specific planning exceptions.
 
-- **No. Series** : Number series code used to assign new location numbers automatically
+## Related
 
-Audit Trail:
-
-- **Last Modified Date Time** : Local date-time when this record was last changed
-- **Last Modified Date Time (UTC)** : UTC date-time when this record was last changed
-- **Last Modified UserID** : User who last modified this record in TMS
-
-## Notes
-
-MAP Locations are usually points on the map that correspond to customers, vendors, warehouses, or their office addresses; in such cases, the MAP Location is linked to the corresponding address by filling in fields like Source Type, Source No., etc. However, there are situations where a MAP Location is not linked to any specific entity. For example, it could represent ports, hubs, airports, etc., which may be part of a route but not belong to any customer, vendor, or warehouse. In such cases, it's recommended to manually assign their codes during creation.
-
-## How to create Map Location
-
-### MAP Location Card or List pages
-
-Directly in the MAP Location Card or List Pages.
-
-- Press "+" / "New" button.
-- A new number is assigned to the map location.
-- Select Map Location Type code.
-- Complete description and address (country, city, postcode) fields.
-- To define position on map click "Geocode address on the map" to geocode map location address and use "Map API Provider" to set up precise position on map.
-- To check position click "Show on MAP"
-
-### From Entity
-
-You can create a MAP Location from the Customer, Ship-to Address, Vendor, Order Address, Location, or Contact card pages.
-In this case, the system will automatically link the MAP Location to the main entity, fill in the Source Type, Source No., etc., and set the created MAP Location as the default.
-To do this, go to the Transportation Management System section in the card and fill in the Default MAP Location field, then use Drilldown and click New.
-
-![Setup Image](resources/maplocation/pics/maplocationNew.png)
-
-If this field is filled in, the MAP Location value will be automatically added to related documents.
-
-## Change geoposition for existing MAP Location
-
-To adjust the exact location on the map, use the "Show On Map" menu option. In the opened map, you will see the current position and the previously saved zoom level. Use zooming to visually find the exact spot. Then click "Set the Exact Place", place the marker on the map, and press Save (the button on the map itself) to store the results in the MAP Location card.
-
-![Setup Image](resources/maplocation/pics/maplocationChangePosition.png)
-
-### Distance Matrix
-
-By default, TMS uses the MAP Provider as the source for distance and transportation duration data. However, this is not always possible—for example, Google does not provide distance data between ports, since there are no roads connecting them. To enable transportation planning in such cases, TMS allows you to define distances between any two MAP Locations.
-
-This is done using the Distance Matrix in the MAP Location card. By default, the system filters the list by the "From Map Location Code", which is set to the MAP Location code of the current card. For proper configuration, you need to fill in the "To Map Location Code", along with the Distance and Duration fields.
-
-![Setup Image](resources/maplocation/pics/maplocationDistanceMatrix.png)
-
-
+- [Map Location Types](maplocationtype.md)
+- [Zones](zones.md)
+- [Map Providers](mapproviders.md)
+- [Transport Request](transportrequest.md)
+- [Transport Order](transportorder.md)

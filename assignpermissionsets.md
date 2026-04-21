@@ -1,28 +1,51 @@
 ---
-title: "Assign Permission Sets to Users"
-description: "Assign TMS permissions: add TMA/TMAC USER sets for operators, TMA/TMAC ADMIN for admins, and TMA API for external access (API/Power BI)."
+title: "Assign Permission Sets"
+description: "Assign the correct Shipper TMS permission sets to users, administrators, and integration accounts."
 ---
 
-# Assign Permission Sets to Users
+# Assign permission sets
 
-## Assign user permissions
+After the app is installed and licenses are assigned, give users access to Shipper TMS by assigning the correct permission sets in Business Central.
 
-Users can be divided into two groups: those who work with TMS, perform operations, and handle documents, and administrators who can configure TMS and change settings.
+![Add Shipper TMS permission sets on the user card](screenshot-permissions-user-permission-sets.png)
 
-The permission sets that need to be added to the User:
+## Which permission set to use
 
-- TMA USER Permissions Set
-- TMAC USER Permissions Set
+| Use this when | Permission set |
+|---|---|
+| Daily planning and execution | **Shipper TMS - User** |
+| Setup and administration | **Shipper TMS - Administrator** |
+| API integration | **Shipper TMS - API** |
+| Telematics API access | **Shipper TMS - Tel. API** |
+| Telematics admin API access | **Shipper TMS - Tel. Admin API** |
 
-To the Administrator:
+## Recommended assignment pattern
 
-- TMA ADMIN Permissions Set
-- TMAC ADMIN Permissions Set
+- Planners and dispatchers: **Shipper TMS - User**
+- System administrators: **Shipper TMS - User** and **Shipper TMS - Administrator**
+- Integration/service accounts: **Shipper TMS - API**
+- Telematics-specific integrations: add the telematics API permission sets as needed
 
-For external access via API or Power BI:
+## Assign a permission set
 
-- TMA API Permissions Set
+1. Open **Users** in Business Central.
+2. Open the user card.
+3. In **User Permission Sets**, add a new line.
+4. In **Permission Set**, select the required Shipper TMS permission set.
+5. Repeat for any additional roles the user needs.
 
-![Setup Image](resources/assignpermissionset/pics/assignpermission1.png)
+## Verify
 
-![Setup Image](resources/assignpermissionset/pics/assignpermission2.png)
+Use these quick checks:
+
+- Planner: search for **Transport Requests**
+- Administrator: search for **Shipper TMS Setup**
+- API account: test the relevant API endpoint
+
+If the page or API is accessible, the permission set is assigned correctly.
+
+## Related
+
+- [Installation](installation.md)
+- [Buy licenses](buylicenses.md)
+- [TMS Setup](setup.md)

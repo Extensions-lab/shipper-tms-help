@@ -1,34 +1,69 @@
 ---
-title: "Google Maps Integration in TMS"
-description: "Google Maps integration in TMS: enter API key and enable Maps JavaScript, Directions, Geocoding, Distance Matrix services for geocoding, route planning, distance and duration calculations."
+title: "Google Maps Integration"
+description: "Create a Google Maps API key and enter it in Shipper TMS for geocoding, route display, and distance calculation."
 ---
 
-# Google MAPs Integration
+# Google Maps integration
 
-TMS utilizes the Google Maps service for access to mapping services for geocoding addresses, route planning, and determining distances and transport durations.
+Use this guide when your company wants Shipper TMS to use **Google Maps** for:
 
-Companies using TMS must have their own Google account with activated Google Maps services, which will be used by TMS.
+- address geocoding,
+- route display,
+- distance calculation,
+- travel-time estimation.
 
-Google Maps is a paid service.
+![Google Maps settings in Shipper TMS setup flow](resources/googlemap/pics/googlemap1.png)
 
-To enable Google Maps in TMS, it is necessary to enter the Google API Key in the Assisted Setup window of the TMS module.
+## How to work with this setup
 
-![Setup Image](resources/googlemap/pics/googlemap1.png)
+Use this page when Google Maps is the selected provider.
 
-## How to receive Google MAP API Key
+1. Prepare the Google Cloud project.
+2. Enable the required APIs.
+3. Create or copy the API key.
+4. Open **Shipper TMS Setup**.
+5. Set **Map Provider** to **Google Maps**.
+6. Enter **Google Api Key**.
+7. Test geocoding from a Map Location.
+8. Test route display or distance calculation from a Transport Request or Transport Order.
 
-Follow the link from the Assisted Setup window. Click on blue “Go to Credentials page” button.
+## Before you start
 
-![Setup Image](resources/googlemap/pics/googlemap2.png)
+- You need a Google Cloud project.
+- Billing must be enabled for that project.
+- The Google Cloud interface may change over time, but the required API concepts stay the same.
 
-On the page that opens, click "Create Credentials" and then "API Key."
+## Required Google APIs
 
-![Setup Image](resources/googlemap/pics/googlemap3.png)
+Enable these APIs for the project you use with Shipper TMS:
 
-Copy API Key field value to past in field Google API of the TMS Assisted Setup page.
+- **Maps JavaScript API**
+- **Directions API**
+- **Geocoding API**
+- **Distance Matrix API**
 
-![Setup Image](resources/googlemap/pics/googlemap4.png)
+## Create the API key
 
-Enable 4 services for API key: Maps JavaScript API, Directions API, Geocoding API, Distance Matrix API
+1. Open the **Google Cloud Console**.
+2. Go to **APIs & Services** > **Credentials**.
+3. Choose **Create credentials** > **API key**.
+4. Copy the generated key.
+5. Restrict the key according to your company's security policy.
 
-![Setup Image](resources/googlemap/pics/googlemap5.png)
+## Enter the key in Shipper TMS
+
+1. Open **Shipper TMS Setup**.
+2. In **Map Provider Settings**, set **Map Provider** to **Google Maps**.
+3. Paste the key into **Google Api Key**.
+
+## Verify the connection
+
+1. Open a [Map Location](maplocation.md) with a valid address.
+2. Choose **Geocode address**.
+3. If coordinates are filled successfully, open the route or map view to confirm the provider is working.
+
+## Related
+
+- [Map Providers](mapproviders.md)
+- [Map Locations](maplocation.md)
+- [TMS Setup](setup.md)

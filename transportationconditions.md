@@ -1,40 +1,75 @@
 ---
-title: "Transportation Conditions Setup and Planning"
-description: "Configure transportation condition attributes in TMS so mixed-condition items split into separate transport requests and enable truck planning by compartmented vehicles."
+title: "Transportation Conditions"
+description: "Use transportation conditions to keep incompatible cargo in separate Transport Requests, loads, and compartments."
 ---
 
-# Transportation Conditions
+# Transportation conditions
 
-The TMS allows you to consider different transportation conditions and manage truck planning accordingly.
+Use **Transportation Conditions** when your company must keep different cargo types separate, for example:
 
-For example, a sales order may contain frozen products and regular goods. In this case, transportation must either be split into two separate deliveries using different trucks, or planned with a truck that has two compartments capable of handling this type of shipment.
+- Frozen
+- Refrigerated
+- Ambient
+- Hazardous
 
-After the transportation conditions control mechanism is enabled, the system will always create separate Transport Requests for goods with different transportation conditions.
+Shipper TMS reads the configured item attribute and uses it to separate planning automatically.
 
-That is, a single order containing items with different conditions will be converted into multiple Transport Requests.
+## How to work with this setup
 
-## Setup
+Use this feature as a data rule, not as a daily planning page.
 
-To enable the transportation conditions control mechanism:
+1. Decide which item attribute represents transport condition.
+2. Create the allowed attribute values, such as Frozen, Refrigerated, Ambient, or Hazardous.
+3. Assign the values to items.
+4. In **Shipper TMS Setup**, select the attribute in **Transport Condition**.
+5. Optionally fill the four shortcut condition names if planners need separate weight and volume columns.
+6. Create a test source document with items from different conditions.
+7. Create Transport Requests and verify that the system separates the lines correctly.
+8. Test assigning the requests to the same Transport Order or compartment to confirm that compatibility rules behave as expected.
 
-- Create a product attribute called “Transportation Conditions.”
-- The attribute values should reflect the conditions used by your company.
-- Assign this attribute to all products.
-- Add this attribute in TMS Setup.
-- If you need to control weight, volume, or footage separately by transportation condition, fill in the corresponding fields in TMS Setup.
+## What happens when it is configured
 
-## Create a product attribute called “Transportation Conditions"
+When a source document contains items with different transportation-condition values:
 
-![New Attribute](resources/transportconditions/tr-conditions-setup2.png)
+- Shipper TMS groups them separately,
+- separate **Transport Requests** are created,
+- planners can assign them to different loads or compartments,
+- compatibility checks prevent mixing incompatible cargo.
 
-## The attribute values should reflect the conditions used by your company.
+## Set it up
 
-![Attribute Values](resources/transportconditions/tr-conditions-setup3.png)
+1. In standard Business Central, create the required **Item Attribute** and values.
+2. Assign those values to the relevant items.
+3. Open **Shipper TMS Setup**.
+4. In **Transport Condition**, select the attribute.
+5. If you want condition-specific analysis columns, fill **Transport Condition 1..4 Name**.
 
-## Add this attribute in TMS Setup.
+## How it affects planning
 
-Select transportation condition attribute in "Item Attribute ID"
+Transportation conditions are used in:
 
-![Settings](resources/transportconditions/tr-conditions-setup1.png)
+- Transport Request creation,
+- Transport Order compatibility checks,
+- Load Management,
+- Truck Load Management,
+- compartment-based allocation.
 
-If you want to see the vehicle load broken down by transportation conditions (for example, if the vehicle has multiple compartments for different conditions), select the corresponding condition values (View Weight, Volume By fields group).
+## Compartments
+
+If a vehicle uses compartment configuration, the system can match cargo to the compartment condition and help keep the load separated correctly.
+
+## Verify
+
+Create a source document with items that have different transportation-condition values.
+
+Expected result:
+
+- Shipper TMS creates separate requests,
+- or blocks incompatible assignment to the same load when conditions do not match.
+
+## Related
+
+- [TMS Setup](setup.md)
+- [Transport Request](transportrequest.md)
+- [Transport Order](transportorder.md)
+- [Truck Load Management](truckloadmanagement.md)

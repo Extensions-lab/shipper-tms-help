@@ -1,65 +1,100 @@
 ---
-title: "TMS Setup Guide"
-description: "TMS Setup overview: status control, transport condition attribute, capacity checks (weight, volume, logistic units), auto-create transport requests, cost allocation defaults."
+title: "TMS Setup"
+description: "Complete the core Shipper TMS setup for numbering, planning controls, map services, carrier selection, and execution."
 ---
 
-# Setup
+# TMS Setup
 
-On the TMS Setup page, the core settings for the TMS module are established, such as default types for created documents, document accounting features, numbering, etc.
+Use **Shipper TMS Setup** to define the default behavior of the solution.
 
-## Where to find
+This page controls:
 
-TMS Setup is accessible via search
+- number series,
+- planning controls,
+- default transport settings,
+- carrier selection,
+- map providers,
+- proof of delivery,
+- telematics access.
 
-![Setup Image](resources/setup/pics/setup1.png)
+![Main Shipper TMS Setup page](resources/setup/pics/setup3.png)
 
-or through Manual Setup in Advanced settings
+## How to open the page
 
-![Setup Image](resources/setup/pics/setup2.png)
+Use one of these options:
 
-## Settings Description
+- search for **Shipper TMS Setup**,
+- open it from **Manual Setup**,
+- open the assisted setup flow if your company uses guided setup.
 
-![Setup Image](resources/setup/pics/setup3.png)
+## Minimum setup checklist
 
-### General
+Complete these items before planners start working in TMS:
 
-- **Status Control**. Enabling/disabling the action control system for statuses across all profiles. Gloval control.
-- **Transport Condition Attribute**. Transport Condition Attribute defines a product attribute that determines transportation conditions. For example, you can create a product attribute called “Transport Conditions” to be assigned to each item—or selected items—that require special handling (such as frozen or chilled goods), which cannot be transported together with regular items. Specifying transport conditions will result in order splitting and grouping based on these conditions.
-You first need to create an Item Attribute and assign values to it.
-For example:
-Item Attribute = Transportation Conditions, Type = Option
-Values = Frozen, Refrigerated, CRT, Ambient, Warm, Ventilation
+1. Fill in **Transport Request Nos.**
+2. Fill in **Transport Order Nos.**
+3. Fill in **MAP Location Nos.**
+4. If you print CMRs, fill in **CMR Nos.**
+5. Set **Default Mode of Transport**
+6. Turn on the capacity controls you need:
+   - **Weight**
+   - **Volume**
+   - **Footage**
+   - **Logistic Units**
+7. Set **Truck Load Time Slot Profile** if you use Truck Load Management or Driver Load Management
+8. Select the **Map Provider** and enter the required key
 
-### Control
+## Settings most teams use
 
-This settings block defines the parameters controlled by the TMS. You can select the specific parameters that will be used as the basis for transportation planning.
+| Area | What to review |
+|---|---|
+| **Control** | Which capacity dimensions should be enforced |
+| **Transport Requests** | Auto-create settings and estimated logistic units |
+| **Transport Orders** | Default transport mode, default charge behavior, driver requirement before release |
+| **Transport Condition** | Item attribute used to separate incompatible cargo |
+| **Carrier Selection** | Enable carrier comparison and optional auto charge creation |
+| **Proof of Delivery** | Enable PoD and choose **Transport Execution Status Profile** |
+| **Map Provider Settings** | Select Google Maps or Azure Maps and store credentials |
 
-- **Weight**. Specifies whether the system checks item weight capacity when placing or assigning orders.
-- **Volume**. Specifies whether the system checks item volume capacity when placing or assigning orders.
-- **Footage**. Specifies whether the system checks footage constraints before finalizing transport or freight orders.
-- **Logistic Units**. Specifies whether the system checks the number of logistic units when assigning or finalizing an order.
+## How to work in this page
 
-Parameters that are not selected will not be displayed on pages or included in totals calculations.
+Use this page as an admin checklist, not as a daily dispatcher page.
 
-### Transport Requests and Transport Order
+1. Start with **Number Series** because Transport Requests, Transport Orders, Map Locations, and CMR documents need numbering before users work.
+2. Go to **Control** and turn on only the dimensions your company really checks.
+3. Go to **Transport Requests** and decide whether requests should be created automatically when sales, purchase, or transfer documents are released.
+4. Go to **Transport Orders** and fill defaults such as **Default Mode of Transport**, **Truck Load Time Slot Profile**, and **Require Driver Before Release** if your process needs them.
+5. Configure **Map Provider Settings** only after your map provider key is ready.
+6. Use **Carrier Selection** settings only if you maintain carrier rates.
+7. Use **Proof of Delivery** settings only if drivers or mobile users report execution statuses.
+8. Choose **Check TMS Settings** after setup changes.
+9. Choose **Set default reports** if print actions do not find the expected report layouts.
+10. Choose **Telematics Setups** when you need to configure provider connections.
 
- Shipper scenario-specific settings
+## Useful actions on the page
 
-- **Transport Request Nos.** : Specifies the number series code used for assigning numbers to transport requests by default.
-- **Delivery Nos.** : Specifies the number series code used to assign numbers to carrier or Transport Orders.
-- **Default Mode of Transport** : Specifies the default mode of transport used for new TMS deliveries or requests.
-- **Default Charge Assignment Type** : Specifies the default charge assignment method for distributing carrier charges among deliveries or orders. This setting determines how transportation costs will be allocated to the orders that were shipped. For example, if we transported 10 orders using a third-party carrier who issued an invoice, we enter that invoice as a purchase invoice in Business Central. We then need to distribute the total amount of the carrier’s invoice across the transported orders. This can be done based on weight, amount, distance, or equally.
-This setting defines the default allocation method, but it can be changed at any time in the cost allocation window within the Transport Order.
-- **Default Item Charge Assignment Type** : Specifies the default item charge assignment method used when allocating costs within orders. This setting determines how transportation costs will be allocated to the item lines within an order—similar to the standard cost allocation functionality in Business Central. In other words, we distribute the portion of the transportation cost related to a specific order across the items included in that order.
-This setting defines the default allocation method, but it can be changed at any time in the cost allocation window within the Transport Order.
-- **Auto Create Transport Request for Sale** : Specifies whether a transport request is created automatically when a sales document is released.
-- **Auto Create Transport Request for Purchase** : Specifies whether a transport request is created automatically when a purchase document is released.
-- **Auto Create Transport Request for Transfer** : Specifies whether a transport request is created automatically when a transfer order is released.
-- **Build Estimated Logistic Units** : Specifies whether the system builds logistic units automatically when creating new transport requests. For a preliminary estimate of how many logistics units (pallets, boxes) are needed, you can set up logistics unit formation rules—for example, how much of item X is required to form one pallet.
-By defining these rules and enabling this setting, the system will estimate the number of pallets (or boxes, containers) required to transport the order when a Transport Request is created.
-This helps in breaking down a large order into multiple shipments (i.e., multiple Transport Orders).
-- **Delivery Execution Status Profile** : Specifies the status profile used to manage the execution steps of a Transport Order. This status profile is used to monitor the execution progress of a Transport Order, for example, via a Proof-of-Delivery app. Each line in the Transport Order has a status, and by updating it, you can effectively track the order fulfillment process.
+| Action | Use it for |
+|---|---|
+| **Check TMS Settings** | Validate whether the minimum required setup is complete |
+| **Set default reports** | Restore the standard report selection setup |
+| **Telematics Setups** | Open telematics provider connections |
 
-## Additional Setup Functions
+## Recommended first-run sequence
 
-- **Set default reports** : Reset default reports settings (if you have problems with TMS reports). Path. "TMS Setup" > "Default Settings" > "Set default reports"
+After the minimum setup is complete:
+
+1. Create at least one [Carrier](carrier.md)
+2. Create at least one [Vehicle](vehicle.md)
+3. Create at least one [Driver](driver.md) if your workflow requires drivers before release
+4. Configure [Map Providers](mapproviders.md) if you want route maps and distance calculation
+5. Create a test [Transport Request](transportrequest.md)
+6. Create a test [Transport Order](transportorder.md)
+
+## Related
+
+- [Map Providers](mapproviders.md)
+- [Azure Maps integration](azuremapsintegration.md)
+- [Transportation Conditions](transportationconditions.md)
+- [Time Slots and Delivery Schedules](timeslots.md)
+- [Telematics](telematics.md)
+- [Carrier Selection](carrierselection.md)

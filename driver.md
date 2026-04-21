@@ -1,99 +1,76 @@
 ---
-title: "Driver Master Data in TMS"
-description: "Driver master data in TMS: personal and contact info, carrier and default vehicle, licenses and compliance (medical, ADR), PoD app login, scheduling flags, and audit fields for assignments."
+title: "Drivers"
+description: "Maintain driver records for planning, default assignments, proof of delivery, and telematics in Shipper TMS."
 ---
 
-# Driver
+# Drivers
 
-The Driver entity is a comprehensive master data table in the Transportation Management System (TMS) that manages complete driver profiles for transportation operations.
-It contains extensive driver information including:
+Use **Drivers** to maintain the people who execute transportation. A driver record is used for:
 
-- personal details (names, birth date, employment date)
-- contact information (phone numbers, email, emergency contacts)
-- professional qualifications (license details, categories, expiration dates), compliance certifications (medical cards, ADR for dangerous goods), - operational settings (carrier association, default vehicle assignment, fuel card, scheduler preferences).
+- Transport Order assignment,
+- Driver Load Management,
+- default vehicle assignment,
+- Proof of Delivery user mapping,
+- telematics mapping and location history.
 
-The entity supports mobile integration through Proof of Delivery (PoD) app credentials and includes photo management capabilities with camera integration. It features a comprehensive card page with organized sections for all driver data, a list page for browsing and selection, and a dedicated picture management page part.
+## How to work in this page
 
-The Driver entity serves as the central repository for driver-related information, enabling effective driver assignment, scheduling, compliance tracking, and operational management within the TMS while ensuring regulatory compliance and supporting mobile workforce operations.
+Use the driver card to keep dispatching, compliance, and telematics data ready for planning.
 
-This directory allows you to store information not only about your own drivers but also to register drivers from third-party carriers if needed.
+1. Fill **General** with the driver name and active/blocked state.
+2. In **Carrier**, select the carrier the driver works for.
+3. In **Defaults**, set **Default Vehicle No.** if the driver normally uses one vehicle.
+4. Maintain **Contact** and **License** data so dispatchers can see operational and compliance information.
+5. If Proof of Delivery is enabled, fill **PoD User E-mail** in **Proof Of Delivery Settings**.
+6. In **Scheduler**, set **Scheduler Sort Order** or **Block for Scheduling**.
+7. If telematics is used, use **Telematics Mapping** to connect this driver to the external provider identity.
+8. Use **Current Location**, **Position History**, and **Telematics Log** only after the driver has a telematics mapping.
 
-## Field description
+## Create a driver
 
-- **No.** :  Unique identifier for the driver in TMS
-- **Name** :  Short name or label for the driver, shown on TMS documents
-- **Full Name** : Driver's complete name for official references in TMS
-- **First Name** : Driver's given name for detailed TMS identification
-- **Last Name** : Driver's family name used for TMS records or official documents
-- **Middle Name** : Additional name if needed for complete driver identification
+1. Search for **Drivers**.
+2. Choose **New**.
+3. Fill in **No.** and **Name**.
+4. Set **Carrier No.**.
+5. If needed, set **Default Vehicle No.**.
+6. Fill in the contact and compliance fields your company requires.
+7. If the driver should not appear in scheduling tools, enable **Block for Scheduling**.
 
-Personal Information:
+## Fields that matter most
 
-- **Birth Date** : Driver's date of birth, often required for HR or compliance
-- **Employment Date** :  When the driver started working for the organization
+| Field | Why it matters |
+|---|---|
+| **Carrier No.** | Controls which carrier the driver belongs to |
+| **Default Vehicle No.** | Lets the system propose a vehicle automatically |
+| **Blocked** | Prevents the driver from being used in new work |
+| **PoD User E-mail** | Links the driver to the Proof of Delivery user |
+| **Scheduler Sort Order** | Controls how the driver appears in scheduler views |
+| **Block for Scheduling** | Removes the driver from planning boards without deleting the driver |
 
-Carrier Association:
+## Compliance fields you should keep current
 
-- **Carrier No.** :  Which carrier the driver is associated with for TMS tasks.
-- **Carrier Name** : Name of the carrier linked to this driver (auto-populated)
+Review these regularly:
 
-Vehicle Assignment:
+- **License No.**
+- **License Expiration Date**
+- **Medical Card Number**
+- **Medical Card Expiration**
+- **ADR No.**
+- **ADR Expiration Date**
 
-- **Default Vehicle No.** : Vehicle number the driver typically operates in TMS. This field can be filled in so that when a driver is selected in the Transport Order, the vehicle is automatically selected.
-- **Default Vehicle Name** : Name or label for the driver's main vehicle resource (auto-populated)
+## What happens on a Transport Order
 
-Contact Information:
+When you assign a driver to a Transport Order:
 
-- **Phone No.** : Driver's primary phone contact for scheduling or emergencies
-- **Phone No. 2** :  Alternative phone contact if the driver has another line
-- **E-Mail** : Driver's email address for official communication
+- the driver name is filled automatically,
+- the default vehicle can also be filled if the order does not already have one.
 
-License Information:
+When you change the carrier on the order, Business Central clears incompatible vehicle or driver values to prevent mismatches.
 
-- **License No.** : Driver's official license ID used for compliance checks
-- **License Categories** : Driver's permitted vehicle categories (e.g., A, B, C) for TMS routes
-- **License Start Date** : When the driver's license validity begins
-- **License Exp. Date** : When the driver's license expires and needs renewal
-- **License State** : Which state or region issued the driver's license
+## Related
 
-Operational Status:
-
-- **Blocked** : Indicates whether this driver cannot be assigned to new shipments
-
-Medical Compliance:
-
-- **Medical Card Number** : Driver's medical card ID if required by law
-- **Medical Card Expiration** : When the driver's medical card becomes invalid
-
-Dangerous Goods Certification:
-
-- **ADR No.** : ADR certificate number if the driver handles dangerous goods
-- **ADR Expiration Date** : When the ADR certificate is no longer valid for dangerous cargo
-
-Emergency Information:
-
-- **Emergency Contact** : Whom to contact for emergencies involving this driver
-
-Fuel Management:
-
-- **Fuel Card No.** : Assigned fuel card number for this driver if relevant
-
-Proof-of Delivery (POD) Mobile App Integration:
-
-- **PoD User E-mail** : Driver's email used to log in to the Proof of Delivery application. This field links an organization’s user, who may not necessarily have access to Business Central, with a driver’s card. As a result, when the user logs into the mobile Power App (Proof-Of-Delivery), they will only see Transport Orders assigned to that specific driver.
-- **PoD User Full Name** : Name displayed for the driver's PoD user account in TMS
-
-Visual Identification:
-
-- **Picture** : Stored photograph for driver identification within TMS. Foto in FactBox.
-
-Scheduling Management:
-
-- **Scheduler Sort Order** : Numeric priority for this driver in the TMS scheduler view
-- **Block for Scheduling** : Indicates if this driver is restricted from scheduling due to maintenance or downtime
-
-Audit Trail:
-
-- **Last Modified Date Time** : When this driver record was last updated for traceability
-- **Last Modified Date Time (UTC)** : Timestamp of the latest update in Coordinated Universal Time
-- **Last Modified UserID** : User who performed the most recent modification to this record
+- [Driver Load Management](driverloadmanagement.md)
+- [Vehicles](vehicle.md)
+- [Carriers](carrier.md)
+- [Transport Order](transportorder.md)
+- [Telematics](telematics.md)

@@ -1,91 +1,81 @@
 ---
-title: "Time Slots in TMS"
-description: "Define time slot profiles to standardize loading/unloading windows, align with customer/vendor/location hours, and assist scheduling on Transport Requests and Orders."
+title: "Time Slots and Delivery Schedules"
+description: "Use Time Slot Profiles and Delivery Schedules to calculate planned load and unload dates and times automatically."
 ---
 
-# Time Slots
+# Time slots and delivery schedules
 
-## Overview
+Use this setup when your company wants Shipper TMS to calculate planned transportation timing automatically.
 
-Time Slots in the TMS system provide a structured approach to scheduling transportation activities by defining specific time windows for loading and unloading operations. This functionality enables precise scheduling, resource optimization, and better coordination between shippers, carriers, and consignees.
+The setup has two parts:
 
-The Time Slot functionality provides TMS users with powerful scheduling capabilities that enhance operational efficiency and customer satisfaction through precise time window management.
+- **Delivery Schedule** decides the date
+- **Time Slot Profile** decides the time window on that date
 
-## Benefits
+## How to work with these pages
 
-- Standardization: Consistent time window definitions across the organization
-- Customer Service: Align deliveries with customer availability preferences
-- Resource Planning: Optimize warehouse and transportation resource utilization
-- Automation: Reduce manual scheduling errors through predefined time windows
-- Flexibility: Support different scheduling patterns for different customer types or locations
+Use these pages together.
 
-## Settings
+1. Create the **Time Slot Profile** first.
+2. Add time-slot lines for the real receiving or loading windows.
+3. Use **Day of Week** when a time window applies only on specific days.
+4. Use an "any day" style slot only when the same time works every day.
+5. Create the **Delivery Schedule** that calculates the date.
+6. Assign the delivery schedule and time-slot profile to the customer, vendor, location, ship-to address, or order address.
+7. Create a test Transport Request and confirm that load/unload date and time values are calculated as expected.
 
-### Time Slot Profiles
+## Create a Time Slot Profile
 
-Time Slot Profiles serve as templates that group related time slots together. Each profile contains:
+1. Search for **Time Slot Profiles**.
+2. Choose **New**.
+3. Fill in **Code** and **Description**.
+4. Open the profile lines.
+5. Add one or more time slots with:
+   - **No.**
+   - **Description**
+   - **Time Start**
+   - **Time End**
+   - **Day of Week**
 
-- **Code**: Unique identifier for the profile
-- **Description**: Brief description of the profile's purpose (e.g., "Morning Deliveries", "Weekend Pickups")
-- **Slots**: Automatically calculated count of time slot lines within the profile
+## Create a Delivery Schedule
 
-### Time Slot Profile Lines
+1. Search for **Delivery Schedules**.
+2. Choose **New**.
+3. Fill in:
+   - **Base Date**
+   - **Second Base Date**
+   - **Base Date Mandatory**
+   - **Lead Time**
+   - **Calendar**
 
-These define the actual time windows within each profile:
+## Assign the setup to master data
 
-- **No.**: Unique identifier within the profile
-- **Description**: Description of the specific time slot
-- **Time Start**: Beginning time of the slot
-- **Time End**: Ending time of the slot
+Apply the schedule and time-slot profile on the relevant:
 
-## Integration with TMS Operations
+- customer,
+- vendor,
+- location,
+- ship-to address,
+- order address.
 
-### Transport Request Scheduling
+## How the system chooses the final time
 
-Time Slot Profiles are extensively used in Transport Requests for:
+When a Transport Request is created:
 
-- **Load Time Slot Profile Code**: Defines available loading windows at pickup locations
-- **Unload Time Slot Profile Code**: Defines available unloading windows at delivery locations
+1. Shipper TMS calculates the target date from the delivery schedule.
+2. It looks for a matching time slot on that day of week.
+3. If no day-specific slot exists, it falls back to the best available default logic.
 
-### Transport Order Management
+## Example
 
-In Transport Orders, time slots are used to:
+If a customer accepts deliveries only on Monday and Thursday:
 
-- Schedule specific delivery times for each stop
-- Provide assist edit functionality for selecting from predefined time windows
-- Ensure deliveries align with customer availability
+- the delivery schedule can use a calendar that allows only those days,
+- the time-slot profile can define separate Monday and Thursday windows,
+- newly created Transport Requests will follow that pattern automatically.
 
-### Customer and Vendor Integration
+## Related
 
-Time Slot Profiles can be assigned to:
-
-- **Customers**: "Time Slot Profile" sets the customer's working hours schedule during which deliveries can be made. Default delivery time preferences are set via the "Default Time Slot" field.
-- **Vendors**: "Time Slot Profile" sets the supplier's working hours schedule during which deliveries for loading can be made. Default pickup time preferences are set via the "Default Time Slot" field.
-- **Locations**: Default "Time Slot Profile" sets the warehouse's operating hours schedule.
-- **Order/Ship-to Addresses**: Specific address-level scheduling preferences are set via "Time Slot Profile" and "Default Time Slot" fields.
-
-## How to Use Time Slots
-
-### 1. Setting Up Time Slot Profiles
-
-- Navigate to Time Slot Profiles from the TMS Role Center
-- Create a new profile with a descriptive code and description
-- Add time slot lines defining specific time windows
-
-### 2. Assign the Profile to Relevant Customers, Vendors, or Locations
-
-### 3. Using Time Slots in Transport Requests
-
-When creating a Transport Request:
-
-- Select appropriate Load and Unload Time Slot Profile fields
-- Use the assist edit button on date/time fields to select from available time slots
-- The system will automatically populate the date/time based on the selected time slot
-
-### 4. Delivery Scheduling
-
-- In Transport Orders, use the assist edit functionality on "Scheduled Date and Time" fields
-- Select from available time slots based on the assigned Time Slot Profile
-
-The system automatically calculates estimated arrival times considering transportation duration.
-
+- [TMS Setup](setup.md)
+- [Transport Request](transportrequest.md)
+- [Truck Load Management](truckloadmanagement.md)

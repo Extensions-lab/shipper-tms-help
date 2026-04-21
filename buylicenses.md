@@ -1,46 +1,52 @@
 ---
-title: "Buy TMS Licenses"
-description: "How to buy and assign TMS licenses: purchase via AppSource plan selection and billing setup, then assign or unassign licenses to users in Microsoft 365 admin center."
+title: "Buy Licenses"
+description: "Purchase Shipper TMS licenses and assign them to the users who work with transportation tasks."
 ---
 
-# Transportation Management System (TMS) - Buy Licenses
+# Buy licenses
 
-Purchase and assign licenses. Immediately after installation, TMS is not available to users and is not visible in the Business Central menu, therefore, it is necessary to purchase TMS licenses. This can be done from the TMS page on AppSource by selecting the pricing plan that best suits your company. Then, assign licenses to users who will work with TMS in the Microsoft 365 Admin Center.
+Shipper TMS uses its own AppSource licensing. Only users who actively work with TMS features need a Shipper TMS license.
 
-p.s. It is not mandatory to buy as many licenses as Business Central licenses; you can limit it to only those who work with transportation and TMS.
+![Open the Shipper TMS product in AppSource](resources/buylicenses/pics/buylicense1.png)
 
-Licenses are purchased directly on the TMS page on the AppSource portal. Click "Buy now" button.
+## Who needs a license
 
-![Setup Image](resources/buylicenses/pics/buylicense1.png)
+Assign a Shipper TMS license to users who:
 
-Choose the suitable pricing plan according to the number of users you need. Each plan includes a one-month trial period.
+- create or release Transport Requests,
+- plan Transport Orders,
+- work in Load Management, Truck Load Management, Driver Load Management, or Visual Scheduler,
+- work with TMS setup, telematics, or TMS APIs.
 
-![Setup Image](resources/buylicenses/pics/buylicense2.png)
+Users who never open or use TMS features do not need a Shipper TMS license.
 
-Set the subscription parameters. For demo mode, auto-renewal can be disabled (Recurring billing).
+## Buy the licenses
 
-![Setup Image](resources/buylicenses/pics/buylicense3.png)
+1. Open the Shipper TMS offer in AppSource.
+2. Choose **Buy now**.
+3. Select the pricing plan that matches your team size.
+4. Complete the Microsoft purchase flow.
 
-In the next step, it is necessary to check the subscription parameters and select the billing account from which payments will be made and to which Microsoft will issue invoices.
+After the purchase, the licenses are provisioned to your Microsoft 365 tenant.
 
-![Setup Image](resources/buylicenses/pics/buylicense4.png)
+## Assign licenses to users
 
-Payment by card is possible. To do this, it is necessary to press the +Add new button to add a new payment method.
+1. Open the **Microsoft 365 admin center**.
+2. Go to **Billing** > **Licenses**.
+3. Open the Shipper TMS product.
+4. Choose **Assign licenses**.
+5. Select the users who need access.
+6. Save the change.
 
-![Setup Image](resources/buylicenses/pics/buylicense5.png)
+![Assign Shipper TMS licenses to users in Microsoft 365 admin center](resources/buylicenses/pics/buylicense8.png)
 
-Assigning licenses to users is done in the Microsoft 365 admin center.
+## Verify
 
-![Setup Image](resources/buylicenses/pics/buylicense6.png)
+Ask one licensed user to sign in to Business Central and search for **Transport Requests** or **Shipper TMS Setup**.
 
-Select the Billing > Licenses menu item and scroll down to the TMS product licenses
+If the page opens without a licensing message, the license assignment is working.
 
-![Setup Image](resources/buylicenses/pics/buylicense7.png)
+## Related
 
-On this page, licenses are distributed among users. Click Assign licenses button and find users.
-
-![Setup Image](resources/buylicenses/pics/buylicense8.png)
-
-To revoke TMS licenses from users, you need to select the users and press the 'Unassign licenses' button.
-
-![Setup Image](resources/buylicenses/pics/buylicense9.png)
+- [Installation](installation.md)
+- [Assign permission sets](assignpermissionsets.md)
