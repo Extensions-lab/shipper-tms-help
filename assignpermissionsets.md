@@ -7,7 +7,7 @@ description: "Assign the correct Shipper TMS permission sets to users, administr
 
 After the app is installed and licenses are assigned, give users access to Shipper TMS by assigning the correct permission sets in Business Central.
 
-![Add Shipper TMS permission sets on the user card](screenshot-permissions-user-permission-sets.png)
+![Add Shipper TMS permission sets on the user card](resources/assignpermissionset/screenshot-permissions-user-permission-sets.png)
 
 ## Which permission set to use
 

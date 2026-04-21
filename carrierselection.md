@@ -5,65 +5,67 @@ description: "Compare carrier rates for a Transport Order and apply the best car
 
 # Carrier Selection
 
-Use **Carrier Selection** on an **Open** Transport Order when you want Shipper TMS to compare carrier rates for the current route.
+Use **Carrier Selection** on an **Open** Transport Order when you want Shipper TMS to compare carriers for the current route.
 
-The feature helps planners choose a carrier based on configured pricing instead of manual estimates.
+The feature helps planners choose a carrier based on configured rates instead of manual estimates.
 
-## How to work in this window
-
-Use Carrier Selection after the route is planned enough to calculate costs.
-
-1. Open the Transport Order.
-2. Confirm that the order is **Open**.
-3. Review the route stops and make sure addresses and distances are usable.
-4. Choose **Carrier Selection**.
-5. Review the carrier rows sorted by calculated cost.
-6. Open or review the cost breakdown if you need to understand why a carrier costs more or less.
-7. Select the carrier you want to use.
-8. Confirm that **Carrier No.** and **Carrier Name** are updated on the Transport Order.
-9. If **Auto Create Charge Line** is enabled, review the generated charge lines.
+![Carrier Selection results](resources/carrierselection/screenshot-carrier-selection-results.png)
 
 ## Before you start
 
 Make sure these items are in place:
 
-1. **Carrier Selection Enabled** is turned on in [TMS Setup](setup.md)
-2. carrier rates exist for the carriers you want to compare
-3. route stops are already defined on the Transport Order
-4. if you want automatic charges, enable **Auto Create Charge Line**
+1. **Carrier Selection Enabled** is turned on in [TMS Setup](setup.md).
+2. [Carrier Rates](carrier-rates.md) exist for the carriers you want to compare.
+3. **Carrier Rate Types Mapping** is configured in TMS Setup.
+4. The Transport Order is **Open**.
+5. Route stops are already defined.
+6. If you want automatic charges, **Auto Create Charge Line** is enabled.
 
 ## Run Carrier Selection
 
-1. Open the **Transport Order**.
+1. Open the [Transport Order](transportorder.md).
 2. Make sure the order status is **Open**.
-3. Choose **Carrier Selection**.
-4. Review the returned carrier list.
-5. Select the carrier you want to apply.
+3. Review route stops, addresses, and distance data.
+4. Choose **Carrier Selection**.
+5. Review the returned carrier rows.
+6. Open or review the cost breakdown if needed.
+7. Select the carrier you want to use.
+8. Confirm that **Carrier No.** and **Carrier Name** are updated on the order.
+9. If automatic charge creation is enabled, review [Transport Charges](transport-charges.md).
 
-## What the result includes
+## What the comparison can include
 
-The comparison can include:
+The calculation can include:
 
 - route-based rate amount,
 - flat fee amount,
-- stop-related charges,
-- return amount.
+- fee per load,
+- fee per unload,
+- empty-return amount,
+- carrier start or end map locations when configured on the carrier.
 
 When you apply the result, the selected carrier is written back to the Transport Order.
 
-If **Auto Create Charge Line** is enabled, Shipper TMS also creates charge lines on the order.
+If **Auto Create Charge Line** is enabled, Shipper TMS can also create charge lines on the order.
 
 ## If no good result appears
 
 Check these items:
 
-- the route has the stops you expect,
+- the Transport Order is **Open**,
+- carrier selection is enabled,
 - the carrier is not blocked,
-- the carrier has rates for the relevant route pattern,
-- the pricing setup covers the countries, cities, or postal codes used by the route.
+- the route has the stops you expect,
+- map locations and distance data are usable,
+- carrier start and end map locations are correct,
+- the carrier has rates for the relevant geography,
+- rate-type mapping is complete.
 
 ## Related
 
+- [Carrier Rates](carrier-rates.md)
 - [Carriers](carrier.md)
 - [Transport Order](transportorder.md)
+- [Transport Charges](transport-charges.md)
 - [TMS Setup](setup.md)

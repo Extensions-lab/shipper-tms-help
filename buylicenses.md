@@ -7,7 +7,7 @@ description: "Purchase Shipper TMS licenses and assign them to the users who wor
 
 Shipper TMS uses its own AppSource licensing. Only users who actively work with TMS features need a Shipper TMS license.
 
-![Open the Shipper TMS product in AppSource](resources/buylicenses/pics/buylicense1.png)
+![Open the Shipper TMS product in AppSource](resources/buylicenses/buylicense1.png)
 
 ## Who needs a license
 
@@ -38,7 +38,7 @@ After the purchase, the licenses are provisioned to your Microsoft 365 tenant.
 5. Select the users who need access.
 6. Save the change.
 
-![Assign Shipper TMS licenses to users in Microsoft 365 admin center](resources/buylicenses/pics/buylicense8.png)
+![Assign Shipper TMS licenses to users in Microsoft 365 admin center](resources/buylicenses/buylicense8.png)
 
 ## Verify
 

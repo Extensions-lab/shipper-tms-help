@@ -9,7 +9,7 @@ Use **Driver Load Management** when you want to plan from the driver side first.
 
 This page answers the question: "Which driver is working in this time slot, with which vehicle, and are there any conflicts?"
 
-![Driver Load Management worksheet with driver slots and status indicators](screenshot-driver-load-management.png)
+![Driver Load Management worksheet with driver slots and status indicators](resources/driverloadmanagement/driver-load-management.png)
 
 ## When to use it
 

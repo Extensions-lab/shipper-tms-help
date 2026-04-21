@@ -13,48 +13,43 @@ Use them to define standard equipment such as:
 - boxes,
 - containers,
 - trailers,
-- transport unit profiles.
+- vehicle or transport-unit profiles.
 
 ## How to work with this setup
-
-Use Logistic Unit Types before you depend on capacity planning.
 
 1. Define the unit types your operation actually uses.
 2. Fill weight limits when weight control is enabled.
 3. Fill volume and dimensions when volume control is enabled.
 4. Fill footage when floor-space planning matters.
 5. Turn on strict controls only when the system should prevent exceeding the limit.
-6. Assign a transportation condition value when the unit type or compartment is dedicated to a condition such as Frozen or Ambient.
-7. Assign the unit type to vehicles or vehicle configurations that use that capacity profile.
-8. Test a Transport Order or Truck Load Management slot to confirm load percentages look right.
+6. Assign transportation condition values when a unit type or compartment is dedicated to a condition such as Frozen or Ambient.
+7. If you use Azure Maps truck routing, assign **Vehicle Routing Profile Code**.
+8. Assign the unit type to vehicles or vehicle configurations that use that capacity profile.
+9. Test a Transport Order or Truck Load Management slot to confirm load percentages look right.
 
 ## When this matters in Shipper TMS
 
-This setup matters when you want consistent:
+This setup matters when you want consistent results in:
 
-- weight limits,
-- volume limits,
-- footage,
-- logistic unit calculations,
-- compartment or condition behavior.
+- Transport Request estimation,
+- Transport Order capacity totals,
+- Load Management,
+- Truck Load Management,
+- Driver Load Management,
+- transportation-condition compatibility checks,
+- Azure Maps truck-aware routing.
 
-## What to maintain
+## Vehicle routing profile
 
-Review these areas on the Logistic Unit Type:
+Use **Vehicle Routing Profile Code** when the unit type represents equipment that should affect Azure Maps routing.
 
-| Area | Why it matters |
-|---|---|
-| **Weight** | Controls payload and total weight logic |
-| **Dimensions** | Supports volume and capacity calculations |
-| **Control** | Defines whether strict limits should be enforced |
-| **Transportation condition field** | Helps match equipment to compatible cargo when used |
+The profile can carry routing constraints such as dimensions, weight, axle weight, hazardous load, and road restrictions.
 
-## Important note
-
-This page is not part of the Shipper TMS app alone. If your users need full instructions for the Logistic Units extension, maintain those instructions separately and link to them from your customer help site.
+For setup, see [Vehicle Routing Profiles](vehicle-routing-profiles.md).
 
 ## Related
 
-- [Vehicles](vehicle.md)
 - [Transportation Conditions](transportationconditions.md)
+- [Vehicle Routing Profiles](vehicle-routing-profiles.md)
+- [Truck Load Management](truckloadmanagement.md)
 - [Transport Order](transportorder.md)

@@ -1,6 +1,6 @@
 ---
 title: "Transport Order"
-description: "Use Transport Orders to build and execute the actual trip with carrier, vehicle, driver, route, charges, and documents."
+description: "Use Transport Orders to build and execute the actual trip with carrier, vehicle, driver, route, charges, warehouse documents, telematics, and posting."
 ---
 
 # Transport Order
@@ -15,7 +15,7 @@ Use it to define the actual trip:
 - which requests are on the load,
 - which charges and documents belong to the trip.
 
-![Transport Order example with route stops and transport details](resources/transportorder/pics/transportorder1.png)
+![Transport Order example with route stops and transport details](resources/transportorder/transportorder1.png)
 
 ## What lives on a Transport Order
 
@@ -26,47 +26,51 @@ A Transport Order can contain:
 - vehicle and carrier assignments,
 - capacity totals,
 - warehouse document links,
-- transport charges,
-- telematics publication links.
+- transport charges and charge assignments,
+- telematics publication links,
+- execution entries.
 
 ## Statuses
 
 | Status | Meaning |
 |---|---|
 | **Open** | The order can be edited and planned |
-| **Released** | The order is ready for execution |
+| **Released** | The order is ready for execution and warehouse document creation |
 | **In Progress** | The trip is underway and can be posted |
 
 ## How requests get into the order
 
 Use one of these methods:
 
-- **Get Transport Requests** from the Transport Order
-- **Assign to Transport Order** from the Transport Request
-- planning tools such as [Load Management](loadmanagement.md) and [Truck Load Management](truckloadmanagement.md)
-- **Create Transport Orders** from supported source documents when eligible released requests already exist
+- **Add Transport Requests** from the Transport Order,
+- **Assign to Transport Order** from the Transport Request,
+- [Load Management](loadmanagement.md),
+- [Truck Load Management](truckloadmanagement.md),
+- [Driver Load Management](driverloadmanagement.md),
+- [Visual Scheduler](visualscheduler.md),
+- **Create Transport Order** from a supported source document.
 
 When a request is added, Shipper TMS creates the related load and unload route lines automatically.
 
 ## How to work in this window
 
-Use the Transport Order card as the main execution workspace for a trip.
-
 1. Keep the order **Open** while you are planning.
 2. Fill or review **Carrier**, **Vehicle**, and **Driver**.
 3. Choose **Add Transport Requests** when you need to add released requests.
-4. Review **Route Stops and Actions** to confirm load and unload sequence.
+4. Review **Route Stops and Actions**.
 5. Use **Get Transport Time & Distance** to calculate distance and duration.
 6. Use **Show Route** to review the route visually.
-7. Use route optimization actions only after the stop list is complete enough to optimize.
-8. Use **Carrier Selection** if you need to compare carrier rates.
-9. Use **Create Warehouse Documents** after the order is **Released** and warehouse work should be created.
-10. Use print actions when the driver, carrier, or warehouse needs documents.
-11. Use telematics actions only after carrier, vehicle, driver, and route data are ready.
-12. Move the order to **In Progress** when execution starts.
-13. Use **Post** when the trip is ready to be posted.
+7. Use route optimization only after the stop list is complete enough to optimize.
+8. Use [Carrier Selection](carrierselection.md) if you need to compare carrier rates.
+9. Review [Transport Charges](transport-charges.md) if the order carries cost or re-billing lines.
+10. Release the order when planning is complete.
+11. Create [Warehouse Documents](warehouse-documents.md) if the warehouse process requires them.
+12. Print the required documents.
+13. Publish to telematics if your carrier uses a connected provider.
+14. Move the order to **In Progress** when execution starts.
+15. Post the order when the trip and financial prerequisites are complete.
 
-If you need to change the route, resources, or requests after release, reopen the order first.
+If you need to change route, resources, requests, or charges after release, reopen the order first.
 
 ## Key actions
 
@@ -85,45 +89,64 @@ If you need to change the route, resources, or requests after release, reopen th
 
 | Action | Use it for |
 |---|---|
-| **Carrier Selection** | Compare carriers and apply the result |
-| **Create Warehouse Documents** | Build warehouse shipment or receipt documents |
-| **Re&lease** | Move the order from Open to Released |
-| **Re&open** | Move the order from Released back to Open |
+| **Carrier Selection** | Compare carriers and apply the selected carrier |
+| **Create Warehouse Documents** | Build warehouse shipment or receipt documents from a Released order |
+| **Release** | Move the order from Open to Released |
+| **Reopen** | Move the order from Released back to Open |
 | **In Progress** | Start execution |
 | **Return to Released** | Move the order back from In Progress |
+| **Post** | Post the trip and move it to history |
+
+### Telematics
+
+If the carrier is connected to a telematics setup, the order can show actions such as:
+
+- **Publish to Telematics**,
+- **Cancel Telematics Dispatch**,
+- **Refresh from Telematics**,
+- **Sync Execution Facts**,
+- **Show Location**,
+- **Telematics Dispatches**,
+- **Telematics Links**.
 
 ### Documents
 
 Available print actions include:
 
-- **Loading Manifest**
-- **Packing List**
-- **Bill Of Lading**
-- **Delivery Note**
-- **Summary Delivery Notes**
-- **Returns**
-- **CMR Blank**
+- **Loading Manifest**,
+- **Packing List**,
+- **Bill Of Lading**,
+- **Delivery Note**,
+- **Summary Delivery Notes**,
+- **Returns**,
+- **CMR Blank**.
 
-## Telematics actions
+## Posting requirements
 
-If the carrier is connected to a telematics setup, the order can expose actions such as:
+Before you post the order:
 
-- **Publish to Telematics**
-- **Cancel Telematics Dispatch**
-- **Refresh from Telematics**
-- **Telematics Dispatches**
-- **Telematics Links**
+1. The order must be **In Progress**.
+2. The order must contain at least one transport line.
+3. Charge lines must be linked or handled correctly.
+4. Source-linked sales, purchase, or transfer charge lines must not remain in an unposted state that blocks posting.
+5. Execution and proof-of-delivery data should be reviewed if your process requires it.
+
+After posting, use [Posted Transport Orders](posted-transport-orders.md) for read-only history.
 
 ## Good to know
 
-- The order must be **Open** for most planning changes.
 - Carrier Selection is available only when the order is **Open** and carrier selection is enabled.
-- Warehouse document creation is available from **Released** orders.
+- Warehouse document creation is available only from **Released** orders.
 - Posting is available from **In Progress** orders.
+- Truck Load Management can enforce driver, conflict, capacity, and compartment checks before releasing a truck load.
 
 ## Related
 
 - [Transport Request](transportrequest.md)
 - [Carrier Selection](carrierselection.md)
+- [Transport Charges](transport-charges.md)
+- [Warehouse Documents](warehouse-documents.md)
+- [Execution Entries](execution-entries.md)
 - [Telematics](telematics.md)
 - [Reports and Documents](reports.md)
+- [Posted Transport Orders](posted-transport-orders.md)

@@ -15,7 +15,7 @@ Use this guide when your company wants Shipper TMS to use **Azure Maps** for:
 
 This app currently expects an **Azure Maps Subscription Key** in **Shipper TMS Setup**.
 
-![Azure Maps subscription key and geo scope in Shipper TMS Setup](screenshot-azure-maps-subscription-key.png)
+![Azure Maps subscription key and geo scope in Shipper TMS Setup](resources/azuremapsintegration/azure-maps-subscription-key.png)
 
 ## How to work with this setup
 
@@ -28,7 +28,7 @@ Use this page when Azure Maps is the selected provider.
 5. Paste the key into **Azure Maps Subscription Key**.
 6. Select **Azure Maps Geo Scope** if your company uses a specific processing region.
 7. Test geocoding from a Map Location.
-8. If truck-aware routing is required, create **Vehicle Routing Profiles** and assign them to vehicle unit types.
+8. If truck-aware routing is required, create [Vehicle Routing Profiles](vehicle-routing-profiles.md) and assign them to vehicle unit types.
 9. Test distance calculation from a Transport Request or Transport Order that uses a configured vehicle type.
 
 ## Before you start
@@ -69,7 +69,7 @@ Azure Maps becomes much more useful for transportation planning when you also co
 
 Recommended setup:
 
-1. Open **Vehicle Routing Profiles**.
+1. Open [Vehicle Routing Profiles](vehicle-routing-profiles.md).
 2. Create one or more profiles for your equipment types.
 3. Assign the profile to the relevant vehicle unit type.
 4. Use that vehicle type on the Transport Order.
@@ -98,4 +98,5 @@ Treat the Azure Maps key as a secret.
 - [Map Providers](mapproviders.md)
 - [TMS Setup](setup.md)
 - [Map Locations](maplocation.md)
+- [Vehicle Routing Profiles](vehicle-routing-profiles.md)
 - [Transport Order](transportorder.md)

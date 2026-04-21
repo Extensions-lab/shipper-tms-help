@@ -1,107 +1,86 @@
 ---
 title: "Telematics"
-description: "Connect Shipper TMS to Geotab, Samsara, or Webfleet for dispatch publishing, tracking, route updates, and execution monitoring."
+description: "Connect Shipper TMS to telematics providers such as Geotab, Samsara, and Webfleet."
 ---
 
 # Telematics
 
-Use **Telematics** to connect Shipper TMS with external fleet systems.
+Use **Telematics** when Shipper TMS must exchange route, dispatch, vehicle, driver, or execution data with a fleet platform.
 
-The telematics integration lets you:
+Supported provider options include:
 
-- publish Transport Orders to a provider,
-- monitor execution from inside Business Central,
-- view current and historical locations,
-- bring back route changes,
-- connect different carriers to different providers.
+- **Geotab**,
+- **Samsara**,
+- **Webfleet**.
 
-![Telematics Setup card with connection and sync actions](screenshot-telematics-setup-card.png)
+![Telematics Setup card with connection and sync actions](resources/telematics/telematics-setup-card.png)
 
-## How to work in this setup window
+## What telematics can support
 
-Use **Telematics Setup** as the admin workspace for one provider connection.
+Depending on provider setup, telematics can support:
 
-1. Create one setup per provider account or tenant that should be used by Shipper TMS.
-2. In **General**, select the provider and enable the setup.
-3. In **Authentication**, enter the base URL, account values, and user name values required by the provider.
-4. Choose **Manage Secrets** to store passwords, API keys, client secrets, refresh tokens, or webhook secrets.
-5. Choose **Provider Parameters** when the provider needs extra values such as token URL, scope, region, API version, or webhook routing values.
-6. Choose **Stream Setup** when you need to control sync mode, cadence, retry behavior, or webhook handling per stream.
-7. Choose **Test Connection** before you run sync.
-8. Turn on only the synchronization streams your company needs.
-9. Run **Full Sync** for first setup, or run individual sync actions such as **Sync Vehicles**, **Sync Drivers**, **Sync Zones**, or **Sync Routes / Dispatches**.
-10. Use **Entity Mappings** to verify how provider vehicles, drivers, and zones map to TMS records.
-11. Use **Integration Log**, **Inbound Messages**, **Sync States**, and **Sync Locks** for troubleshooting.
-12. Start **Background Polling** only after manual sync works.
+- vehicle and driver mapping,
+- route or dispatch publication,
+- dispatch cancellation,
+- vehicle location review,
+- position history,
+- route-stop events,
+- execution fact synchronization,
+- inbound messages and log review.
 
-After the setup works, open the [Carrier](carrier.md) card and assign the correct **Telematics Setup Code**.
+## Basic setup flow
 
-## Supported providers
+1. Create a **Telematics Setup** record.
+2. Select the provider.
+3. Enter connection and authentication values.
+4. Use provider-specific secret management where available.
+5. Map vehicles and drivers.
+6. Link the setup to the relevant [Carrier](carrier.md).
+7. Test synchronization in a sandbox or demo company first.
+8. Publish a test Transport Order.
+9. Review telematics logs and inbound messages.
 
-Shipper TMS currently supports:
+## Transport Order actions
 
-- **Geotab**
-- **Samsara**
-- **Webfleet**
+A connected order can expose actions such as:
 
-The data depth is not identical for every provider, but the operational setup pattern is consistent.
+- **Publish to Telematics**,
+- **Cancel Telematics Dispatch**,
+- **Refresh from Telematics**,
+- **Sync Execution Facts**,
+- **Show Location**,
+- **Telematics Dispatches**,
+- **Telematics Links**.
 
-## Basic setup
+The exact action result depends on the provider, credentials, mapping, and provider-side configuration.
 
-1. Open **Shipper TMS Setup**.
-2. Choose **Telematics Setups**.
-3. Create a new setup.
-4. Fill in the connection details for the provider.
-5. Use **Manage Secrets** to store protected credentials.
-6. Review **Provider Parameters** if the provider requires extra values.
-7. Review **Stream Setup** if you want stream-level control.
-8. Choose **Test Connection**.
-9. Run **Full Sync** or only the sync actions you need.
-10. On the [Carrier](carrier.md), set **Telematics Setup Code**.
+## Telematics administration API
 
-## Common sync actions
+Shipper TMS also exposes API actions for telematics administration.
 
-Depending on the provider, you can run:
+Examples include:
 
-- **Sync Vehicles**
-- **Sync Drivers**
-- **Sync Zones**
-- **Sync Routes / Dispatches**
-- **Sync Trips**
-- location and history sync actions
+- registering or deleting a Samsara route webhook,
+- ensuring or deleting a Webfleet route queue,
+- retrieving a route-ingress contract,
+- receiving provider webhook payloads.
 
-You can also enable **Background Polling Enabled** when you want automatic refresh.
+For API entity sets and permission sets, see [API](api.md).
 
-## Publish a Transport Order
+## Troubleshooting
 
-1. Open the **Transport Order**.
-2. Make sure the carrier is connected to the correct telematics setup.
-3. Prepare the vehicle, driver, and stop sequence.
-4. Use the telematics publish action on the order.
-5. Monitor the result in:
-   - **Telematics Dispatches**
-   - **Telematics Links**
-   - integration log pages
-
-## Bring external changes back
-
-If the provider changes the route order or related execution data:
-
-1. Refresh the telematics data for the setup or the order.
-2. Use **Refresh from Telematics** on the Transport Order.
-3. Review the returned changes before applying them.
-
-## Zones and geofences
-
-Telematics also works with [Zones](zones.md):
-
-- internal zones can be mapped to provider zones,
-- provider zones can be synchronized into snapshot tables,
-- stop publication can use those mapped geofence references.
+| Problem | Check |
+|---|---|
+| Publish action fails | Provider credentials, carrier setup, route data, vehicle/driver mapping |
+| No vehicle location appears | Vehicle mapping, provider sync status, last known position |
+| Webhook is not received | API permissions, endpoint configuration, provider webhook registration |
+| Execution entries are missing | Provider event availability, sync logs, status profile setup |
 
 ## Related
 
+- [Carriers](carrier.md)
+- [Vehicles](vehicle.md)
+- [Drivers](driver.md)
 - [Transport Order](transportorder.md)
-- [Carrier](carrier.md)
-- [Zones](zones.md)
-- [TMS Setup](setup.md)
+- [Execution Entries](execution-entries.md)
+- [API](api.md)

@@ -9,7 +9,7 @@ Use **Load Management** when your planner wants to start with a pool of released
 
 This is the classic document-first planning page in Shipper TMS.
 
-![Load Management worksheet with request pool and planning tree](screenshot-load-management.png)
+![Load Management worksheet with request pool and planning tree](resources/loadmanagement/load-management.png)
 
 ## When to use it
 

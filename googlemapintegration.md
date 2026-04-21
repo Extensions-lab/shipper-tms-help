@@ -12,7 +12,7 @@ Use this guide when your company wants Shipper TMS to use **Google Maps** for:
 - distance calculation,
 - travel-time estimation.
 
-![Google Maps settings in Shipper TMS setup flow](resources/googlemap/pics/googlemap1.png)
+![Google Maps settings in Shipper TMS setup flow](resources/googlemap/googlemap1.png)
 
 ## How to work with this setup
 

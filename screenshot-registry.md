@@ -9,90 +9,52 @@ This file is for documentation maintenance.
 
 ## Save location
 
-Save every screenshot as a **PNG** file directly in the `docs/` root folder.
+Save screenshots as **PNG** files under the matching topic folder:
 
-Do not create subfolders for these screenshots unless you also update the links in the Markdown files.
+- `resources/<topic>/<file-name>.png`
 
-Target location for every file below:
-
-- `docs/<filename>.png`
+Do not save new screenshots in the documentation root.
 
 ## Capture rules
 
 - Use Business Central in English.
 - Use a clean demo company or sanitized customer data.
-- Avoid personal data, email addresses, phone numbers, or real vehicle registrations unless they are fake/demo values.
+- Avoid personal data, email addresses, phone numbers, or real vehicle registrations unless they are fake demo values.
 - Use the standard light theme.
-- Capture the main working area only. Avoid browser tabs, bookmarks, and desktop clutter.
+- Capture the main working area only.
+- Avoid browser tabs, bookmarks, and desktop clutter.
 - Keep the UI readable at normal zoom.
+- Do not expose API keys, access tokens, or telematics secrets.
 - If a page has filters, set realistic values before taking the screenshot.
 
-## Existing repo images already reused
+## Screenshot backlog
 
-The following pages already use images that exist in `docs/resources`, so you do **not** need to create new screenshots for them unless you want to replace them with fresher UI captures:
+| File path | Used in | What to capture | Priority |
+|---|---|---|---|
+| `resources/source-documents/screenshot-source-document-actions.png` | `source-documents.md` | Released Sales Order or Transfer Order with the Shipper TMS action group visible | High |
+| `resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png` | `transport-request-planning.md` | Worksheet with Source Lines, Planned Transport Requests, and factbox visible | High |
+| `resources/carrier-rates/screenshot-carrier-rates.png` | `carrier-rates.md` | Carrier Rates page with lane filters and pricing fields | High |
+| `resources/carrierselection/screenshot-carrier-selection-results.png` | `carrierselection.md` | Carrier Selection results with at least two carriers and calculated amounts | High |
+| `resources/transport-charges/screenshot-transport-charges.png` | `transport-charges.md` | Transport Order Charges section and the Show Assignment action | High |
+| `resources/vehicle-routing-profiles/screenshot-vehicle-routing-profile-card.png` | `vehicle-routing-profiles.md` | Vehicle Routing Profile card with truck dimensions, weight, and avoid options | High |
+| `resources/distance-matrix/screenshot-distance-matrix.png` | `distance-matrix.md` | Distance Matrix or Route Distance Matrix with Update Distance and Duration action | Medium |
+| `resources/posted-transport-orders/screenshot-posted-transport-order.png` | `posted-transport-orders.md` | Posted Transport Order card with route lines and charges visible | Medium |
+| `resources/execution-entries/screenshot-execution-entries.png` | `execution-entries.md` | Execution Entries page with status, timestamp, and attachment indicators | High |
+| `resources/warehouse-documents/screenshot-warehouse-document-actions.png` | `warehouse-documents.md` | Released Transport Order showing Create Warehouse Documents and Show Warehouse actions | Medium |
+| `resources/api/screenshot-api-overview.png` | `api.md` | Optional: sanitized API client, Business Central API page list, or integration diagram | Low |
+| `resources/assignpermissionset/screenshot-permissions-user-permission-sets.png` | `assignpermissionsets.md` | User card with Shipper TMS permission sets visible | High |
+| `resources/mapproviders/screenshot-map-providers-setup.png` | `mapproviders.md` | Map Provider Settings section in Shipper TMS Setup | High |
+| `resources/azuremapsintegration/azure-maps-subscription-key.png` | `azuremapsintegration.md` | Azure Maps Subscription Key and Azure Maps Geo Scope, with key masked | High |
+| `resources/loadmanagement/load-management.png` | `loadmanagement.md` | Load Management showing pending requests and planning tree | Medium |
+| `resources/truckloadmanagement/truck-load-management.png` | `truckloadmanagement.md` | Truck Load Management with truck slots and candidate requests | Medium |
+| `resources/driverloadmanagement/driver-load-management.png` | `driverloadmanagement.md` | Driver Load Management showing drivers, assigned vehicle, and conflict columns | Medium |
+| `resources/visualscheduler/screenshot-visual-scheduler.png` | `visualscheduler.md` | Visual Scheduler timeline with at least one Transport Order frame | High |
+| `resources/telematics/telematics-setup-card.png` | `telematics.md` | Telematics Setup card with provider, connection fields, and sync actions | Medium |
 
-- `index.md`
-- `installation.md`
-- `buylicenses.md`
-- `setup.md`
-- `googlemapintegration.md`
-- `maplocation.md`
-- `transportrequest.md`
-- `transportorder.md`
+## Replacement workflow
 
-## Screenshots still needed
-
-| File name | Used in | What to capture |
-|---|---|---|
-| `screenshot-permissions-user-permission-sets.png` | `assignpermissionsets.md` | User card in Business Central with the current Shipper TMS permission-set names visible |
-| `screenshot-map-providers-setup.png` | `mapproviders.md` | The **Map Provider Settings** section in Shipper TMS Setup |
-| `screenshot-azure-maps-subscription-key.png` | `azuremapsintegration.md` | The part of setup where **Azure Maps Subscription Key** and **Azure Maps Geo Scope** are visible |
-| `screenshot-load-management.png` | `loadmanagement.md` | The Load Management page showing both the pending request pool and planning tree |
-| `screenshot-truck-load-management.png` | `truckloadmanagement.md` | Truck Load Management with truck slots in the upper section and candidates in the lower section |
-| `screenshot-driver-load-management.png` | `driverloadmanagement.md` | Driver Load Management showing driver slots and status/conflict columns |
-| `screenshot-visual-scheduler.png` | `visualscheduler.md` | Visual Scheduler timeline with grouped requests and at least one Transport Order frame |
-| `screenshot-telematics-setup-card.png` | `telematics.md` | Telematics Setup card showing connection fields and sync actions |
-
-## Suggested capture notes by file
-
-### `screenshot-load-management.png`
-
-Make sure both sections are visible:
-
-- **Pending Transport Requests**
-- **Transport Order Planning**
-
-### `screenshot-truck-load-management.png`
-
-Make sure these are visible:
-
-- truck slot rows,
-- **Load %**,
-- current status,
-- candidate list in the lower section.
-
-### `screenshot-driver-load-management.png`
-
-Make sure these are visible:
-
-- driver slot rows,
-- assigned vehicle,
-- **Next Step**,
-- conflict columns if possible.
-
-### `screenshot-visual-scheduler.png`
-
-Capture a period where:
-
-- several requests are visible,
-- at least one Transport Order frame is visible,
-- the grouping label is obvious.
-
-### `screenshot-telematics-setup-card.png`
-
-Capture the card with:
-
-- provider,
-- authentication fields,
-- sync fields,
-- **Manage Secrets** or **Full Sync** in the action bar if possible.
+1. Capture the screenshot.
+2. Save it with the exact file path listed above.
+3. Replace any placeholder image file.
+4. Preview the Markdown page locally or in GitHub Pages.
+5. Confirm that no secret values are visible.

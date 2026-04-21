@@ -7,7 +7,7 @@ description: "Install Shipper TMS from AppSource into Microsoft Dynamics 365 Bus
 
 Use this guide to install **Shipper TMS** in your Business Central environment.
 
-![Search for Shipper TMS in Extension Marketplace](resources/installation/pics/installation1.png)
+![Search for Shipper TMS in Extension Marketplace](resources/installation/installation1.png)
 
 ## Before you start
 
@@ -24,7 +24,7 @@ Use this guide to install **Shipper TMS** in your Business Central environment.
 5. Choose **Install** or **Get it now**, depending on the AppSource flow shown in your tenant.
 6. Follow the on-screen prompts until installation is complete.
 
-![Open the Shipper TMS app card in AppSource](resources/installation/pics/installation2.png)
+![Open the Shipper TMS app card in AppSource](resources/installation/installation2.png)
 
 ## What to do next
 

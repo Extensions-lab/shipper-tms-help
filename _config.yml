@@ -1,0 +1,7 @@
+title: Shipper TMS Documentation
+description: User documentation for Shipper TMS for Microsoft Dynamics 365 Business Central.
+markdown: kramdown
+exclude:
+  - documentation-audit-report.md
+  - screenshot-registry.md
+  - Docs.zip

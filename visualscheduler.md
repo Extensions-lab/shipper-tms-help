@@ -14,7 +14,7 @@ It is best for planners who want to see:
 - how the load changes over time,
 - and where quick drag-and-drop adjustments are possible.
 
-![Visual Scheduler timeline grouped by a planning dimension](screenshot-visual-scheduler.png)
+![Visual Scheduler timeline grouped by a planning dimension](resources/visualscheduler/screenshot-visual-scheduler.png)
 
 ## What the scheduler can show
 

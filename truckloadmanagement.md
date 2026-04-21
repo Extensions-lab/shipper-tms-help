@@ -13,9 +13,9 @@ The main planning object is the **truck slot**:
 - planning date,
 - time slot.
 
-This page answers the question: "What should this truck carry in this time window?"
+This page answers the question: **What should this truck carry in this time window?**
 
-![Truck Load Management worksheet with truck slots and candidate requests](screenshot-truck-load-management.png)
+![Truck Load Management worksheet with truck slots and candidate requests](resources/truckloadmanagement/truck-load-management.png)
 
 ## When to use it
 
@@ -37,28 +37,47 @@ Use Truck Load Management when you want to:
 
 ## How to work in this window
 
-Use this window from top to bottom.
-
 1. Set the period with **Previous Period**, **Set Planning Period**, or **Next Period**.
-2. Use **Carrier** when you plan one carrier at a time.
-3. Use **Vehicle Unit Type** when you need only a specific equipment type, such as a truck, container, or trailer profile.
-4. Use **Time Slot** when you plan a specific part of the day.
-5. Use **Depot** when you want only trucks based at one depot.
-6. Use **Candidates** to control the lower list:
-   - choose the most restrictive mode when you only want suitable requests,
-   - choose a mode that shows blocked requests when you need to understand why something cannot be loaded.
-7. Select the truck slot in the upper list.
-8. Review **Status**, **Next Step**, **Load %**, capacity columns, and conflicts.
-9. If the slot has no Transport Order, choose **Create Load**.
-10. In **Eligible Transport Requests**, select one or more requests.
-11. Choose **Add to Selected Truck**.
-12. Open the load with **Next Step**, **Load %**, or **Open Transport Order** to review the result.
-13. When the load is ready, choose **Release Load**.
+2. Use **Carrier**, **Vehicle Unit Type**, **Time Slot**, and **Depot** filters as needed.
+3. Select a truck slot in the upper list.
+4. Review **Status**, **Next Step**, **Load %**, capacity columns, and conflicts.
+5. If the slot has no Transport Order, choose **Create Load**.
+6. In **Eligible Transport Requests**, select one or more requests.
+7. Choose **Add to Selected Truck**.
+8. Open the load with **Next Step**, **Load %**, or **Open Transport Order**.
+9. When the load is ready, choose **Release Load**.
 
-To remove or move work from a truck:
+## Candidate modes
 
-1. Open the selected truck load from **Next Step** or **Load %**.
-2. Select the Transport Request row in **Selected Truck Load**.
+Use the **Candidates** filter to control how strict the lower list should be.
+
+| Mode | Use it when |
+|---|---|
+| **Best Candidates** | You want the best planning suggestions first |
+| **Eligible Only** | You want only requests that can be assigned |
+| **All With Reasons** | You want to see why some requests are warnings or blocked |
+| **Blocked Only** | You are troubleshooting planning blocks |
+
+## Release checks
+
+Before **Release Load** succeeds, Shipper TMS checks the selected truck slot.
+
+Common blockers include:
+
+- no linked Transport Order,
+- Transport Order is not **Open**,
+- no Transport Requests on the load,
+- driver is required in setup but not assigned,
+- slot has conflicts,
+- load is overloaded,
+- compartment or transportation-condition rules are not valid.
+
+Fix the blocker, refresh the page, and release again.
+
+## Move or remove work
+
+1. Open the selected truck load from **Next Step**, **Load %**, or **Open Transport Order**.
+2. Select the Transport Request row.
 3. Choose **Remove from Truck** to return it to the planning pool.
 4. Choose **Move to Another Truck** to move it to another truck slot.
 5. Choose **Move to Another Driver** if the load should stay planned but change driver assignment.
@@ -71,35 +90,8 @@ To remove or move work from a truck:
 | **Show Selected Truck** | Refresh the candidate list for the current slot |
 | **Add to Selected Truck** | Add selected requests to the selected slot |
 | **Open Transport Order** | Open the linked Transport Order |
-| **Release Load** | Release the current load |
+| **Release Load** | Release the current load after validation |
 | **Repair Truck Load Links** | Repair stale slot/order links |
-
-## Typical workflow
-
-1. Open **Truck Load Management**.
-2. Set the planning period and filters.
-3. Select a truck slot.
-4. Review the candidate list.
-5. Choose **Create Load** if the slot does not yet have a Transport Order.
-6. Select one or more candidate requests.
-7. Choose **Add to Selected Truck**.
-8. Review the load detail and then choose **Release Load** when ready.
-
-## Status and next-step hints
-
-The page shows status values such as:
-
-- Empty
-- Planned
-- Partially Loaded
-- Full
-- Overloaded
-- Released
-- In Progress
-- Unavailable
-- Conflict
-
-Use **Next Step** and **Load %** as quick indicators for where the planner should look next.
 
 ## Related
 
