@@ -80,6 +80,24 @@ Expected result:
 | **Proof of Delivery** | PoD enablement and the transport execution status profile |
 | **Map Provider Settings** | Google Maps or Azure Maps credentials |
 
+## Admin field reference
+
+| Field group | What it controls |
+|---|---|
+| **Number Series** | Numbering for Transport Requests, Transport Orders, Map Locations, CMRs, and related documents |
+| **Default Values** | Default mode of transport, charge assignment type, planning defaults, and other values copied into new documents |
+| **Auto-Creation Rules** | Whether released sales, purchase, or transfer documents automatically create Transport Requests |
+| **Carrier Selection** | Carrier comparison availability, automatic charge-line creation, and carrier rate type mapping |
+| **Charges** | Default charge assignment behavior and posting-related charge requirements |
+| **Map Provider** | Selected provider for geocoding, route display, and distance calculation |
+| **Azure Maps** | Subscription key, geo scope, and truck-aware routing support |
+| **Capacity Controls** | Weight, volume, footage, logistic unit, compartment, and transportation-condition controls |
+| **Route Optimization** | Route, route sequence, load sequence, and scheduled time optimization behavior |
+| **Proof of Delivery / Execution** | Execution status profile and PoD-related status behavior |
+| **Reports** | Default report selections for transport documents |
+| **Logistic Units** | Estimation and capacity behavior driven by unit types |
+| **Upgrade Log** | Setup and data checks after extension updates |
+
 ## Recommended first-run sequence
 
 1. Set the number series.

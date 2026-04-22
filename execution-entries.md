@@ -53,6 +53,17 @@ Use attachments for evidence such as:
 
 Integration accounts can also use the API attachment endpoints to upload or download execution-entry attachments. See [API](api.md).
 
+## Proof-of-delivery scenario
+
+Use this flow when the driver or integration captures delivery confirmation before posting.
+
+1. The Transport Order is moved to **In Progress**.
+2. A delivery status is recorded for the relevant stop or request.
+3. The execution entry stores date, time, status, comments, and optional coordinates.
+4. A signature, photo, or document scan is attached as an execution entry attachment.
+5. The dispatcher reviews the entry before posting the Transport Order.
+6. After posting, the posted order keeps the execution history for audit and customer-service review.
+
 ## Status setup
 
 Execution statuses use the status model selected in **Transport Execution Status Profile** in [TMS Setup](setup.md).
@@ -61,7 +72,7 @@ For status setup, see [Statuses and Status Profiles](statuses.md).
 
 ## Good to know
 
-- Execution entries help dispatchers answer “what happened?” after a delivery event.
+- Execution entries help dispatchers answer "what happened?" after a delivery event.
 - Telematics providers may update execution facts when the provider supports the data.
 - Attachments should not contain unnecessary personal data.
 

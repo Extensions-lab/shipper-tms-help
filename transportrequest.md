@@ -45,7 +45,7 @@ A Transport Request can contain:
 |---|---|
 | **Automatic creation from released documents** | TMS Setup is configured to create requests during document release |
 | **Create Transport Request** on a source document | The remaining eligible quantities should become requests immediately |
-| **Split Order for Transportation** | You need partial quantities or several requests from one document |
+| **Transport Request Planning** | You need partial quantities or several requests from one document |
 | **Get Source Documents** on a request | You want to add more released source lines to an Open request |
 | **Document lists** | You want to create requests for several documents in bulk |
 
@@ -59,10 +59,17 @@ For supported document types, see [Source Documents](source-documents.md).
 | **Released** | The request is ready for planning |
 | **Transport** | The request is assigned to a Transport Order |
 
+Allowed status movement is:
+
+```text
+Open -> Released -> Transport
+Released -> Open
+```
+
 ## Important rules
 
 - Only **Released** requests can be assigned to a Transport Order.
-- A request in **Transport** status is no longer available in the free planning pool.
+- A request in **Transport** status is already assigned to a Transport Order and is no longer freely editable or available in the planning pool.
 - If the request is removed from the Transport Order, it can return to **Released**.
 - For unposted source documents, manual creation from the document card requires the source document to be **Released**.
 
@@ -89,16 +96,16 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 
 ## Useful actions
 
-| Action | Use it for |
-|---|---|
-| **Get Source Documents** | Add more released lines while the request is still Open |
-| **Show Route** | Display the route on the map |
-| **Transport Time & Distance** | Calculate distance and duration |
-| **Release** | Move the request to Released |
-| **Reopen** | Move the request back to Open |
-| **Assign to Transport Order** | Add the request to an existing order |
-| **Show Transport** | Open the linked Transport Order |
-| **Estimate** | Rebuild estimated logistic units |
+| Action | Available when | Result |
+|---|---|---|
+| **Get Source Documents** | Request is **Open** | Adds eligible released source document lines |
+| **Show Route** | Endpoints have map data | Displays the route on the map |
+| **Transport Time & Distance** | Endpoints and map provider are valid | Calculates distance and duration |
+| **Release** | Request is **Open** | Makes the request available for planning |
+| **Reopen** | Request is **Released** and not in transport | Returns the request to editing |
+| **Assign to Transport Order** | Request is **Released** | Assigns the request to a new or existing Transport Order |
+| **Show Transport** | Request is in **Transport** | Opens the linked Transport Order |
+| **Estimate** | Request has lines | Rebuilds estimated logistic units |
 
 ## Typical workflow
 
@@ -122,7 +129,7 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 ## Related
 
 - [Source Documents](source-documents.md)
-- [Transport Request Planning Worksheet](transport-request-planning.md)
+- [Transport Request Planning](transport-request-planning.md)
 - [Transport Order](transportorder.md)
 - [Load Management](loadmanagement.md)
 - [Truck Load Management](truckloadmanagement.md)

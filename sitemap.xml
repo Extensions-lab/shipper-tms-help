@@ -1,228 +1,303 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stms.extensions-lab.com/</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/api.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/assignpermissionsets.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/azuremapsintegration.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/buylicenses.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://stms.extensions-lab.com/carrier-rates.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/carrier.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/carrier-rates.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/carrierselection.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/distance-matrix.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/driver.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/driverloadmanagement.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/execution-entries.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/faq.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/googlemapintegration.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/installation.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/loadmanagement.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/logisticunittype.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/maplocation.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/maplocationtype.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/mapproviders.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/posted-transport-orders.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/product.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/reference-master-data.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/reports.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/route.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/routesequence.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/setup.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://stms.extensions-lab.com/shipperloadmanagement.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/source-documents.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/statuses.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/telematics.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-dispatch.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-overview.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-provider-mapping.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-setup.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-sync-and-logs.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/telematics-troubleshooting.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/timeslots.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://stms.extensions-lab.com/transport-charges.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://stms.extensions-lab.com/transport-request-planning.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/transportationconditions.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/transport-charges.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/transportorder.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/transportrequest.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/transport-request-planning.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/truckloadmanagement.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-compare-carriers-assign-freight-cost.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-complete-post-transport-order.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/usecase-create-first-transport-order.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-create-warehouse-documents.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-external-carrier-delivery.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-own-fleet-delivery.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-plan-inbound-purchase-order.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-plan-outbound-sales-order.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-plan-transfer.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-publish-transport-order-telematics.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/usecase-review-execution-history.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/usecase-salesorder-transportrequest.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://stms.extensions-lab.com/vehicle-routing-profiles.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/vehicle.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://stms.extensions-lab.com/vehicle-routing-profiles.html</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/visualscheduler.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/warehouse-documents.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://stms.extensions-lab.com/zones.html</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

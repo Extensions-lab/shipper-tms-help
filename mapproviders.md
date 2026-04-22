@@ -29,10 +29,10 @@ Shipper TMS uses a map provider for:
 
 ## Which provider should you choose
 
-| Provider | Best when |
-|---|---|
-| **Google Maps** | You need standard address geocoding and road routing |
-| **Azure Maps** | You need truck-aware routing with vehicle restrictions |
+| Provider | Best when | Main limitation to check |
+|---|---|---|
+| **Google Maps** | You need standard address geocoding and road routing | Truck-specific routing fields are not used like Azure Maps routing profiles |
+| **Azure Maps** | You need truck-aware routing with vehicle restrictions | Requires Azure Maps setup and vehicle routing profiles for truck constraints |
 
 ## Configure the provider in TMS
 
@@ -43,6 +43,14 @@ Shipper TMS uses a map provider for:
    - **Google Api Key**
    - or **Azure Maps Subscription Key**
 5. For Azure Maps, select **Azure Maps Geo Scope** if your company needs a specific processing region.
+
+## Security note
+
+Map provider keys are secrets.
+
+- Do not include API keys or subscription keys in screenshots.
+- Mask keys before sharing setup screenshots with support or consultants.
+- Rotate keys according to your provider and company security policy.
 
 ## Troubleshooting
 

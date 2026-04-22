@@ -23,6 +23,15 @@ Use Driver Load Management when you need to:
 
 Use Truck Load Management when the main question is what a specific vehicle should carry. Use Driver Load Management when the main question is whether a driver is available and correctly assigned.
 
+## Which planning tool should I use?
+
+| Planner question | Best tool |
+|---|---|
+| Is this driver available for this slot? | **Driver Load Management** |
+| What should this truck carry? | [Truck Load Management](truckloadmanagement.md) |
+| Which requests should be grouped first? | [Load Management](loadmanagement.md) |
+| Where do driver loads overlap on a timeline? | [Visual Scheduler](visualscheduler.md) |
+
 ## Before you start
 
 - Configure **Truck Load Time Slot Profile** in [TMS Setup](setup.md).
@@ -81,6 +90,26 @@ If you need to move work from one driver to another, open the selected load and 
 4. If needed, choose **Assign Vehicle**.
 5. Choose **Open Selected Load** to inspect the linked work.
 6. If the slot shows a conflict, choose **Show Driver Conflicts** and resolve it.
+
+## Conflict and availability indicators
+
+| Indicator | Meaning |
+|---|---|
+| Assigned vehicle | Vehicle manually assigned to the driver slot |
+| Default vehicle | Vehicle suggested from driver or vehicle master data |
+| Linked Transport Order | Load already connected to the driver slot |
+| Load % | Capacity usage of the linked load |
+| Conflict count | Number of driver conflicts for the selected period or slot |
+| Status or next step | What the planner should do next for the driver slot |
+
+## Example: driver-first planning
+
+1. Open **Driver Load Management** for the planning date.
+2. Filter to the carrier and time slot.
+3. Select the driver you want to schedule.
+4. Assign a vehicle if the slot has no valid vehicle.
+5. Open the selected load and review requests, capacity, and route.
+6. If a conflict appears, open **Show Driver Conflicts** and move the load, vehicle, or driver assignment.
 
 ## Troubleshooting
 

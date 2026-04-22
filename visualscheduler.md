@@ -14,6 +14,15 @@ It is best for planners who want to see:
 - how the load changes over time,
 - and where quick drag-and-drop adjustments are possible.
 
+## Which planning tool should I use?
+
+| Planner question | Best tool |
+|---|---|
+| How does the plan look on a timeline? | **Visual Scheduler** |
+| Which released requests should be grouped first? | [Load Management](loadmanagement.md) |
+| What should this truck carry? | [Truck Load Management](truckloadmanagement.md) |
+| Which driver has a conflict? | [Driver Load Management](driverloadmanagement.md) |
+
 ![Visual Scheduler timeline grouped by a planning dimension](resources/visualscheduler/screenshot-visual-scheduler.png)
 
 ## What the scheduler can show
@@ -46,6 +55,15 @@ Depending on status and current context, planners can:
 - drop a request into an Open Transport Order,
 - open the related request or order,
 - create a new Transport Order from selected requests.
+
+## Timeline rules and limits
+
+| Rule | Why it matters |
+|---|---|
+| Transport Requests must be eligible before assignment | The scheduler cannot bypass planning rules from the request and order workflow |
+| Target Transport Orders must be **Open** | Released and In Progress orders are protected from visual edits |
+| Dragging changes timing only when the workflow allows it | Locked request dates or assigned transport documents can prevent changes |
+| Capacity and conflicts still need review | Visual grouping does not replace truck-load or driver validation when those controls are used |
 
 ## How to work in this window
 

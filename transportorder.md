@@ -52,9 +52,12 @@ A Transport Order can contain:
 Allowed status movement is:
 
 ```text
-Open -> Released -> In Progress -> Released
+Open -> Released -> In Progress
 Released -> Open
+In Progress -> Released
 ```
+
+Posting is not a live status change. When you choose **Post**, Shipper TMS creates a **Posted Transport Order** and removes the live order from the active Transport Orders list.
 
 Use **Reopen** when you must change planning data. Use **Return to Released** when execution started but the trip must be paused or corrected before posting.
 
@@ -103,6 +106,14 @@ When you use **Create Transport Orders** on a source document, Shipper TMS creat
 If you need to change route, resources, requests, or charges after release, reopen the order first.
 
 ## Key actions
+
+| Action | Typical status | Result |
+|---|---|---|
+| **Add Transport Requests** | **Open** | Adds released unassigned requests and rebuilds route stops |
+| **Carrier Selection** | **Open** | Compares carrier costs and can apply the selected carrier |
+| **Create Warehouse Documents** | **Released** | Creates or opens warehouse shipment or receipt documents |
+| **In Progress** | **Released** | Starts execution and prepares the order for posting |
+| **Post** | **In Progress** | Moves the order to posted history |
 
 ### Route and timing
 
@@ -157,9 +168,11 @@ Before you post the order:
 
 1. The order must be **In Progress**.
 2. The order must contain at least one transport line.
-3. Charge lines must be linked or handled correctly.
-4. Source-linked sales, purchase, or transfer charge lines must not remain in an unposted state that blocks posting.
-5. Execution and proof-of-delivery data should be reviewed if your process requires it.
+3. Route lines must exist for the load and unload points.
+4. Charge lines must be fully assigned or intentionally handled as non-posting information.
+5. Source-linked sales, purchase, or transfer charge lines must not remain in an unposted state that blocks posting.
+6. Source document charge assignments may need the source document to be posted first, depending on your billing flow.
+7. Execution and proof-of-delivery data should be reviewed if your process requires it.
 
 After posting, use [Posted Transport Orders](posted-transport-orders.md) for read-only history.
 

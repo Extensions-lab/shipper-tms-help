@@ -26,6 +26,25 @@ Posted Transport Orders are created when a Transport Order is posted.
 
 Posting removes the live order and stores the result in posted history.
 
+## What moves to history
+
+| Live record | Posted or history record | What it preserves |
+|---|---|---|
+| Transport Order header | Posted Transport Order header | Final carrier, driver, vehicle, dates, totals, route context, and document numbers |
+| Transport Order Lines | Posted Transport Order Lines | Final load, unload, route-stop, and source document references |
+| Transport Charges | Posted Transport Charges | Final charge amounts and source links |
+| Charge Assignments | Posted Charge Assignments | Final allocation basis and assigned amounts |
+| Execution Entries | Execution Entries linked to posted history | Status events, PoD facts, and attachments created before posting |
+
+## Related record types
+
+| Record type | Meaning |
+|---|---|
+| **Transport Order Lines** | Live route stops and request lines on an unposted Transport Order |
+| **Posted Transport Order Lines** | Read-only route and source-line history after posting |
+| **Execution Entries** | Delivery events, statuses, coordinates, proof notes, or integration facts |
+| **Execution Entry Attachments** | Pictures, signatures, documents, or other evidence attached to an execution entry |
+
 ## Open a posted order
 
 1. Search for **Posted Transport Orders**.

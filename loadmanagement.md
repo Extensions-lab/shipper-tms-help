@@ -22,6 +22,15 @@ Load Management is best when:
 
 Use Truck Load Management instead when the planner starts from a specific vehicle, date, and time slot.
 
+## Which planning tool should I use?
+
+| Planner question | Best tool |
+|---|---|
+| Which released requests should travel together? | **Load Management** |
+| What should this truck carry in this slot? | [Truck Load Management](truckloadmanagement.md) |
+| Is this driver available and conflict-free? | [Driver Load Management](driverloadmanagement.md) |
+| Where does this work fit on a timeline? | [Visual Scheduler](visualscheduler.md) |
+
 ## Before you start
 
 - Transport Requests must be **Released**.
@@ -75,6 +84,16 @@ Use this page instead of Truck Load Management when the planner thinks "which re
 | **Assign to Selected** | Add the selected pending requests to the selected Transport Order or compartment |
 | **Refresh** | Rebuild both sections |
 | **Visual Scheduler** | Open the scheduler for the same planning period |
+
+## Planning indicators
+
+| Indicator | How to use it |
+|---|---|
+| Pending request | Request is released and not assigned to a Transport Order |
+| Assigned request | Request is already placed under a Transport Order or compartment |
+| Compartment node | Vehicle compartment that can receive compatible requests |
+| Capacity total | Current weight, volume, footage, or logistic unit usage for the target order |
+| Conflict or warning | Planning rule that should be reviewed before release |
 
 ## Typical workflow
 

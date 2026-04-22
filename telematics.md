@@ -5,7 +5,7 @@ description: "Connect Shipper TMS to telematics providers such as Geotab, Samsar
 
 # Telematics
 
-Use **Telematics** when Shipper TMS must exchange route, dispatch, vehicle, driver, or execution data with a fleet platform.
+Use **Telematics** when Shipper TMS must exchange route, dispatch, vehicle, driver, position, or execution data with a fleet platform.
 
 Supported provider options include:
 
@@ -15,30 +15,16 @@ Supported provider options include:
 
 ![Telematics Setup card with connection and sync actions](resources/telematics/telematics-setup-card.png)
 
-## What telematics can support
+## Telematics guide
 
-Depending on provider setup, telematics can support:
-
-- vehicle and driver mapping,
-- route or dispatch publication,
-- dispatch cancellation,
-- vehicle location review,
-- position history,
-- route-stop events,
-- execution fact synchronization,
-- inbound messages and log review.
-
-## Basic setup flow
-
-1. Create a **Telematics Setup** record.
-2. Select the provider.
-3. Enter connection and authentication values.
-4. Use provider-specific secret management where available.
-5. Map vehicles and drivers.
-6. Link the setup to the relevant [Carrier](carrier.md).
-7. Test synchronization in a sandbox or demo company first.
-8. Publish a test Transport Order.
-9. Review telematics logs and inbound messages.
+| Topic | Use it for |
+|---|---|
+| [Telematics overview](telematics-overview.md) | Understand what the telematics subsystem does |
+| [Telematics setup](telematics-setup.md) | Create provider setup records, credentials, and sync settings |
+| [Telematics provider mapping](telematics-provider-mapping.md) | Map external vehicles, drivers, zones, and locations to Shipper TMS records |
+| [Telematics dispatch](telematics-dispatch.md) | Publish, cancel, refresh, and review Transport Order dispatches |
+| [Telematics sync and logs](telematics-sync-and-logs.md) | Review sync state, inbound messages, logs, positions, trips, and events |
+| [Telematics troubleshooting](telematics-troubleshooting.md) | Resolve common provider, mapping, webhook, and retry issues |
 
 ## Transport Order actions
 
@@ -54,27 +40,13 @@ A connected order can expose actions such as:
 
 The exact action result depends on the provider, credentials, mapping, and provider-side configuration.
 
-## Telematics administration API
+## Security note
 
-Shipper TMS also exposes API actions for telematics administration.
+Telematics credentials, API tokens, webhook secrets, and provider payloads can contain sensitive operational data.
 
-Examples include:
-
-- registering or deleting a Samsara route webhook,
-- ensuring or deleting a Webfleet route queue,
-- retrieving a route-ingress contract,
-- receiving provider webhook payloads.
-
-For API entity sets and permission sets, see [API](api.md).
-
-## Troubleshooting
-
-| Problem | Check |
-|---|---|
-| Publish action fails | Provider credentials, carrier setup, route data, vehicle/driver mapping |
-| No vehicle location appears | Vehicle mapping, provider sync status, last known position |
-| Webhook is not received | API permissions, endpoint configuration, provider webhook registration |
-| Execution entries are missing | Provider event availability, sync logs, status profile setup |
+- Do not include keys or tokens in screenshots.
+- Use secret management for passwords and tokens where available.
+- Limit telematics admin API access to trusted integration accounts.
 
 ## Related
 

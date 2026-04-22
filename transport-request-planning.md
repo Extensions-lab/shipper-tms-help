@@ -1,11 +1,11 @@
 ---
-title: "Transport Request Planning Worksheet"
+title: "Transport Request Planning"
 description: "Distribute source document lines across one or more Transport Requests."
 ---
 
-# Transport Request Planning Worksheet
+# Transport Request Planning
 
-Use **Transport Request Planning Worksheet** when one source document must be split across one or more Transport Requests.
+Use **Transport Request Planning** when one source document must be split across one or more Transport Requests.
 
 Use it when you need to:
 
@@ -15,7 +15,7 @@ Use it when you need to:
 - move quantities between Open requests,
 - release or reopen all related requests from one page.
 
-![Transport Request Planning Worksheet](resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
+![Transport Request Planning](resources/transport-request-planning/screenshot-transport-request-planning-worksheet.png)
 
 ## Before you start
 
@@ -35,7 +35,7 @@ Use it when you need to:
 ## Create a new request from selected quantities
 
 1. Open the source document.
-2. Choose **Split Order for Transportation**.
+2. Choose **Transport Request Planning**.
 3. In **Source Lines**, enter **Qty. to Add** on the lines you want to plan.
 4. Choose **New Transport Request**.
 5. Review the created request number or request count.
@@ -46,6 +46,19 @@ Expected result:
 - Shipper TMS creates one or more Transport Requests for the selected quantities.
 - Source line balances update so users can see distributed and remaining quantities.
 - Released requests become available in Transport Order planning.
+
+## Already assigned quantities
+
+The worksheet shows what has already been distributed from each source line. Use these quantities before entering a new **Qty. to Add** value.
+
+| Quantity | Meaning |
+|---|---|
+| **Source Quantity** | Quantity on the source document line |
+| **Distributed Quantity** | Quantity already assigned to Transport Requests |
+| **Remaining Quantity** | Quantity still available for planning |
+| **Qty. to Add** | Quantity you want to add in the current action |
+
+If the full source-line quantity is already distributed, **Qty. to Add** stays zero and should not be used for that line unless an Open request line is changed or removed.
 
 ## Add quantities to an existing request
 
@@ -88,7 +101,8 @@ Use this when an Open Transport Request already exists for the same source docum
 
 | Problem | What to check |
 |---|---|
-| Quantity cannot be entered | Check **Remaining Qty.** and whether the source line is eligible for transport. |
+| **Qty. to Add** is not editable | Check **Remaining Qty.**, source-line eligibility, and whether the quantity is already assigned to a request in **Transport**. |
+| No eligible lines are shown | Confirm the source document is supported, released when required, and still has item quantities that are not fully assigned. |
 | Existing request cannot be selected | Only **Open** requests can receive added or moved quantities. |
 | **Release All** does not release a request | The request must have required load and unload date/time values. |
 | **Reopen All** skips a request | Requests already assigned to a Transport Order cannot be reopened from the worksheet. |

@@ -20,6 +20,26 @@ A routing profile can describe:
 - traffic usage,
 - route instruction language.
 
+## Field reference
+
+| Field | What it means | When to use it |
+|---|---|---|
+| **Travel Mode** | Provider travel mode requested for the route | Set this for normal car or truck routing behavior |
+| **Commercial Vehicle** | Marks the route as commercial vehicle routing | Use for truck-aware planning in Azure Maps |
+| **Vehicle Height (m)** | Legal vehicle height | Use when bridges or road restrictions matter |
+| **Vehicle Width (m)** | Legal vehicle width | Use for narrow-road restrictions |
+| **Vehicle Length (m)** | Legal vehicle length | Use for turning and road-access restrictions |
+| **Vehicle Weight (kg)** | Gross vehicle weight | Use for road, bridge, and legal restrictions |
+| **Axle Weight (kg)** | Maximum axle weight | Use when axle-weight restrictions apply |
+| **Axle Count** | Number of axles | Use when provider routing differentiates by axle count |
+| **Max Speed (km/h)** | Vehicle maximum speed | Use when travel-time estimates should reflect equipment limits |
+| **Hazardous Load** | Hazardous or regulated load class | Use for hazmat-aware routing |
+| **ADR Tunnel Restriction** | ADR tunnel category | Use for European tunnel restrictions |
+| **Avoid Toll Roads** | Avoid toll roads where possible | Use when toll avoidance is part of policy or quoting |
+| **Avoid Unpaved Roads** | Avoid unpaved roads where possible | Use for fragile cargo or equipment restrictions |
+| **Use Traffic** | Use traffic-aware duration when supported | Use for more realistic duration estimates |
+| **Instruction Language** | Language code for route instructions | Use when drivers or documents need localized route guidance |
+
 ![Vehicle Routing Profile card](resources/vehicle-routing-profiles/screenshot-vehicle-routing-profile-card.png)
 
 ## Before you start
@@ -56,6 +76,7 @@ A routing profile can describe:
 - Google Maps setup does not use these truck-specific profile fields in the same way.
 - Changing a profile can make stored route-distance values outdated.
 - Recalculate route distance and duration after changing a routing profile.
+- Route results still depend on what the selected map provider supports for your region.
 
 ## Related
 

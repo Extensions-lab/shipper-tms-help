@@ -21,6 +21,24 @@ Shipper TMS can create:
 3. Source documents must be eligible for warehouse shipment or receipt creation.
 4. Business Central warehouse setup must require warehouse documents for the relevant location.
 
+## Supported source lines
+
+Shipper TMS creates warehouse documents for supported sales and purchase source lines.
+
+| Result | Supported source lines |
+|---|---|
+| Warehouse Shipment | Sales Order, Purchase Return Order |
+| Warehouse Receipt | Purchase Order, Sales Return Order |
+
+Transfer lines are not created as warehouse documents by this action in the current version.
+
+In the current version, return-order warehouse document creation depends on the current warehouse creation logic:
+
+- Purchase Return Order lines are processed for Warehouse Shipment only when the Transport Request also contains at least one eligible Sales Order line.
+- Sales Return Order lines are processed for Warehouse Receipt only when the Transport Request also contains at least one eligible Purchase Order line.
+
+If you need standalone return-order warehouse document creation, verify the behavior in a sandbox before using this workflow in production.
+
 ## Create warehouse documents
 
 1. Open the [Transport Order](transportorder.md).
@@ -49,6 +67,7 @@ The same applies when posted warehouse shipment or receipt records already exist
 | **Create Warehouse Documents** is unavailable | The Transport Order must be **Released**. |
 | No shipment is created | The shipper must be a location that requires shipment handling, and the source line must still be eligible for warehouse shipment. |
 | No receipt is created | The consignee must be a location that requires receive handling, and the source line must still be eligible for warehouse receipt. |
+| A transfer line does not create a warehouse document | Transfer warehouse document creation is not implemented by this action in the current version. |
 | Existing documents open instead of new ones | A warehouse or posted warehouse document is already linked to the Transport Order. |
 | Quantities are lower than expected | Business Central warehouse logic uses outstanding warehouse quantities, not the original source quantity. |
 

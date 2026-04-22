@@ -47,6 +47,16 @@ The profile can carry routing constraints such as dimensions, weight, axle weigh
 
 For setup, see [Vehicle Routing Profiles](vehicle-routing-profiles.md).
 
+## Configuration examples
+
+| Unit type | Useful fields | Result |
+|---|---|---|
+| Standard pallet | Dimensions, weight, volume | Better estimated capacity on requests and orders |
+| Refrigerated trailer | Volume, footage, transportation condition, strict controls | Helps keep frozen or chilled cargo compatible with the right equipment |
+| Heavy truck | Maximum weight, dimensions, Vehicle Routing Profile Code | Supports capacity checks and Azure Maps truck-aware routing |
+
+When you change unit type dimensions or routing profile assignments, recalculate estimates and route distance on affected Transport Requests or Transport Orders.
+
 ## Related
 
 - [Transportation Conditions](transportationconditions.md)

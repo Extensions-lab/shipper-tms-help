@@ -92,7 +92,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 | Job | Start here |
 |---|---|
 | Create transport demand from Business Central documents | [Source Documents](source-documents.md) |
-| Split one document into several transport requests | [Transport Request Planning Worksheet](transport-request-planning.md) |
+| Split one document into several transport requests | [Transport Request Planning](transport-request-planning.md) |
 | Prepare and release a request | [Transport Request](transportrequest.md) |
 | Assign requests to a trip | [Load Management](loadmanagement.md) or [Transport Order](transportorder.md) |
 | Plan by vehicle | [Truck Load Management](truckloadmanagement.md) |
@@ -109,7 +109,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 |---|---|
 | [Source Documents](source-documents.md) | Where transport demand starts in sales, purchase, transfer, and posted documents |
 | [Transport Request](transportrequest.md) | The planning document that captures what must be moved |
-| [Transport Request Planning Worksheet](transport-request-planning.md) | How to split source lines across one or more requests |
+| [Transport Request Planning](transport-request-planning.md) | How to split source lines across one or more requests |
 | [Transport Order](transportorder.md) | The execution document for the actual trip |
 | [Execution Entries](execution-entries.md) | Delivery, proof-of-delivery, and execution-status history |
 | [Posted Transport Orders](posted-transport-orders.md) | Read-only history after a trip is posted |
@@ -162,8 +162,11 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 
 | Topic | What it covers |
 |---|---|
-| [Telematics](telematics.md) | Geotab, Samsara, and Webfleet integration |
-| [API](api.md) | Business Central API pages exposed by Shipper TMS |
+| [Telematics](telematics.md) | Telematics guide for Geotab, Samsara, and Webfleet integration |
+| [Telematics setup](telematics-setup.md) | Provider credentials, sync streams, and polling setup |
+| [Telematics dispatch](telematics-dispatch.md) | Publishing, canceling, refreshing, and reviewing dispatches |
+| [Telematics sync and logs](telematics-sync-and-logs.md) | Logs, inbound messages, sync state, positions, trips, and events |
+| [API](api.md) | Business Central API pages, entity sets, permissions, examples, and telematics actions |
 
 ## Troubleshooting Starting Points
 
@@ -182,6 +185,16 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 
 - [Use case: Create a Transport Request from a Sales Order](usecase-salesorder-transportrequest.md)
 - [Use case: Create your first Transport Order](usecase-create-first-transport-order.md)
+- [Use case: Plan an outbound delivery from a Sales Order](usecase-plan-outbound-sales-order.md)
+- [Use case: Plan an inbound pickup from a Purchase Order](usecase-plan-inbound-purchase-order.md)
+- [Use case: Plan a transfer between locations](usecase-plan-transfer.md)
+- [Use case: Plan a delivery with your own fleet](usecase-own-fleet-delivery.md)
+- [Use case: Plan a delivery with an external carrier](usecase-external-carrier-delivery.md)
+- [Use case: Compare carriers and assign freight cost](usecase-compare-carriers-assign-freight-cost.md)
+- [Use case: Create warehouse documents from a Transport Order](usecase-create-warehouse-documents.md)
+- [Use case: Complete and post a Transport Order](usecase-complete-post-transport-order.md)
+- [Use case: Publish a Transport Order to telematics](usecase-publish-transport-order-telematics.md)
+- [Use case: Review delivery execution and posted history](usecase-review-execution-history.md)
 
 ## Maintenance
 

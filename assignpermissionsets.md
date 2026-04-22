@@ -11,13 +11,13 @@ After the app is installed and licenses are assigned, give users access to Shipp
 
 ## Which permission set to use
 
-| Use this when | Permission set |
-|---|---|
-| Daily planning and execution | **Shipper TMS - User** |
-| Setup and administration | **Shipper TMS - Administrator** |
-| API integration | **Shipper TMS - API** |
-| Telematics API access | **Shipper TMS - Tel. API** |
-| Telematics admin API access | **Shipper TMS - Tel. Admin API** |
+| Use this when | Permission set caption | Permission set name |
+|---|---|---|
+| Daily planning and execution | **Shipper TMS - User** | `Shipper TMS User` |
+| Setup and administration | **Shipper TMS - Administrator** | `Shipper TMS Admin` |
+| API integration | **Shipper TMS - API** | `Shipper TMS API` |
+| Telematics API access | **Shipper TMS - Tel. API** | `TMAS Telematics API` |
+| Telematics admin API access | **Shipper TMS - Tel. Admin API** | `TMAS Tel. Admin API` |
 
 ## Recommended assignment pattern
 

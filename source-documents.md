@@ -1,13 +1,13 @@
 ---
 title: "Source Documents"
-description: "Use sales, purchase, transfer, and posted Business Central documents as the source of transport demand in Shipper TMS."
+description: "Use supported sales, purchase, transfer, and posted Business Central documents as the source of transport demand in Shipper TMS."
 ---
 
 # Source documents
 
 A **source document** is the Business Central document that creates transport demand.
 
-Shipper TMS can create or show Transport Requests and Transport Orders from sales, purchase, transfer, and selected posted documents.
+Shipper TMS can create or show Transport Requests and Transport Orders from supported sales, purchase, transfer, and selected posted documents.
 
 ![TMS actions on a source document](resources/source-documents/screenshot-source-document-actions.png)
 
@@ -17,9 +17,19 @@ Shipper TMS can create or show Transport Requests and Transport Orders from sale
 |---|---|
 | **Sales** | Sales Order, Sales Invoice, Sales Credit Memo, Sales Return Order, Posted Sales Invoice, Posted Sales Shipment, Posted Sales Return, Posted Sales Credit Memo |
 | **Purchase** | Purchase Order, Purchase Invoice, Purchase Credit Memo, Purchase Return Order, Posted Purchase Invoice, Posted Purchase Receipt, Posted Purchase Return, Posted Purchase Credit Memo |
-| **Transfer** | Transfer Order, Posted Transfer Shipment, Posted Transfer Receipt |
+| **Transfer** | Transfer Order |
 
 The exact action set depends on the document type and status.
+
+Posted Transfer Shipment and Posted Transfer Receipt records exist in the Business Central transport data model, but the current UI does not add Shipper TMS source-document actions to those posted transfer pages.
+
+## User entry points
+
+| Entry point | Typical documents | Main Shipper TMS actions |
+|---|---|---|
+| Document cards | Sales Order, Purchase Order, Transfer Order, invoices, credit memos, returns, and supported posted sales/purchase documents | Create one request, open Transport Request Planning, open related requests or orders, create orders from released requests |
+| Document list pages | Sales, purchase, and supported posted sales/purchase lists | Create requests or orders for selected documents in bulk and update Transportation Status |
+| Posted transfer pages | Posted Transfer Shipment, Posted Transfer Receipt | No user-facing Shipper TMS source-document actions in the current UI |
 
 ## What Shipper TMS adds
 
@@ -27,7 +37,7 @@ On supported document pages, Shipper TMS adds transport fields and actions such 
 
 - **Transportation Status**,
 - **Create Transport Request**,
-- **Split Order for Transportation**,
+- **Transport Request Planning**,
 - **Transport Requests**,
 - **Create Transport Order**,
 - **Transport Orders**,
@@ -54,13 +64,15 @@ Expected result:
 Use this path when only part of the document should be planned now or when one document must become several transport requests.
 
 1. Open the source document.
-2. Choose **Split Order for Transportation**.
+2. Choose **Transport Request Planning**.
 3. Review the source lines in the upper part of the worksheet.
 4. Enter **Qty. to Add** for the quantities you want to plan.
 5. Choose **New Transport Request** or **Add to Existing Transport Request**.
 6. Release the requests when they are ready for planning.
 
-For the full workflow, see [Transport Request Planning Worksheet](transport-request-planning.md).
+Use this worksheet when you need to split source document quantities across one or more Transport Requests.
+
+For the full workflow, see [Transport Request Planning](transport-request-planning.md).
 
 ## Create Transport Orders from a source document
 
@@ -94,8 +106,9 @@ Expected result:
 
 - Manual request creation from unposted source documents requires the source document to be **Released**.
 - **Create Transport Request** is for remaining eligible quantities.
-- **Split Order for Transportation** is for partial quantities and controlled distribution.
+- **Transport Request Planning** is for partial quantities and controlled distribution.
 - Posted documents are useful when transport planning starts after posting.
+- Posted transfer shipments and receipts are not user entry points for Shipper TMS actions in the current version.
 - Customer, vendor, location, ship-to, and order-address map data improve automatic route creation.
 
 ## Troubleshooting
@@ -111,6 +124,6 @@ Expected result:
 ## Related
 
 - [Transport Request](transportrequest.md)
-- [Transport Request Planning Worksheet](transport-request-planning.md)
+- [Transport Request Planning](transport-request-planning.md)
 - [Transport Order](transportorder.md)
 - [Map Locations](maplocation.md)

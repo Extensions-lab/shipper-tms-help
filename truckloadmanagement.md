@@ -29,6 +29,15 @@ Use Truck Load Management when you want to:
 
 Do not start here if you only need to choose an external carrier. Use [Carrier Selection](carrierselection.md) on a Transport Order for that flow.
 
+## Which planning tool should I use?
+
+| Planner question | Best tool |
+|---|---|
+| What should this truck carry in this date and time slot? | **Truck Load Management** |
+| Which released requests should be grouped first? | [Load Management](loadmanagement.md) |
+| Which driver can take this load? | [Driver Load Management](driverloadmanagement.md) |
+| How does the plan look across the day or week? | [Visual Scheduler](visualscheduler.md) |
+
 ## Before you start
 
 - Configure **Truck Load Time Slot Profile** in [TMS Setup](setup.md).
@@ -70,6 +79,29 @@ Use the **Candidates** filter to control how strict the lower list should be.
 | **Eligible Only** | You want only requests that can be assigned |
 | **All With Reasons** | You want to see why some requests are warnings or blocked |
 | **Blocked Only** | You are troubleshooting planning blocks |
+
+## Candidate and slot indicators
+
+| Indicator | Meaning |
+|---|---|
+| **Best Candidate** | The request is a strong match for the selected truck slot |
+| **Eligible** | The request can be added, but it may not be the best fit |
+| **Warning** | The request can require planner review before assignment |
+| **Blocked** | The request cannot be assigned until the shown reason is fixed |
+| **Load %** | Capacity usage for the linked load |
+| **Conflict Count** | Driver, vehicle, slot, or rule conflicts detected for the slot |
+| **Compartment** | Capacity or transport-condition subdivision on the vehicle |
+
+## Example: truck-first planning
+
+1. Open **Truck Load Management** for tomorrow's planning period.
+2. Filter to the carrier, depot, and time slot.
+3. Select an empty truck slot.
+4. Choose **Create Load**.
+5. Switch candidates to **Best Candidates**.
+6. Add compatible released requests until capacity and time look correct.
+7. Review conflicts and compartments.
+8. Choose **Release Load** when the load is ready for execution.
 
 ## Release checks
 

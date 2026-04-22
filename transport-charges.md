@@ -59,6 +59,36 @@ Expected result:
 6. Choose **Apply** if the allocation must be pushed to source document item-charge assignments.
 7. Confirm that the remaining amount is zero.
 
+## Example: allocate freight by gross weight
+
+Use this example when one carrier freight cost must be spread across several Sales Order lines.
+
+| Sales Order line | Gross weight | Share | Assigned amount |
+|---|---:|---:|---:|
+| Line 10000 | 300 kg | 60% | 300.00 |
+| Line 20000 | 200 kg | 40% | 200.00 |
+| Total | 500 kg | 100% | 500.00 |
+
+Steps:
+
+1. Add a sales or purchase transport charge line for 500.00.
+2. Choose **Show Assignment**.
+3. Choose **By Weight**.
+4. Review the suggested amounts.
+5. Choose **Apply** when the assignment must update the linked source document item-charge assignment.
+
+## Why posting can be blocked
+
+Transport Order posting can stop when charge lines do not have a complete financial path.
+
+| Blocker | What to fix |
+|---|---|
+| Charge amount is not fully assigned | Open **Show Assignment** and assign the remaining amount |
+| Source document assignment is missing | Choose **Apply** after reviewing the assignment |
+| Linked sales or purchase charge line is not posted when required | Post or correct the source document before posting the Transport Order |
+| Carrier rate type has no item charge mapping | Complete **Carrier Rate Types Mapping** in TMS Setup |
+| Charge is only informational | Confirm the process does not require source document assignment for that charge line |
+
 ## Purchase charge actions
 
 | Action | Use it for |
@@ -80,7 +110,7 @@ Expected result:
 - Use **Update Distances** in the assignment page when distance-based allocation depends on current route data.
 - Use **Clear Amount to Assign** before rebuilding an allocation from another method.
 - Use **Show Item Charge Assignment** to inspect the Business Central item-charge distribution.
-- Posting the Transport Order can be blocked by unlinked or unposted charge lines.
+- Posting the Transport Order can be blocked by unlinked, unassigned, or unposted charge lines.
 
 ## Troubleshooting
 

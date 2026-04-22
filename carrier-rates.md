@@ -75,11 +75,28 @@ Expected result:
 - The cost breakdown shows the rate components that apply to the route.
 - Applying the carrier updates the Transport Order carrier fields.
 
+## Example: lane with distance and stop fees
+
+Use this pattern when a carrier charges both a route rate and fixed operational fees.
+
+| Component | Example value | Result |
+|---|---:|---:|
+| Main route distance | 120 km | Used with **Rate** |
+| **Rate** | 2.00 per km | 240.00 |
+| **Fee Per Load** | 25.00 | 25.00 for the loading stop |
+| **Fee Per Unload** | 30.00 | 30.00 for the unloading stop |
+| Empty return distance | 40 km | Used with **Empty Return Rate** when empty return applies |
+| **Empty Return Rate** | 1.50 per km | 60.00 |
+| **Flat Fee** | 50.00 | 50.00 |
+
+The calculated carrier amount in this example is 405.00 before taxes or finance-specific charges. If **Auto Create Charge Line** is enabled, each cost component that creates a charge must have a valid **Carrier Rate Types Mapping**.
+
 ## Troubleshooting
 
 | Problem | Check |
 |---|---|
 | Carrier does not appear | Carrier is blocked or not eligible |
+| Carrier Selection returns no carriers | Confirm the Transport Order has route stops, the order is **Open**, carrier selection is enabled, and at least one unblocked carrier has matching rate geography. |
 | Amount is zero | No matching rate exists or only a fallback comparison row was created |
 | Rate is too high or too low | Distance, empty-return setup, fees, and geographic filters |
 | Auto charge line is missing | **Auto Create Charge Line** and **Carrier Rate Types Mapping** in TMS Setup |

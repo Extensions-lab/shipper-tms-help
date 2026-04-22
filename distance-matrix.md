@@ -39,6 +39,14 @@ The record can store:
 
 This matters when Azure Maps routing profiles are used, because vehicle restrictions can change the route.
 
+## Manual versus calculated values
+
+| Type of value | When to use it | How to maintain it |
+|---|---|---|
+| Manual distance or duration | Your company uses contracted, audited, or legally agreed lane values | Enter and review the value directly, then avoid recalculating unless the lane policy changes |
+| Calculated distance or duration | You want the map provider to return current route distance and travel time | Choose **Update Distance and Duration** or run the route calculation from a request or order |
+| Route-profile-specific value | The route depends on vehicle dimensions, weight, hazardous load, or avoid settings | Recalculate after changing the vehicle routing profile, map provider, or stop sequence |
+
 ## When to update distances
 
 Update distances after you change:
@@ -49,6 +57,8 @@ Update distances after you change:
 - vehicle routing profile,
 - route stop sequence,
 - road restrictions that affect truck routing.
+
+Do not recalculate a manually maintained record unless the manual value is intentionally being replaced by provider-calculated data.
 
 ## Where distance values are used
 

@@ -55,12 +55,24 @@ When you apply the result, the selected carrier is written back to the Transport
 
 If **Auto Create Charge Line** is enabled, Shipper TMS can also create charge lines on the order.
 
+## How setup records work together
+
+| Setup record | Why it matters |
+|---|---|
+| **Carrier** | Defines the provider, source vendor/customer relationship, default vehicle, default driver, and optional start or end map locations |
+| **Default Vehicle** | Supplies vehicle capacity and may carry a unit type used for routing or planning |
+| **Default Driver** | Gives planners a suggested driver when the carrier represents own-fleet or dedicated resources |
+| **Start MAP Location No.** and **End MAP Location No.** | Add carrier depot or return legs when the rate logic uses them |
+| **Carrier Rate** | Defines geographic matching and rate components |
+| **Carrier Rate Types Mapping** | Maps rate components to item charges and purchase or sales charge behavior |
+| **Item Charge Assignment** | Determines whether created charge lines must be assigned back to source document lines before posting |
+
 ## Troubleshooting
 
 | Problem | What to check |
 |---|---|
 | The action is unavailable | The Transport Order must be **Open**, and **Carrier Selection Enabled** must be turned on in TMS Setup. |
-| No carrier appears | The carrier must not be blocked and must have matching rates or valid comparison data for the route. |
+| Carrier Selection returns no carriers | The carrier must not be blocked, the order must have usable route stops or distances, and at least one rate must match the route geography. |
 | Amount is zero or unexpected | Check distance, empty return setup, flat fee, load/unload fees, and origin/destination filters. |
 | The wrong carrier start or end point is used | Review **Start MAP Location No.** and **End MAP Location No.** on the carrier. |
 | Charge lines are missing | Check **Auto Create Charge Line**, carrier source vendor, and **Carrier Rate Types Mapping**. |

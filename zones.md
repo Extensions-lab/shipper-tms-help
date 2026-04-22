@@ -38,6 +38,32 @@ Use the Zone card when the business needs planning areas or geofence-style group
 
 This separation lets you keep your own business structure while still connecting to external geofences.
 
+## Use zones for planning and rating
+
+Use standard zones when the business needs simple geographic classification.
+
+Common uses include:
+
+- assigning a default carrier, vehicle, or driver for an area,
+- filtering or grouping transport demand,
+- supporting route and delivery-region planning,
+- using zone-carrier relationships for service coverage,
+- reporting demand by region.
+
+For this use, a zone can be useful even before detailed geometry is maintained.
+
+## Use zone geometry for maps, routing, and geofence scenarios
+
+Use zone geometry when the system or integration needs a physical area, not just a code.
+
+| Geometry option | Use it when |
+|---|---|
+| Circle | A depot, yard, or stop can be represented by a center point and radius |
+| Polygon | A delivery area, terminal, or city region needs a precise boundary |
+| Additional geometries | One business zone has multiple areas or exclusion holes |
+
+Telematics integrations can synchronize provider geofences into telematics zone records. Map or review those records before relying on them for dispatch or execution logic.
+
 ## Create an internal zone
 
 1. Search for **Zones**.
