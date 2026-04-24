@@ -34,7 +34,7 @@ Do not start here if you only need to choose an external carrier. Use [Carrier S
 | Planner question | Best tool |
 |---|---|
 | What should this truck carry in this date and time slot? | **Truck Load Management** |
-| Which released requests should be grouped first? | [Load Management](loadmanagement.md) |
+| Which released requests should be grouped first? | [Transport Request Load Planning](loadmanagement.md) |
 | Which driver can take this load? | [Driver Load Management](driverloadmanagement.md) |
 | How does the plan look across the day or week? | [Visual Scheduler](visualscheduler.md) |
 
@@ -92,6 +92,35 @@ Use the **Candidates** filter to control how strict the lower list should be.
 | **Conflict Count** | Driver, vehicle, slot, or rule conflicts detected for the slot |
 | **Compartment** | Capacity or transport-condition subdivision on the vehicle |
 
+## Slot status legend
+
+| Slot status | What it means | Planner action |
+|---|---|---|
+| **Empty** | The vehicle/date/time slot has no linked load. | Create a load or leave the slot available. |
+| **Planned** | A Transport Order exists for the slot. | Add requests, review route and capacity, then release when ready. |
+| **Partially Loaded** | The load has requests but still has capacity. | Add more compatible requests if the route still makes sense. |
+| **Full** | Capacity is considered full for the selected controls. | Review and release, or move work if the load is not operationally correct. |
+| **Released** | The linked Transport Order is released. | Warehouse/execution can proceed; reopen only if planning changes are needed. |
+| **In Progress** | Execution has started. | Do not use the slot for planning changes unless the process is rolled back. |
+| **Unavailable** | The vehicle or slot is not available for planning. | Choose another slot or fix vehicle scheduling setup. |
+| **Conflict** | A scheduling or assignment conflict exists. | Open conflict details or the linked order and resolve before release. |
+| **Overloaded** | The load exceeds a configured capacity control. | Remove requests, move work, or use a larger compatible vehicle. |
+
+![Truck Load Management candidate reasons](resources/truckloadmanagement/screenshot-truck-load-candidate-reasons.png)
+
+## How to read candidate reasons
+
+Candidate reasons are written for the planner. Use them to decide the next action:
+
+| Reason type | What it means | What to do |
+|---|---|---|
+| **Eligible** | The request can be added to the selected truck slot. | Add the request if it fits the route and capacity plan. |
+| **Warning** | The request can be possible, but one planning detail needs review. | Review the reason, capacity, time slot, route, and compartment before adding it. |
+| **Blocked** | The request cannot be added in the current state. | Fix the shown blocker or choose another truck slot. |
+| **Conflict** | The selected truck, driver, or time slot has overlapping work or another scheduling conflict. | Open the load or conflict details and move the work, vehicle, driver, or time slot. |
+
+![Truck Load Management slot statuses](resources/truckloadmanagement/screenshot-truck-slot-status-legend.png)
+
 ## Example: truck-first planning
 
 1. Open **Truck Load Management** for tomorrow's planning period.
@@ -128,7 +157,7 @@ Fix the blocker, refresh the page, and release again.
 | A candidate is blocked | Use **All With Reasons** or **Blocked Only** to see the reason. |
 | **Add to Selected Truck** fails | The target slot and Transport Order must be selectable and open; capacity, compartment, and transportation-condition rules must allow the move. |
 | **Release Load** fails | Resolve missing order, non-open order, missing requests, missing driver, conflict, overload, or compartment/condition blockers. |
-| The linked order looks wrong | Use **Repair Truck Load Links** only when stale slot/order links must be rebuilt. |
+| The linked order looks wrong | Use **Repair Truck Load Links** to check and repair Transport Order links to truck planning slots for the current period. |
 
 ## Move or remove work
 
@@ -147,11 +176,12 @@ Fix the blocker, refresh the page, and release again.
 | **Add to Selected Truck** | Add selected requests to the selected slot |
 | **Open Transport Order** | Open the linked Transport Order |
 | **Release Load** | Release the current load after validation |
-| **Repair Truck Load Links** | Repair stale slot/order links |
+| **Repair Truck Load Links** | Check and repair Transport Order links to truck planning slots for the current period |
 
 ## Related
 
 - [Driver Load Management](driverloadmanagement.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Transport Order](transportorder.md)
+- [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md)
 - [Time Slots and Delivery Schedules](timeslots.md)

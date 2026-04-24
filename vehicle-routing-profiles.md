@@ -70,6 +70,23 @@ A routing profile can describe:
 3. Run **Get Transport Time & Distance** or a route action.
 4. Review the calculated route.
 
+![Vehicle Routing Profile settings](resources/vehicle-routing-profiles/screenshot-vehicle-routing-profile-settings.png)
+
+## Example: avoid a route that is not suitable for the truck
+
+A dispatcher plans a delivery with a tall, heavy truck.
+
+1. Create a vehicle routing profile with the truck's height, weight, axle count, and any hazardous-load rules.
+2. Assign that profile to the logistic unit type used by the vehicle.
+3. Use **Azure Maps** as the map provider.
+4. Recalculate the route on the Transport Order.
+
+Expected result:
+
+- Azure Maps receives truck-related restrictions during route calculation;
+- the returned route and duration can differ from a normal passenger-car route;
+- planners can review the route before releasing the Transport Order.
+
 ## Good to know
 
 - Vehicle routing profiles are used with Azure Maps truck-aware routing.

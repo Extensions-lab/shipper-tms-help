@@ -74,6 +74,18 @@ Expected result:
 - Financial corrections should be handled through the related sales, purchase, or finance documents.
 - Execution attachments may be available through execution entries, depending on your PoD and telematics setup.
 
+## What is no longer editable
+
+After posting, users should treat the posted order as history. Do not expect to change:
+
+- carrier, vehicle, or driver assignment;
+- route stops or stop sequence;
+- Transport Request assignment;
+- posted transport charge lines and allocation history;
+- source document links copied to posted history.
+
+If a business correction is needed, handle it through the related finance, warehouse, or source-document correction process instead of editing posted transport history.
+
 ## Troubleshooting
 
 | Problem | What to check |

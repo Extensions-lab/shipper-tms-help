@@ -77,6 +77,19 @@ Steps:
 4. Review the suggested amounts.
 5. Choose **Apply** when the assignment must update the linked source document item-charge assignment.
 
+## Choosing an allocation method
+
+| Method | Use it when | Watch for |
+|---|---|---|
+| **Equally** | Each request or source line should carry the same cost share. | Small and large shipments receive the same amount. |
+| **By Distance** | Cost should follow route distance or drop distance. | Run **Get Transport Time & Distance** or **Update Distances** first. |
+| **By Weight** | Freight cost is mostly driven by gross weight. | Item weights must be maintained. |
+| **By Volume** | Truck space is driven more by cube than by weight. | Item volume must be maintained. |
+| **By Footage** | Floor space or linear loading is the key constraint. | Footage data must be maintained consistently. |
+| **By Number of Logistic Units** | Pallets, crates, or other unit counts drive the cost split. | Estimated or actual logistic unit quantities must be reliable. |
+
+![Transport charge allocation lines](resources/transport-charges/screenshot-transport-charge-allocation-lines.png)
+
 ## Why posting can be blocked
 
 Transport Order posting can stop when charge lines do not have a complete financial path.

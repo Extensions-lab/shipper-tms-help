@@ -50,13 +50,26 @@ Transportation conditions are used in:
 
 - Transport Request creation,
 - Transport Order compatibility checks,
-- Load Management,
+- Transport Request Load Planning,
 - Truck Load Management,
 - compartment-based allocation.
 
 ## Compartments
 
 If a vehicle uses compartment configuration, the system can match cargo to the compartment condition and help keep the load separated correctly.
+
+![Transportation Conditions compatibility](resources/transportconditions/screenshot-transportation-conditions-compatibility.png)
+
+## Example: frozen and ambient goods
+
+A sales order contains frozen products and ambient products.
+
+With transportation conditions configured:
+
+1. Shipper TMS reads the item attribute values from the source lines.
+2. Separate Transport Requests can be created for the different conditions.
+3. In Truck Load Management, the planner can assign both requests to the same multi-compartment vehicle only when each request has a compatible compartment.
+4. If the selected vehicle has no compatible compartment or the compartment capacity is exceeded, the candidate is shown as blocked or warning depending on the rule.
 
 ## Verify
 
@@ -73,3 +86,4 @@ Expected result:
 - [Transport Request](transportrequest.md)
 - [Transport Order](transportorder.md)
 - [Truck Load Management](truckloadmanagement.md)
+- [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md)

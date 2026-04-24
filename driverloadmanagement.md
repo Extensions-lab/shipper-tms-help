@@ -29,7 +29,7 @@ Use Truck Load Management when the main question is what a specific vehicle shou
 |---|---|
 | Is this driver available for this slot? | **Driver Load Management** |
 | What should this truck carry? | [Truck Load Management](truckloadmanagement.md) |
-| Which requests should be grouped first? | [Load Management](loadmanagement.md) |
+| Which requests should be grouped first? | [Transport Request Load Planning](loadmanagement.md) |
 | Where do driver loads overlap on a timeline? | [Visual Scheduler](visualscheduler.md) |
 
 ## Before you start
@@ -102,6 +102,17 @@ If you need to move work from one driver to another, open the selected load and 
 | Conflict count | Number of driver conflicts for the selected period or slot |
 | Status or next step | What the planner should do next for the driver slot |
 
+![Driver conflict details](resources/driverloadmanagement/screenshot-driver-conflict-details.png)
+
+## Common conflict examples
+
+| Conflict | What it usually means | Typical fix |
+|---|---|---|
+| Driver has overlapping work | The same driver is linked to more than one load in the same period or time slot. | Move one load to another driver or change the time slot. |
+| Vehicle is not available for the driver slot | The assigned vehicle is already used or does not have a valid truck slot for the same date and time. | Assign another vehicle or move the load. |
+| Default vehicle does not match the plan | The driver has a default vehicle, but the load is planned on another vehicle. | Confirm the manual assignment or clear and reassign the vehicle. |
+| Driver is required before release | Setup requires a driver before releasing the truck load, but the linked order has no driver. | Assign a driver before choosing **Release Load**. |
+
 ## Example: driver-first planning
 
 1. Open **Driver Load Management** for the planning date.
@@ -124,6 +135,6 @@ If you need to move work from one driver to another, open the selected load and 
 ## Related
 
 - [Truck Load Management](truckloadmanagement.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Drivers](driver.md)
 - [Transport Order](transportorder.md)

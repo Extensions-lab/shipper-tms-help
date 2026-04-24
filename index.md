@@ -44,7 +44,7 @@ Use these terms this way:
 | **Source document** | A Business Central sales, purchase, transfer, or posted document that creates transport demand. |
 | **Transport Request** | What must be moved, from where, to where, and when. |
 | **Transport Order** | The actual trip or load that will be executed. |
-| **Load Management** | A request-first worksheet for assigning released requests to orders. |
+| **Transport Request Load Planning** | A request-first worksheet for assigning released requests to orders. |
 | **Truck Load Management** | A vehicle-first worksheet for planning by truck slot, date, and time slot. |
 | **Driver Load Management** | A driver-first worksheet for checking driver workload and conflicts. |
 | **Carrier Selection** | A rate comparison tool for choosing an external carrier on an open Transport Order. |
@@ -64,12 +64,25 @@ If you are setting up Shipper TMS for the first time, follow this order:
 
 After step 6, your users should be able to create transport demand, plan it into a trip, and understand which page to open next.
 
+## First 30 minutes
+
+Use this short path when you want to prove the basic process in a sandbox:
+
+1. Complete the minimum setup in [TMS Setup](setup.md).
+2. Create or open one demo Sales Order.
+3. Create a [Transport Request](usecase-salesorder-transportrequest.md) from that order.
+4. Release the request.
+5. Create a [Transport Order](usecase-create-first-transport-order.md).
+6. Add the request to the order, review route stops, then release the order.
+
+Do this before configuring advanced carrier rates, telematics, or truck-first planning. It gives planners a clean baseline for how source demand becomes an executable trip.
+
 ## Choose Your Role
 
 | Role | Start with | Why |
 |---|---|---|
 | Transportation manager | [TMS Setup](setup.md), [Carriers](carrier.md), [Carrier Rates](carrier-rates.md), [Transport Charges](transport-charges.md) | Configure the rules, rates, defaults, and cost behavior. |
-| Dispatcher or planner | [Transport Requests](transportrequest.md), [Load Management](loadmanagement.md), [Transport Orders](transportorder.md) | Turn demand into executable trips. |
+| Dispatcher or planner | [Transport Requests](transportrequest.md), [Transport Request Load Planning](loadmanagement.md), [Transport Orders](transportorder.md) | Turn demand into executable trips. |
 | Fleet planner | [Truck Load Management](truckloadmanagement.md), [Driver Load Management](driverloadmanagement.md), [Vehicles](vehicle.md), [Drivers](driver.md) | Plan own-fleet capacity, driver assignment, and slot conflicts. |
 | Warehouse user | [Warehouse Documents](warehouse-documents.md), [Reports and Documents](reports.md) | Create or open warehouse shipments and receipts connected to a trip. |
 | Delivery coordinator | [Execution Entries](execution-entries.md), [Posted Transport Orders](posted-transport-orders.md) | Track delivery events, attachments, PoD facts, and completed trip history. |
@@ -79,7 +92,7 @@ After step 6, your users should be able to create transport demand, plan it into
 
 | Need | Use |
 |---|---|
-| I have released demand and need to decide which requests go together. | [Load Management](loadmanagement.md) |
+| I have released demand and need to decide which requests go together. | [Transport Request Load Planning](loadmanagement.md) |
 | I plan own-fleet work by truck, date, and time slot. | [Truck Load Management](truckloadmanagement.md) |
 | I need to check driver workload, assigned vehicles, or driver conflicts. | [Driver Load Management](driverloadmanagement.md) |
 | I want a calendar or timeline view of requests and orders. | [Visual Scheduler](visualscheduler.md) |
@@ -94,7 +107,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 | Create transport demand from Business Central documents | [Source Documents](source-documents.md) |
 | Split one document into several transport requests | [Transport Request Planning](transport-request-planning.md) |
 | Prepare and release a request | [Transport Request](transportrequest.md) |
-| Assign requests to a trip | [Load Management](loadmanagement.md) or [Transport Order](transportorder.md) |
+| Assign requests to a trip | [Transport Request Load Planning](loadmanagement.md) or [Transport Order](transportorder.md) |
 | Plan by vehicle | [Truck Load Management](truckloadmanagement.md) |
 | Plan by driver | [Driver Load Management](driverloadmanagement.md) |
 | Compare carriers | [Carrier Selection](carrierselection.md) |
@@ -120,7 +133,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 
 | Tool | Best for |
 |---|---|
-| [Load Management](loadmanagement.md) | Request-first planning |
+| [Transport Request Load Planning](loadmanagement.md) | Request-first planning |
 | [Truck Load Management](truckloadmanagement.md) | Truck-first planning |
 | [Driver Load Management](driverloadmanagement.md) | Driver-first planning |
 | [Visual Scheduler](visualscheduler.md) | Timeline-based planning |
@@ -131,6 +144,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 | Topic | What it covers |
 |---|---|
 | [Carrier Rates](carrier-rates.md) | Rate setup used by Carrier Selection |
+| [Carrier Rate Type Mapping](carrier-rate-type-mapping.md) | Item charge mapping used when Carrier Selection creates charge lines |
 | [Transport Charges](transport-charges.md) | Purchase charges, sales re-billing, and charge allocation |
 | [Warehouse Documents](warehouse-documents.md) | Warehouse shipments and receipts created from Transport Orders |
 | [Reports and Documents](reports.md) | Loading Manifest, Packing List, Bill Of Lading, Delivery Note, and CMR Blank |
@@ -150,6 +164,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 | [Zones](zones.md) | Internal zones and telematics geofences |
 | [Time Slots and Delivery Schedules](timeslots.md) | Automatic date and time logic |
 | [Transportation Conditions](transportationconditions.md) | Separation of incompatible cargo |
+| [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md) | How compartments and cargo conditions work together in planning |
 | [Logistic Unit Types](logisticunittype.md) | Capacity-related equipment profiles |
 | [Vehicle Routing Profiles](vehicle-routing-profiles.md) | Azure Maps truck-routing constraints by unit type |
 | [Distance Matrix](distance-matrix.md) | Stored distance and duration values |

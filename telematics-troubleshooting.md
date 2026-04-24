@@ -20,6 +20,14 @@ Use this page when telematics setup, dispatch publication, webhook processing, o
 | Admin API action fails | Confirm the selected setup is the right provider, and the account has `TMAS Tel. Admin API` permission |
 | Provider secret is visible in a screenshot | Rotate the secret and replace the screenshot with a masked version |
 
+## Provider-specific checks
+
+| Provider | If this fails | Check this first |
+|---|---|---|
+| **Geotab** | Vehicle, driver, or position sync | Database name, credentials, and whether the service account can see the vehicles in Geotab |
+| **Samsara** | Route webhook or dispatch updates | Webhook registration, webhook URL, telematics API permission set, and token scope |
+| **Webfleet** | Route publication or queue processing | Route queue setup, account credentials, queue status, and whether the provider route ID is returned |
+
 ## Safe retry process
 
 1. Fix the obvious setup or mapping issue first.

@@ -54,6 +54,19 @@ Expected result:
 - Warehouse receipts are created for eligible inbound source lines when the unloading location requires receipt handling.
 - If documents already exist, Shipper TMS opens the existing documents instead of creating duplicates.
 
+![Warehouse document created from Transport Order](resources/warehouse-documents/screenshot-warehouse-document-created-from-transport-order.png)
+
+## What the warehouse user sees
+
+After the action succeeds, warehouse users continue in standard Business Central warehouse pages:
+
+| Created document | Warehouse user does next |
+|---|---|
+| **Warehouse Shipment** | Pick, pack, and ship the outbound goods according to the warehouse process |
+| **Warehouse Receipt** | Receive and put away inbound goods according to the warehouse process |
+
+The Transport Order remains the transportation document. The warehouse shipment or receipt remains the warehouse execution document.
+
 ## What happens if documents already exist
 
 If warehouse documents already exist, Shipper TMS opens the existing documents instead of creating duplicates.

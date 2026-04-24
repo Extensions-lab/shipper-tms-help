@@ -122,6 +122,21 @@ The execution-entry attachment API supports service actions for:
 
 Use these actions for proof-of-delivery photos, signed documents, or delivery evidence that must be attached to an execution entry.
 
+## Attachment upload rules
+
+Execution entry attachments accept only these MIME types:
+
+- `image/jpeg`
+- `image/png`
+- `image/gif`
+- `application/pdf`
+
+Send file content as base64. The maximum decoded file size is **10 MB**.
+
+The API validates the file signature against the MIME type, so the MIME type must match the actual file content. For JPG/JPEG files, use `image/jpeg`; `image/jpg` is accepted and normalized to `image/jpeg`.
+
+![Attachment upload API example](resources/api/screenshot-api-attachment-upload-postman.png)
+
 Example upload action body:
 
 ```json

@@ -33,7 +33,7 @@ This setup matters when you want consistent results in:
 
 - Transport Request estimation,
 - Transport Order capacity totals,
-- Load Management,
+- Transport Request Load Planning,
 - Truck Load Management,
 - Driver Load Management,
 - transportation-condition compatibility checks,
@@ -60,6 +60,7 @@ When you change unit type dimensions or routing profile assignments, recalculate
 ## Related
 
 - [Transportation Conditions](transportationconditions.md)
+- [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md)
 - [Vehicle Routing Profiles](vehicle-routing-profiles.md)
 - [Truck Load Management](truckloadmanagement.md)
 - [Transport Order](transportorder.md)

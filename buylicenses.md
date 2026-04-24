@@ -15,7 +15,7 @@ Assign a Shipper TMS license to users who:
 
 - create or release Transport Requests,
 - plan Transport Orders,
-- work in Load Management, Truck Load Management, Driver Load Management, or Visual Scheduler,
+- work in Transport Request Load Planning, Truck Load Management, Driver Load Management, or Visual Scheduler,
 - work with TMS setup, telematics, or TMS APIs.
 
 Users who never open or use TMS features do not need a Shipper TMS license.

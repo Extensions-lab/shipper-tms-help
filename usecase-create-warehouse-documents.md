@@ -31,8 +31,10 @@ Use this flow when warehouse work should be driven by the transport plan.
 
 ## Expected result
 
-- Warehouse shipments are created for Sales Order and Purchase Return Order lines when shipment handling applies.
-- Warehouse receipts are created for Purchase Order and Sales Return Order lines when receive handling applies.
+- Warehouse shipments are created for eligible Sales Order lines when shipment handling applies.
+- Purchase Return Order lines are currently processed for Warehouse Shipment only when the same Transport Request also contains at least one eligible Sales Order line.
+- Warehouse receipts are created for eligible Purchase Order lines when receive handling applies.
+- Sales Return Order lines are currently processed for Warehouse Receipt only when the same Transport Request also contains at least one eligible Purchase Order line.
 - Existing warehouse documents open instead of creating duplicates.
 
 ## What to do next

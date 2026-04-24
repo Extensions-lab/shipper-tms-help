@@ -26,6 +26,8 @@ After the app is installed and licenses are assigned, give users access to Shipp
 - Integration/service accounts: **Shipper TMS - API**
 - Telematics-specific integrations: add the telematics API permission sets as needed
 
+Use the smallest permission set that fits the job. Do not give telematics admin API access to normal planner users or broad service accounts.
+
 ## Assign a permission set
 
 1. Open **Users** in Business Central.
@@ -43,6 +45,15 @@ Use these quick checks:
 - API account: test the relevant API endpoint
 
 If the page or API is accessible, the permission set is assigned correctly.
+
+## Common access problems
+
+| Problem | What to check |
+|---|---|
+| User can open Business Central but not Shipper TMS pages | Assign **Shipper TMS - User** and confirm the app license is assigned. |
+| User can plan but cannot change setup | Add **Shipper TMS - Administrator** only for setup/admin users. |
+| API returns 403 Forbidden | Assign the relevant API permission set to the integration account. |
+| Telematics admin action fails | Add **Shipper TMS - Tel. Admin API** only to the account that performs provider administration. |
 
 ## Related
 

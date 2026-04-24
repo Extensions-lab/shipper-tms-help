@@ -19,7 +19,7 @@ It is best for planners who want to see:
 | Planner question | Best tool |
 |---|---|
 | How does the plan look on a timeline? | **Visual Scheduler** |
-| Which released requests should be grouped first? | [Load Management](loadmanagement.md) |
+| Which released requests should be grouped first? | [Transport Request Load Planning](loadmanagement.md) |
 | What should this truck carry? | [Truck Load Management](truckloadmanagement.md) |
 | Which driver has a conflict? | [Driver Load Management](driverloadmanagement.md) |
 
@@ -56,6 +56,16 @@ Depending on status and current context, planners can:
 - open the related request or order,
 - create a new Transport Order from selected requests.
 
+## Task shortcuts
+
+| User goal | What to do |
+|---|---|
+| Change when a released request should happen | Drag the request to the new date or time, then refresh if needed. |
+| Extend or shorten a visible request duration | Resize the request edge when the request is editable. |
+| Put a request on an existing trip | Drop the request on an **Open** Transport Order. |
+| Build a new trip from several requests | Multi-select eligible requests and choose **Create Transport Order**. |
+| Review details before changing the plan | Open the related Transport Request or Transport Order from the scheduler. |
+
 ## Timeline rules and limits
 
 | Rule | Why it matters |
@@ -64,6 +74,7 @@ Depending on status and current context, planners can:
 | Target Transport Orders must be **Open** | Released and In Progress orders are protected from visual edits |
 | Dragging changes timing only when the workflow allows it | Locked request dates or assigned transport documents can prevent changes |
 | Capacity and conflicts still need review | Visual grouping does not replace truck-load or driver validation when those controls are used |
+| Driver and vehicle must match carrier rules | If the scheduler blocks a driver or vehicle change, review carrier assignments on the resource and on the Transport Order |
 
 ## How to work in this window
 
@@ -111,7 +122,7 @@ Use Visual Scheduler when you want to:
 
 ## Related
 
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Truck Load Management](truckloadmanagement.md)
 - [Transport Request](transportrequest.md)
 - [Transport Order](transportorder.md)

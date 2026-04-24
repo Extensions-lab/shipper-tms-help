@@ -43,6 +43,28 @@ Use this process when the planner knows that the selected requests should travel
 13. Choose **In Progress** when the trip starts.
 14. Post the order after execution and posting prerequisites are complete.
 
+## Status path
+
+Use this sequence for the first test:
+
+```text
+Transport Request: Released
+    |
+    v
+Transport Order: Open
+    |
+    v
+Transport Order: Released
+    |
+    v
+Transport Order: In Progress
+    |
+    v
+Posted Transport Order
+```
+
+Keep the Transport Order **Open** while you are changing carrier, vehicle, driver, route, requests, or charges.
+
 ## Result
 
 A new Transport Order is created and the selected requests are linked to it.
@@ -65,6 +87,6 @@ After posting, the live order is moved to [Posted Transport Orders](posted-trans
 
 - [Transport Request](transportrequest.md)
 - [Transport Order](transportorder.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Carrier Selection](carrierselection.md)
 - [Warehouse Documents](warehouse-documents.md)

@@ -26,6 +26,18 @@ Use **Telematics Setup** to define the connection to a provider account.
 8. Turn on the sync streams your company uses.
 9. Test the provider connection.
 
+![Telematics provider setup](resources/telematics/screenshot-telematics-provider-setup.png)
+
+## Provider setup notes
+
+| Provider | Pay special attention to | Good first test |
+|---|---|---|
+| **Geotab** | Database name, user name, password/secret, and vehicle/driver external IDs | Sync vehicles or current positions |
+| **Samsara** | API token, route webhook registration, and external IDs used for vehicles and drivers | Register the route webhook, then sync vehicles |
+| **Webfleet** | Account credentials, route queue setup, and queue cleanup process | Ensure the route queue, then publish a test dispatch |
+
+Use one enabled setup record per provider account that Shipper TMS should talk to. If your company uses several provider tenants or regions, create separate setup records with clear codes and descriptions.
+
 ## Important fields
 
 | Field | What it controls |

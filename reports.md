@@ -43,6 +43,7 @@ Expected result:
 | Document | Use it for |
 |---|---|
 | **Loading Manifest** | Driver and warehouse loading instructions |
+| **Email Loading Manifest** | Send the loading manifest to the carrier vendor from the Transport Order |
 | **Packing List** | Per-drop cargo summary |
 | **Bill Of Lading** | Shipment handover and route document |
 | **Delivery Note** | Goods delivered to the consignee |
@@ -55,6 +56,7 @@ Expected result:
 - Default report mappings can be reset from **Shipper TMS Setup** with **Set default reports**.
 - **CMR No.** can be generated from the number series configured in setup.
 - If your company uses custom layouts, the printed result depends on the active report selection.
+- The email action uses the Business Central report selection and vendor email behavior. Review the carrier/vendor contact setup before relying on it in production.
 
 ## Troubleshooting
 

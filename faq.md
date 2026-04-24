@@ -55,6 +55,10 @@ Yes. That is exactly what **Transport Request Planning** is for.
 
 The request must have **Load Date And Time** and **Unload Date And Time**.
 
+### What changes when a Transport Request is assigned?
+
+The request leaves the planning pool, shows as **Assigned**, and points to the linked Transport Order in **Assigned To**. To change the request freely again, remove it from the Transport Order first.
+
 ## Transport Orders
 
 ### When should we create a Transport Order directly?
@@ -87,7 +91,7 @@ The Transport Order must be **Released**, and the linked loading or unloading lo
 
 Use:
 
-- [Load Management](loadmanagement.md) for request-first planning
+- [Transport Request Load Planning](loadmanagement.md) for request-first planning
 - [Truck Load Management](truckloadmanagement.md) for truck-first planning
 - [Driver Load Management](driverloadmanagement.md) for driver-first planning
 - [Visual Scheduler](visualscheduler.md) for timeline-based planning
@@ -110,9 +114,17 @@ Common blockers are missing Transport Order, non-open Transport Order, no reques
 
 Check that the carrier is not blocked, rates match the route geography, map locations and distance data are usable, and rate-type mapping is complete when charge creation is expected.
 
+### Does Carrier Selection use Region Code on Carrier Rates?
+
+No. Carrier Selection currently matches rates by country/region code, county, city, and post code. **From Region Code** and **To Region Code** can be stored on the rate, but they are not used by the current matching logic.
+
 ### Why did Carrier Selection choose the carrier but not create charges?
 
 Automatic charge creation requires **Auto Create Charge Line**, a vendor-based carrier, and rate type mappings with item charge numbers.
+
+### Why did an API attachment upload fail?
+
+Execution-entry attachments must be valid base64, 10 MB or smaller after decoding, and one of these MIME types: `image/jpeg`, `image/png`, `image/gif`, or `application/pdf`. The MIME type must match the actual file signature.
 
 ### Why does transport posting mention charge lines?
 

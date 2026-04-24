@@ -47,6 +47,8 @@ On supported document pages, Shipper TMS adds transport fields and actions such 
 
 Use this path when the remaining eligible lines can become Transport Requests without manual splitting.
 
+![Create Transport Request action on Sales Order](resources/source-documents/screenshot-sales-order-create-transport-request-action.png)
+
 1. Open the source document.
 2. Make sure the document is **Released** when it is an unposted sales, purchase, or transfer document.
 3. Choose **Create Transport Request**.
@@ -88,8 +90,19 @@ Use **Create Transport Orders** only after the source document already has eligi
 Expected result:
 
 - Shipper TMS creates separate Transport Orders for eligible released requests that are not already assigned.
-- Requests that are still **Open** or already in **Transport** are skipped.
+- Requests that are still **Open** or already **Assigned** are skipped.
 - Each created Transport Order can be opened for carrier, vehicle, driver, route, and warehouse planning.
+
+## When to use each action
+
+| User goal | Use this action |
+|---|---|
+| Create transport demand for all remaining eligible quantities | **Create Transport Request** |
+| Split quantities, dates, routes, or transport conditions before planning | **Transport Request Planning** |
+| Open demand already created for this document | **Transport Requests** |
+| Create one Transport Order per released unassigned request | **Create Transport Orders** |
+| Open trips already created from this document | **Transport Orders** |
+| Recalculate the source document's transport progress | **Update Transportation Status** |
 
 ## Transportation Status values
 

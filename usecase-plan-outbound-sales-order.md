@@ -27,7 +27,7 @@ Use this flow for customer deliveries where Sales Order item lines must be deliv
 3. Open the created Transport Request.
 4. Fill load and unload date/time values if they were not defaulted.
 5. Choose **Release**.
-6. Open **Transport Requests** or **Load Management**.
+6. Open **Transport Requests** or **Transport Request Load Planning**.
 7. Create or assign the request to a Transport Order.
 8. On the Transport Order, review carrier, vehicle, driver, route stops, and charges.
 9. Release the Transport Order when planning is complete.
@@ -48,7 +48,7 @@ Use [Carrier Selection](carrierselection.md), [Warehouse Documents](warehouse-do
 |---|---|
 | Create Transport Request is unavailable | Sales Order status, item lines, remaining quantities, and Location Code |
 | Request cannot be released | Load and unload date/time values |
-| Request does not appear in planning | Request status must be **Released** and not already in **Transport** |
+| Request does not appear in planning | Request status must be **Released** and not already **Assigned** |
 
 ## Related
 

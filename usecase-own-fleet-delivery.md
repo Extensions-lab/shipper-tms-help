@@ -19,6 +19,7 @@ Use this flow when your own fleet executes the delivery and planners work by tru
 - Truck Load Time Slot Profile is configured.
 - Transport Requests are **Released**.
 - Capacity controls and transportation conditions are configured if enforced.
+- If separated cargo is used, compartments and transportation conditions are configured.
 
 ## Steps
 
@@ -27,10 +28,11 @@ Use this flow when your own fleet executes the delivery and planners work by tru
 3. Select the truck slot.
 4. Choose **Create Load** if the slot has no Transport Order.
 5. Review candidate requests.
-6. Add eligible requests to the selected truck.
-7. Open **Driver Load Management** if driver availability must be checked.
-8. Resolve conflicts or assign a driver and vehicle.
-9. Choose **Release Load**.
+6. If a candidate shows **Warning** or **Blocked**, switch to **All With Reasons** and review the reason before adding it.
+7. Add eligible requests to the selected truck.
+8. Open **Driver Load Management** if driver availability must be checked.
+9. Resolve conflicts or assign a driver and vehicle.
+10. Choose **Release Load**.
 
 ## Expected result
 
@@ -54,4 +56,5 @@ Print documents, publish to telematics if used, and move the Transport Order to 
 
 - [Truck Load Management](truckloadmanagement.md)
 - [Driver Load Management](driverloadmanagement.md)
+- [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md)
 - [Transport Order](transportorder.md)

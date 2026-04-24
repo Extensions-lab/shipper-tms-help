@@ -52,6 +52,25 @@ That value defines the equipment profile used for:
 
 Without the right unit type, capacity checks and truck-aware planning are much less reliable.
 
+![Vehicle compartment setup](resources/vehicle/screenshot-vehicle-compartment-setup.png)
+
+## Compartments and separated cargo
+
+Use compartment setup when one vehicle can carry separated cargo, such as frozen and ambient goods, in different areas of the same truck.
+
+For planners, compartments matter in two places:
+
+- candidate requests in [Truck Load Management](truckloadmanagement.md) can be eligible, warning, or blocked depending on compartment fit;
+- transportation conditions can prevent incompatible cargo from being mixed in the same load area.
+
+Example:
+
+| Compartment | Typical condition | Planning result |
+|---|---|---|
+| Front frozen compartment | Frozen | Frozen requests can be assigned when capacity is available. |
+| Rear ambient compartment | Ambient | Ambient requests can be assigned separately on the same vehicle. |
+| No matching compartment | Hazardous or incompatible condition | The request is blocked or requires a different vehicle. |
+
 ## Fields that matter most
 
 | Field | Why it matters |
@@ -78,4 +97,6 @@ When you assign a vehicle on a Transport Order:
 - [Drivers](driver.md)
 - [Carriers](carrier.md)
 - [Logistic Unit Types](logisticunittype.md)
+- [Transportation Conditions](transportationconditions.md)
+- [Vehicle Compartments and Transportation Conditions](vehicle-compartments-and-transportation-conditions.md)
 - [Transport Order](transportorder.md)

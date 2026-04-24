@@ -53,6 +53,19 @@ Use attachments for evidence such as:
 
 Integration accounts can also use the API attachment endpoints to upload or download execution-entry attachments. See [API](api.md).
 
+![Execution Entry with attachment](resources/execution-entries/screenshot-execution-entry-with-attachment.png)
+
+## Attachment rules for integrations
+
+When attachments are uploaded through the API:
+
+- allowed file types are JPEG, PNG, GIF, and PDF;
+- file content must be sent as base64;
+- the decoded file size must be 10 MB or less;
+- the MIME type must match the actual file signature.
+
+For the full API contract, see [Attachment upload rules](api.md#attachment-upload-rules).
+
 ## Proof-of-delivery scenario
 
 Use this flow when the driver or integration captures delivery confirmation before posting.

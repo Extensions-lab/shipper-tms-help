@@ -47,6 +47,27 @@ Expected result:
 - Source line balances update so users can see distributed and remaining quantities.
 - Released requests become available in Transport Order planning.
 
+![Transport Request Planning split lines](resources/transport-request-planning/screenshot-transport-request-planning-split-lines.png)
+
+## Example: split one order into two deliveries
+
+A Sales Order has 100 units. The customer wants 60 units delivered Monday and 40 units delivered Thursday.
+
+1. Open the Sales Order and choose **Transport Request Planning**.
+2. Enter `60` in **Qty. to Add**.
+3. Choose **New Transport Request**.
+4. Open the created request and set the Monday load and unload dates.
+5. Return to **Transport Request Planning**.
+6. Enter `40` in **Qty. to Add**.
+7. Choose **New Transport Request** again.
+8. Set the Thursday dates on the second request.
+
+Expected result:
+
+- the source line shows the full quantity as distributed;
+- the document has two linked Transport Requests;
+- each request can be released and planned into a different Transport Order.
+
 ## Already assigned quantities
 
 The worksheet shows what has already been distributed from each source line. Use these quantities before entering a new **Qty. to Add** value.
@@ -101,7 +122,7 @@ Use this when an Open Transport Request already exists for the same source docum
 
 | Problem | What to check |
 |---|---|
-| **Qty. to Add** is not editable | Check **Remaining Qty.**, source-line eligibility, and whether the quantity is already assigned to a request in **Transport**. |
+| **Qty. to Add** is not editable | Check **Remaining Qty.**, source-line eligibility, and whether the quantity is already assigned to a request with status **Assigned**. |
 | No eligible lines are shown | Confirm the source document is supported, released when required, and still has item quantities that are not fully assigned. |
 | Existing request cannot be selected | Only **Open** requests can receive added or moved quantities. |
 | **Release All** does not release a request | The request must have required load and unload date/time values. |
@@ -112,5 +133,5 @@ Use this when an Open Transport Request already exists for the same source docum
 
 - [Source Documents](source-documents.md)
 - [Transport Request](transportrequest.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Truck Load Management](truckloadmanagement.md)

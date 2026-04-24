@@ -29,6 +29,8 @@ Expected result:
 - The record stores provider, setup code, external dispatch ID, external status, vehicle and driver external IDs, stop count, and publish result.
 - Provider-side route or dispatch data is available according to the provider's rules.
 
+![Telematics dispatch log](resources/telematics/screenshot-telematics-dispatch-log.png)
+
 ## Cancel or refresh a dispatch
 
 | Action | Use it when | Result |

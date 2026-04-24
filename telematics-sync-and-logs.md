@@ -21,6 +21,8 @@ Use telematics logs and sync pages when you need to confirm what was received fr
 | Telematics Routes, Route Stops, Trips, Events | Provider route and execution facts |
 | Fuel, HOS, and Sensor Entries | Operational facts when the provider supplies them |
 
+![Telematics inbound message log](resources/telematics/screenshot-telematics-inbound-message-log.png)
+
 ## Log fields
 
 | Field | Meaning |

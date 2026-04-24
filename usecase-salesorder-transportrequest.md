@@ -47,7 +47,7 @@ Choose one of these paths:
 | Need | Next step |
 |---|---|
 | Add the request to a new trip immediately | Open **Transport Requests**, select the request, and choose **Create New Transport Order**. |
-| Combine this request with other demand | Use [Load Management](loadmanagement.md) or [Visual Scheduler](visualscheduler.md). |
+| Combine this request with other demand | Use [Transport Request Load Planning](loadmanagement.md) or [Visual Scheduler](visualscheduler.md). |
 | Plan by own-fleet truck slot | Use [Truck Load Management](truckloadmanagement.md). |
 | Select an external carrier later | Create or open the Transport Order, then use [Carrier Selection](carrierselection.md). |
 
@@ -65,4 +65,4 @@ Choose one of these paths:
 - [Source Documents](source-documents.md)
 - [Transport Request](transportrequest.md)
 - [Transport Order](transportorder.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)

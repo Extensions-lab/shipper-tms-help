@@ -57,21 +57,35 @@ For supported document types, see [Source Documents](source-documents.md).
 |---|---|
 | **Open** | The request can still be prepared and adjusted |
 | **Released** | The request is ready for planning |
-| **Transport** | The request is assigned to a Transport Order |
+| **Assigned** | The request is assigned to a Transport Order |
 
 Allowed status movement is:
 
 ```text
-Open -> Released -> Transport
+Open -> Released -> Assigned
 Released -> Open
 ```
 
 ## Important rules
 
 - Only **Released** requests can be assigned to a Transport Order.
-- A request in **Transport** status is already assigned to a Transport Order and is no longer freely editable or available in the planning pool.
+- A request in **Assigned** status is already assigned to a Transport Order and is no longer freely editable or available in the planning pool.
 - If the request is removed from the Transport Order, it can return to **Released**.
 - For unposted source documents, manual creation from the document card requires the source document to be **Released**.
+
+## Before you release a request
+
+Use this checklist before choosing **Release**:
+
+| Check | Why it matters |
+|---|---|
+| **Load Date And Time** is filled | Required before the request can become available for planning |
+| **Unload Date And Time** is filled | Required before the request can become available for planning |
+| Source lines and quantities are correct | Released requests are what planners see in load-building pages |
+| Shipper and consignee addresses are correct | Route, distance, warehouse, and map behavior depend on these values |
+| Transportation condition is correct when used | Conditions can affect splitting, compatibility, and compartment planning |
+
+![Transport Request created from source document](resources/transportrequest/screenshot-transport-request-after-source-document.png)
 
 ## How to work in this window
 
@@ -89,8 +103,17 @@ Released -> Open
 9. Choose **Release** when the request is ready for planning.
    The status changes to **Released** and the request becomes available for Transport Order planning.
 10. Choose **Assign to Transport Order** when you want to place this request into an existing Transport Order.
-    The request status changes to **Transport** after it is added to the selected order.
+    The request status changes to **Assigned** after it is added to the selected order.
 11. If the request is already assigned, choose **Show Transport** to open the related order.
+
+## What changes after assignment
+
+After a request is assigned to a Transport Order:
+
+- the request leaves the general planning pool;
+- the request status is shown as **Assigned**;
+- the **Assigned To** field points to the linked Transport Order;
+- most request changes must be made by changing the Transport Order plan or by removing the request from the order first.
 
 Use the list page when you want to release, reopen, or assign multiple requests at the same time.
 
@@ -102,9 +125,9 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 | **Show Route** | Endpoints have map data | Displays the route on the map |
 | **Transport Time & Distance** | Endpoints and map provider are valid | Calculates distance and duration |
 | **Release** | Request is **Open** | Makes the request available for planning |
-| **Reopen** | Request is **Released** and not in transport | Returns the request to editing |
+| **Reopen** | Request is **Released** and not assigned to a Transport Order | Returns the request to editing |
 | **Assign to Transport Order** | Request is **Released** | Assigns the request to a new or existing Transport Order |
-| **Show Transport** | Request is in **Transport** | Opens the linked Transport Order |
+| **Show Transport** | Request is **Assigned** | Opens the linked Transport Order |
 | **Estimate** | Request has lines | Rebuilds estimated logistic units |
 
 ## Typical workflow
@@ -120,16 +143,16 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 |---|---|
 | **Release** fails | Fill **Load Date And Time** and **Unload Date And Time**. |
 | **Get Source Documents** is unavailable | The request must be **Open**. |
-| The request does not appear in planning pages | Only **Released** requests are available for planning. A request in **Transport** is already assigned. |
+| The request does not appear in planning pages | Only **Released** requests are available for planning. A request in **Assigned** status is already assigned. |
 | **Assign to Transport Order** is unavailable | The request must be **Released**. |
 | **Show Route** fails | Check shipper and consignee map locations, coordinates, and map provider setup. |
 | Distance or duration is empty | Configure a map provider and verify that both route endpoints can be geocoded. |
-| You cannot delete the request | Requests in **Transport** status must be removed from the Transport Order first. |
+| You cannot delete the request | Requests in **Assigned** status must be removed from the Transport Order first. |
 
 ## Related
 
 - [Source Documents](source-documents.md)
 - [Transport Request Planning](transport-request-planning.md)
 - [Transport Order](transportorder.md)
-- [Load Management](loadmanagement.md)
+- [Transport Request Load Planning](loadmanagement.md)
 - [Truck Load Management](truckloadmanagement.md)

@@ -67,7 +67,7 @@ Use one of these methods:
 
 - **Add Transport Requests** from the Transport Order,
 - **Assign to Transport Order** from the Transport Request,
-- [Load Management](loadmanagement.md),
+- [Transport Request Load Planning](loadmanagement.md),
 - [Truck Load Management](truckloadmanagement.md),
 - [Driver Load Management](driverloadmanagement.md),
 - [Visual Scheduler](visualscheduler.md),
@@ -155,6 +155,7 @@ If the carrier is connected to a telematics setup, the order can show actions su
 Available print actions include:
 
 - **Loading Manifest**,
+- **Email Loading Manifest**,
 - **Packing List**,
 - **Bill Of Lading**,
 - **Delivery Note**,
@@ -164,15 +165,18 @@ Available print actions include:
 
 ## Posting requirements
 
-Before you post the order:
+Before you post the order, Shipper TMS checks these hard requirements:
 
-1. The order must be **In Progress**.
-2. The order must contain at least one transport line.
-3. Route lines must exist for the load and unload points.
-4. Charge lines must be fully assigned or intentionally handled as non-posting information.
-5. Source-linked sales, purchase, or transfer charge lines must not remain in an unposted state that blocks posting.
-6. Source document charge assignments may need the source document to be posted first, depending on your billing flow.
-7. Execution and proof-of-delivery data should be reviewed if your process requires it.
+1. The Transport Order status is **In Progress**.
+2. The order contains transport lines.
+3. Every transport charge line still has an active source link when a source link is required.
+4. Source-linked sales, purchase, or transfer charge lines are no longer active live source lines that block posting.
+
+If posting fails, open **Charges** first. Resolve inactive source links or complete the source-document posting flow, then try posting again.
+
+Operationally, you should also review route stops, execution facts, proof-of-delivery attachments, carrier charges, warehouse documents, and printed documents before posting. These items may be required by your company process even when they are not the exact system blocker shown in the posting check.
+
+![Transport Order posting blocker message](resources/transportorder/screenshot-transport-order-posting-blocker-message.png)
 
 After posting, use [Posted Transport Orders](posted-transport-orders.md) for read-only history.
 
@@ -185,7 +189,7 @@ After posting, use [Posted Transport Orders](posted-transport-orders.md) for rea
 | Released requests do not appear | Confirm the requests are **Released** and not already assigned to another Transport Order. |
 | Distance or duration does not update | The order must be **Open**, the mode of transport must be filled, map provider setup must be complete, and route points must have usable map locations. |
 | Carrier Selection is unavailable | Carrier Selection must be enabled in TMS Setup and the order must be **Open**. |
-| Auto charge lines are not created | Check **Auto Create Charge Line**, carrier source vendor, and **Carrier Rate Types Mapping**. |
+| Auto charge lines are not created | Check **Auto Create Charge Line**, carrier source vendor, and [Carrier Rate Type Mapping](carrier-rate-type-mapping.md). |
 | **Create Warehouse Documents** is unavailable | The order must be **Released**. |
 | No warehouse document is created | The linked location must require warehouse shipment or receipt, and the linked source lines must still have outstanding warehouse quantity. |
 | **Post** does not complete | The order must be **In Progress**, must have transport lines, and charge lines must be linked or posted correctly. |

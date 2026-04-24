@@ -61,6 +61,17 @@ Map provider keys are secrets.
 | Distance does not update | Provider selection, key, route stop coordinates, [Distance Matrix](distance-matrix.md) |
 | Truck-aware routing is ignored | Azure Maps provider, unit type, [Vehicle Routing Profile](vehicle-routing-profiles.md) |
 
+## When to recalculate distance
+
+Recalculate distance and duration after changing:
+
+- shipper or consignee address;
+- route stop order;
+- carrier depot/start/end map location;
+- map provider;
+- vehicle or logistic unit type used for Azure truck routing;
+- vehicle routing profile restrictions.
+
 ## Related
 
 - [Google Maps integration](googlemapintegration.md)
