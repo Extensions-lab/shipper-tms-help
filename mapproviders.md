@@ -13,7 +13,7 @@ Shipper TMS uses a map provider for:
 - route optimization,
 - route-distance caching.
 
-![Map provider settings in Shipper TMS Setup](resources/mapproviders/screenshot-map-providers-setup.png)
+![Map Provider setup](resources/mapproviders/screenshot-map-provider-setup.png)
 
 ## How to work with map provider setup
 

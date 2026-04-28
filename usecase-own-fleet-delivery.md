@@ -13,6 +13,8 @@ Assign released transportation demand to a company vehicle and driver.
 
 Use this flow when your own fleet executes the delivery and planners work by truck slot, driver availability, capacity, or compartments.
 
+![Own fleet planning in Truck Load Management](resources/truckloadmanagement/truck-load-management.png)
+
 ## Before you start
 
 - Vehicles and drivers are created and not blocked.

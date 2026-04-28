@@ -14,6 +14,8 @@ Common examples:
 - hazardous and non-hazardous goods,
 - customer rules that require separate loading areas.
 
+![Vehicle compartment setup](resources/vehicle/screenshot-vehicle-compartment-setup.png)
+
 ## How the pieces work together
 
 | Setup | What it controls |
@@ -61,6 +63,10 @@ In [Truck Load Management](truckloadmanagement.md), candidate requests can appea
 | **Eligible** | The request fits the selected truck slot and compatible compartment capacity is available. |
 | **Warning** | The request might fit, but the planner should review capacity, condition, time slot, route, or driver setup. |
 | **Blocked** | The request cannot be added until the shown reason is fixed. A common reason is no compatible compartment or not enough capacity. |
+
+After assignment, **Selected Truck Load** shows the Transport Order, the matched compartment, and the Transport Requests placed under that compartment.
+
+![Compartment assignment for truck load](resources/truckloadmanagement/screenshot-truck-load-compartment-assignment.png)
 
 ## Good to know
 

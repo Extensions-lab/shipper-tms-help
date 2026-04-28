@@ -11,6 +11,8 @@ You have a Sales Order that must be handed over to transportation planning.
 
 Use this process for a normal outbound customer delivery when the whole remaining eligible quantity can become transport demand.
 
+![Sales Order to Transport Request use case](resources/usecases/screenshot-usecase-sales-order-to-transport-request.png)
+
 ## Before you start
 
 - The Sales Order must contain eligible item lines.

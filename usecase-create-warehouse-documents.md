@@ -9,6 +9,8 @@ description: "Create warehouse shipments or receipts from a Released Transport O
 
 Create or open warehouse shipments and receipts that are linked to a Transport Order.
 
+![Warehouse document use case](resources/usecases/screenshot-usecase-warehouse-documents.png)
+
 ## When to use it
 
 Use this flow when warehouse work should be driven by the transport plan.

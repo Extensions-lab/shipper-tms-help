@@ -9,6 +9,8 @@ Use **Telematics Entity Mapping** to connect external provider IDs to Shipper TM
 
 Mapping keeps provider IDs out of the core transport records while still letting Shipper TMS publish and receive provider data.
 
+![Telematics provider mapping](resources/telematics/screenshot-telematics-provider-mapping.png)
+
 ## Entities that can be mapped
 
 | Provider entity | Internal Shipper TMS record |

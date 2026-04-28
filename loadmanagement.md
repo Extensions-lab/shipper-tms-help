@@ -76,6 +76,8 @@ Use this window when you start from the list of unplanned requests.
 
 Use this page instead of Truck Load Management when the planner thinks "which requests need to be assigned?" rather than "what should this truck carry?"
 
+![Load Management request assignment](resources/loadmanagement/screenshot-load-management-assign-requests.png)
+
 ## Main actions
 
 | Action | Use it for |

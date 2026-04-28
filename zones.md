@@ -15,6 +15,8 @@ Typical zone examples:
 - terminal zones,
 - telematics geofences.
 
+![Zone card with planning geometry](resources/zones/screenshot-zone-card-geometry.png)
+
 ## How to work in this page
 
 Use the Zone card when the business needs planning areas or geofence-style grouping.

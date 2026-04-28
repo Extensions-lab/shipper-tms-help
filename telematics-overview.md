@@ -7,6 +7,8 @@ description: "Understand the Shipper TMS telematics subsystem, supported provide
 
 The telematics subsystem connects Shipper TMS with fleet platforms so dispatchers can publish work and receive operational facts.
 
+![Telematics provider setup overview](resources/telematics/screenshot-telematics-provider-setup.png)
+
 ## Supported providers
 
 | Provider | Typical use |

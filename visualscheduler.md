@@ -23,7 +23,7 @@ It is best for planners who want to see:
 | What should this truck carry? | [Truck Load Management](truckloadmanagement.md) |
 | Which driver has a conflict? | [Driver Load Management](driverloadmanagement.md) |
 
-![Visual Scheduler timeline grouped by a planning dimension](resources/visualscheduler/screenshot-visual-scheduler.png)
+![Visual Scheduler timeline](resources/visualscheduler/screenshot-visual-scheduler-timeline.png)
 
 ## What the scheduler can show
 

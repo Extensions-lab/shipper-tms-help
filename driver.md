@@ -13,6 +13,8 @@ Use **Drivers** to maintain the people who execute transportation. A driver reco
 - Proof of Delivery user mapping,
 - telematics mapping and location history.
 
+![Driver card with carrier and scheduling defaults](resources/driver/screenshot-driver-card.png)
+
 ## How to work in this page
 
 Use the driver card to keep dispatching, compliance, and telematics data ready for planning.

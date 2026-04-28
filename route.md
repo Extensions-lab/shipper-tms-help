@@ -14,6 +14,8 @@ A route in Shipper TMS is not a turn-by-turn map path. It is a planning label th
 - default carrier, vehicle, and driver values,
 - plan by route in Visual Scheduler.
 
+![Transport route planning concept](resources/transportorder/transportorder2.png)
+
 ## How to work in this page
 
 Use the route list when you maintain planning areas or recurring delivery corridors.

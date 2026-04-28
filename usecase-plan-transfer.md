@@ -13,6 +13,8 @@ Plan transportation for goods moving between two Business Central locations.
 
 Use this flow when a released Transfer Order needs transport planning before execution.
 
+![Transfer planning route concept](resources/transportrequest/tr2.png)
+
 ## Before you start
 
 - The Transfer Order is **Released**.

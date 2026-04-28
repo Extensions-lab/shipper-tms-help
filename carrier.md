@@ -7,6 +7,8 @@ description: "Set up carriers in Shipper TMS for default resources, rate compari
 
 Use **Carriers** to define who executes transportation in Shipper TMS.
 
+![Carrier card with planning defaults](resources/carrier/screenshot-carrier-card.png)
+
 A carrier can represent:
 
 - your own fleet organization,

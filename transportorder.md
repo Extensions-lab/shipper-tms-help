@@ -15,7 +15,7 @@ Use it to define the actual trip:
 - which requests are on the load,
 - which charges and documents belong to the trip.
 
-![Transport Order example with route stops and transport details](resources/transportorder/transportorder1.png)
+![Transport Order with route and assignments](resources/transportorder/screenshot-transport-order-route-assignments.png)
 
 ## Before you start
 

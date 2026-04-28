@@ -9,6 +9,8 @@ description: "Move a Transport Order through execution and post it to history."
 
 Complete execution and move a live Transport Order to posted history.
 
+![Complete and post Transport Order use case](resources/usecases/screenshot-usecase-complete-post-transport-order.png)
+
 ## When to use it
 
 Use this flow after route, carrier, vehicle, driver, warehouse, charges, and execution facts are ready.

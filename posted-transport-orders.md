@@ -67,6 +67,8 @@ Expected result:
 | **Posted Charges** | Review posted charge lines and assignments |
 | **Print actions** | Reprint documents when allowed by your report setup |
 
+![Posted Transport Order history](resources/posted-transport-orders/screenshot-posted-transport-order-history.png)
+
 ## Good to know
 
 - Posted orders are read-only operational history.

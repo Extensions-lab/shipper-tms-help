@@ -7,6 +7,8 @@ description: "Use Logistic Unit Types to define standard container and equipment
 
 **Logistic Unit Types** belong to the related Logistic Units extension, but they are important for Shipper TMS because they provide the capacity profile used by vehicles and planning logic.
 
+![Logistic Unit Types list](resources/logisticunittype/logisticunittype1.png)
+
 Use them to define standard equipment such as:
 
 - pallets,

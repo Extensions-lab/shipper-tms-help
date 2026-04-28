@@ -9,7 +9,7 @@ Use **Carrier Rate Type Mapping** when Carrier Selection should create freight c
 
 Carrier Selection can calculate several cost components, such as rate, load fee, unload fee, empty return, and flat fee. The mapping tells Shipper TMS which Business Central **Item Charge No.** to use for each component when automatic charge creation is enabled.
 
-![Carrier Rate Type Mapping list](resources/carrier-rates/screenshot-carrier-rate-type-mapping-list.png)
+![Carrier Rate Type Mapping list](resources/carrier-rate-type-mapping/screenshot-carrier-rate-type-mapping-list.png)
 
 ## Use this page when
 

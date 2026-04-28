@@ -11,6 +11,8 @@ You already have one or more **Released Transport Requests** and now want to cre
 
 Use this process when the planner knows that the selected requests should travel together.
 
+![First Transport Order use case](resources/usecases/screenshot-usecase-first-transport-order.png)
+
 ## Before you start
 
 - At least one Transport Request must be **Released**.

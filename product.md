@@ -7,6 +7,8 @@ description: "Maintain TMS product records for freight classification, weight, a
 
 Use **Products** to maintain shipment-related product characteristics inside Shipper TMS.
 
+![Products list with transport attributes](resources/product/screenshot-product-list.png)
+
 This page is mainly useful when your transportation process needs a dedicated TMS product list for:
 
 - freight classification,

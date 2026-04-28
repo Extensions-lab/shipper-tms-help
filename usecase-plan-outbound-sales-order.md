@@ -13,6 +13,8 @@ Move released Sales Order demand into transportation planning and prepare the de
 
 Use this flow for customer deliveries where Sales Order item lines must be delivered from a warehouse or shipping location.
 
+![Sales Order source document actions for Shipper TMS](resources/source-documents/screenshot-sales-order-create-transport-request-action.png)
+
 ## Before you start
 
 - The Sales Order has eligible item lines and a **Location Code**.

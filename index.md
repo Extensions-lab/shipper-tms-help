@@ -11,6 +11,8 @@ Use this help when you need to create transport demand, plan a trip, assign a ca
 
 ![Shipper TMS logo](resources/index/index-logo.png)
 
+![Business Central Role Center with Shipper TMS navigation](resources/index/business-central-role-center.png)
+
 ## How Shipper TMS works
 
 Most transportation work follows this flow:

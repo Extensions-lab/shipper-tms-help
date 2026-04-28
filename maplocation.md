@@ -16,7 +16,7 @@ A Map Location can represent:
 - a port, hub, or airport,
 - or any other stop used in transport.
 
-![Create a default Map Location from a source record](resources/maplocation/maplocationNew.png)
+![Map Location geocoding](resources/maplocation/screenshot-map-location-geocoding.png)
 
 ## How to work in this page
 

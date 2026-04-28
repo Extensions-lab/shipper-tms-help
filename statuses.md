@@ -9,6 +9,8 @@ Use **Status Profiles** and **Statuses** when your company wants to control exec
 
 This setup is most relevant for **Proof of Delivery** and other execution-oriented workflows where documents move through named business stages.
 
+![Status profile lines for execution statuses](resources/statuses/screenshot-status-profile-lines.png)
+
 ## How to work in these pages
 
 Use Status Profiles to define the list of execution states that users should see.

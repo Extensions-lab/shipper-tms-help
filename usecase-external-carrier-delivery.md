@@ -13,6 +13,8 @@ Assign a carrier to a Transport Order and prepare the delivery for subcontracted
 
 Use this flow when a third-party carrier executes the delivery and your company needs carrier selection, charges, or carrier documents.
 
+![External carrier delivery with Carrier Selection results](resources/carrierselection/screenshot-carrier-selection-results.png)
+
 ## Before you start
 
 - Carrier master data exists and is not blocked.

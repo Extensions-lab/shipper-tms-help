@@ -9,6 +9,8 @@ Use **Route Sequence** when you already know the preferred stop order for custom
 
 Route Sequence does not create the route. It tells Shipper TMS which stop should normally come first, second, third, and so on when several deliveries belong to the same route.
 
+![Route Sequence on customer master data](resources/routesequence/route-sequence-customer-card.png)
+
 ## How to work with Route Sequence
 
 Use Route Sequence as a simple ordering rule.

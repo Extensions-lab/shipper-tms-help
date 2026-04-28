@@ -58,7 +58,7 @@ Transportation conditions are used in:
 
 If a vehicle uses compartment configuration, the system can match cargo to the compartment condition and help keep the load separated correctly.
 
-![Transportation Conditions compatibility](resources/transportconditions/screenshot-transportation-conditions-compatibility.png)
+![Transportation Conditions compatibility](resources/transportationconditions/screenshot-transportation-conditions-compatibility.png)
 
 ## Example: frozen and ambient goods
 

@@ -9,6 +9,8 @@ description: "Review execution entries, attachments, and posted Transport Order 
 
 Find delivery events, proof-of-delivery evidence, and posted Transport Order history.
 
+![Execution history use case](resources/usecases/screenshot-usecase-execution-history.png)
+
 ## When to use it
 
 Use this flow for customer service, audit review, delivery proof, or post-delivery investigation.

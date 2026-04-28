@@ -9,6 +9,8 @@ description: "Send a Transport Order dispatch to a connected telematics provider
 
 Publish a Transport Order to Geotab, Samsara, or Webfleet for execution by a connected fleet platform.
 
+![Publish Transport Order to telematics use case](resources/usecases/screenshot-usecase-publish-telematics.png)
+
 ## When to use it
 
 Use this flow when the carrier or fleet execution process is managed in a telematics provider.

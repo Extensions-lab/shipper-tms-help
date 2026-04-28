@@ -40,6 +40,8 @@ Expected result:
 - If the carrier is vendor-based and **Auto Create Charge Line** is enabled, Shipper TMS creates transport charge lines from the carrier selection entries.
 - If automatic charge creation is not enabled, the carrier is selected but charges must be created or reviewed manually.
 
+![Carrier Selection cost breakdown](resources/carrierselection/screenshot-carrier-selection-cost-breakdown.png)
+
 ## What the comparison can include
 
 The calculation can include:

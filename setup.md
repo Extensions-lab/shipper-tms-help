@@ -135,6 +135,8 @@ Use this section only when your company maintains carrier rates.
 | **Auto Create Charge Line** | Creates transport charge lines when a carrier is selected |
 | **Carrier Rate Types Mapping** | Opens/counts the mappings from carrier rate types to Business Central item charges |
 
+![Carrier Selection settings in TMS Setup](resources/setup/screenshot-tms-setup-carrier-selection-settings.png)
+
 If carrier selection is enabled but rate-type mapping is missing, **Check TMS Settings** should be treated as a blocker before go-live.
 
 The old **Auto Create Item Charge** field is no longer used. The item charge now comes from [Carrier Rate Type Mapping](carrier-rate-type-mapping.md).

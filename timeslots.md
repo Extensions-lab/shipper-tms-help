@@ -12,6 +12,8 @@ The setup has two parts:
 - **Delivery Schedule** decides the date
 - **Time Slot Profile** decides the time window on that date
 
+![Transport Request timeline with load and unload time slots](resources/transportrequest/tr8.png)
+
 ## How to work with these pages
 
 Use these pages together.

@@ -13,6 +13,8 @@ Plan inbound vendor pickup or receipt transportation from a Purchase Order.
 
 Use this flow when your company controls the inbound transportation from the vendor to your receiving location.
 
+![Inbound and outbound Transport Request flow](resources/transportrequest/tr1.png)
+
 ## Before you start
 
 - The Purchase Order has eligible item lines.

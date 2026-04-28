@@ -9,6 +9,8 @@ description: "Compare carrier rates, apply a carrier, and allocate freight cost 
 
 Select a carrier by rate and allocate the resulting freight cost so posting is not blocked.
 
+![Carrier comparison use case](resources/usecases/screenshot-usecase-carrier-selection.png)
+
 ## When to use it
 
 Use this flow when carrier freight charges must be visible on the Transport Order and assigned to source document lines.

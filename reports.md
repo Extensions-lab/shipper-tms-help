@@ -9,6 +9,8 @@ Shipper TMS prints transport documents from the **Transport Order** page.
 
 Use these documents for the warehouse, the driver, the carrier, and the consignee.
 
+![Transport Order report actions](resources/reports/screenshot-transport-order-report-actions.png)
+
 ## How to work with print actions
 
 Use report actions from the Transport Order after the trip has enough data to print meaningful documents.

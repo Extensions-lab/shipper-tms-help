@@ -16,6 +16,8 @@ Use **Map Location Types** to classify locations by business purpose, such as:
 
 This helps keep newly created Map Locations consistent.
 
+![Map Location Types setup](resources/maplocationtype/maplocationtype.png)
+
 ## How to work in this page
 
 Use this page when you need consistent defaults for new Map Locations.
