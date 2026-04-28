@@ -16,6 +16,10 @@ It answers four questions:
 
 Use a Transport Request before you build the trip in a [Transport Order](transportorder.md).
 
+The diagram below shows how a Transport Request works as the architecture layer between source documents and transport execution. It can also separate source demand by transportation condition before planning, helping planners keep incompatible cargo in separate requests, loads, or compartments.
+
+![Transport Request architecture layer showing source documents, transport conditions, and transport planning](resources/transportrequest/transport-request-architecture-layer.png)
+
 ![Transport Request example showing load point, unload point, and route actions](resources/transportrequest/tr5.png)
 
 ## Before you start

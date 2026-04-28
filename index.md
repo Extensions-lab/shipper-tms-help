@@ -9,33 +9,7 @@ Shipper TMS helps manufacturers, distributors, and retailers plan and control de
 
 Use this help when you need to create transport demand, plan a trip, assign a carrier or fleet resource, create warehouse work, complete execution, or review posted transport history.
 
-![Shipper TMS logo](resources/index/index-logo.png)
-
-## How Shipper TMS works
-
-Most transportation work follows this flow:
-
-```text
-Source document
-    |
-    v
-Transport Request
-    |
-    v
-Planning worksheet or scheduler
-    |
-    v
-Transport Order
-    |
-    v
-Carrier, vehicle, driver, route, charges, and warehouse documents
-    |
-    v
-Execution entries and proof of delivery
-    |
-    v
-Posted Transport Order
-```
+![Shipper TMS workflow from source document to posted transport history](resources/index/shipper-tms-workflow.png)
 
 Use these terms this way:
 
