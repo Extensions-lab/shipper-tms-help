@@ -5,6 +5,12 @@ markdown: kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
 exclude:
   - documentation-audit-report.md
   - screenshot-registry.md
