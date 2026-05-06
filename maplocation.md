@@ -11,6 +11,7 @@ A Map Location can represent:
 
 - a customer delivery point,
 - a vendor pickup point,
+- the company address,
 - a warehouse,
 - a depot,
 - a port, hub, or airport,
@@ -23,7 +24,7 @@ A Map Location can represent:
 Use the Map Location card to keep address, coordinates, and zone data correct.
 
 1. Fill **Description** and **Type Code** so planners understand what the point represents.
-2. If the location is linked to a customer, vendor, ship-to address, order address, location, or contact, fill the **Link to system** fields.
+2. If the location is linked to a customer, vendor, ship-to address, order address, location, company, or contact, fill the **Link to system** fields.
 3. Review the copied address and contact information.
 4. Choose **Geocode address** when the location has an address but no coordinates.
 5. Choose **Show on map** to review the map point.
@@ -52,9 +53,25 @@ You can also create a Map Location from:
 - **Vendor**
 - **Order Address**
 - **Location**
+- **Company**
 - **Contact**
 
 When you create the location from the source record, Shipper TMS fills the source link and copies the address values automatically.
+
+## Company Map Location
+
+Create a **Company** Map Location when source document lines may not have a Business Central **Location Code**.
+
+Use this setup when your company does not maintain warehouses on sales or purchase lines, but you still need a real geographic point for route display, distance, and duration.
+
+1. Open **Map Locations**.
+2. Create a Map Location for the company address.
+3. Set **Source Type** to **Company**.
+4. Geocode the address or set the coordinates manually.
+5. Open **Company Information**.
+6. Fill **Default Map Location** with that Company Map Location.
+
+After this setup, Transport Requests created from lines without **Location Code** use the company Map Location as the company-side endpoint. This is a transportation planning point only. It does not create a Business Central location and does not make warehouse documents available for those blank-location lines.
 
 ## Fine-tune the coordinates
 

@@ -61,6 +61,24 @@ Expected result:
 - The created requests are linked to the source document.
 - The source document **Transportation Status** is updated to show transport-request progress.
 
+## Location code and company endpoint
+
+Source document lines can create Transport Requests even when **Location Code** is blank.
+
+When **Location Code** is filled, the location is used as the warehouse-side endpoint. When **Location Code** is blank, Shipper TMS uses the **Default Map Location** from **Company Information** as the company-side endpoint.
+
+This supports companies that do not use Business Central locations on document lines. The company Map Location is used for transportation planning only. It does not create warehouse shipment or receipt documents for blank-location lines.
+
+## Drop shipment source documents
+
+For **Drop Shipment** Sales Order lines, create the Transport Request from the **Sales Order**.
+
+Shipper TMS creates the route from the linked Purchase Order vendor or order address to the Sales Order customer or ship-to address. The Sales Line **Location Code** is ignored for this route.
+
+The drop shipment Sales Line must be linked to a Purchase Order line before request creation. If the link does not exist, create or link the Purchase Order first.
+
+Purchase Order lines marked **Drop Shipment** are skipped during Transport Request creation. The Sales Order owns the transport demand so the same vendor-to-customer movement is not created twice.
+
 ## Split source lines across requests
 
 Use this path when only part of the document should be planned now or when one document must become several transport requests.
@@ -76,22 +94,27 @@ Use this worksheet when you need to split source document quantities across one 
 
 For the full workflow, see [Transport Request Planning](transport-request-planning.md).
 
-## Create Transport Orders from a source document
+## Create Transport Order from a source document
 
-Use **Create Transport Orders** only after the source document already has eligible **Released** Transport Requests.
+Use **Create Transport Order** after the source document has eligible **Released** Transport Requests, or when **Create Transport Requests Before Transport Orders** is turned on and the source document still has transportable quantities.
+
+If **Create Transport Requests Before Transport Orders** is turned on in [TMS Setup](setup.md), Shipper TMS can create missing Transport Requests first, creates them in **Released** status, releases existing **Open** Transport Requests, and then creates one Transport Order. If the setting is turned off, this is a manual request-first flow: only existing **Released** Transport Requests are used, and **Open** requests must be released by the user before a Transport Order can be created.
 
 1. Open the source document.
 2. Choose **Transport Requests** and confirm that at least one linked request is **Released**.
 3. Return to the source document.
-4. Choose **Create Transport Orders**.
+4. Choose **Create Transport Order**.
 5. Confirm the prompts shown by the system.
 6. Open **Transport Orders** from the same source document to review the created orders.
 
 Expected result:
 
-- Shipper TMS creates separate Transport Orders for eligible released requests that are not already assigned.
-- Requests that are still **Open** or already **Assigned** are skipped.
-- Each created Transport Order can be opened for carrier, vehicle, driver, route, and warehouse planning.
+- Shipper TMS creates one Transport Order for all eligible released requests that are not already assigned.
+- When the setup option is on, missing eligible requests are created in **Released** status and existing **Open** requests are released before the Transport Order is created.
+- Requests that are already **Assigned** are skipped. When the setup option is off, requests that are still **Open** are skipped too.
+- All eligible requests are included in the same Transport Order; this action does not split or filter them by route, transportation conditions, or vehicle capabilities.
+- Create a Transport Order manually when route, transportation conditions, or vehicle capabilities must drive which Transport Requests are selected.
+- The created Transport Order can be opened for carrier, vehicle, driver, route, and warehouse planning.
 
 ## When to use each action
 
@@ -100,7 +123,7 @@ Expected result:
 | Create transport demand for all remaining eligible quantities | **Create Transport Request** |
 | Split quantities, dates, routes, or transport conditions before planning | **Transport Request Planning** |
 | Open demand already created for this document | **Transport Requests** |
-| Create one Transport Order per released unassigned request | **Create Transport Orders** |
+| Create one Transport Order from all released unassigned requests | **Create Transport Order** |
 | Open trips already created from this document | **Transport Orders** |
 | Recalculate the source document's transport progress | **Update Transportation Status** |
 
@@ -120,19 +143,22 @@ Expected result:
 - Manual request creation from unposted source documents requires the source document to be **Released**.
 - **Create Transport Request** is for remaining eligible quantities.
 - **Transport Request Planning** is for partial quantities and controlled distribution.
+- Lines without **Location Code** require a Company Map Location on **Company Information**.
+- Drop shipment demand is created from the Sales Order. The related Purchase Order drop shipment lines are skipped.
 - Posted documents are useful when transport planning starts after posting.
 - Posted transfer shipments and receipts are not user entry points for Shipper TMS actions in the current version.
-- Customer, vendor, location, ship-to, and order-address map data improve automatic route creation.
+- Customer, vendor, location, company, ship-to, and order-address map data improve automatic route creation.
 
 ## Troubleshooting
 
 | Problem | What to check |
 |---|---|
 | **Create Transport Request** is unavailable | The source document must be released and must still contain eligible unassigned quantities. |
-| No Transport Request was created | Check that source lines are item lines with remaining quantity and a usable location/address context. |
-| **Create Transport Orders** is unavailable | At least one linked Transport Request must be **Released** and not already assigned to a Transport Order. |
+| No Transport Request was created | Check that source lines are item lines with remaining quantity and a usable endpoint/address context. For blank **Location Code**, check **Company Information** default Map Location. |
+| Drop shipment request is not created | Create or link the Purchase Order from the Sales Order drop shipment line first. |
+| **Create Transport Order** is unavailable | If **Create Transport Requests Before Transport Orders** is off, at least one linked Transport Request must be **Released** and not already assigned to a Transport Order. If the setting is on, check that the source document still has eligible transportable quantities or an existing **Open** or **Released** unassigned Transport Request. |
 | Only some quantities were planned | Open **Transport Request Planning** and review already distributed quantities. |
-| The route or address looks wrong | Check customer, vendor, location, ship-to, order address, and map location defaults. |
+| The route or address looks wrong | Check customer, vendor, location, company, ship-to, order address, and map location defaults. |
 
 ## Related
 

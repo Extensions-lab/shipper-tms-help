@@ -1,6 +1,5 @@
 ---
-layout: page
-title: "Shipper TMS Documentation"
+title: "Shipper TMS"
 description: "User documentation for Shipper TMS, a transportation management extension for Microsoft Dynamics 365 Business Central."
 ---
 

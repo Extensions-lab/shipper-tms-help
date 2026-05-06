@@ -21,7 +21,7 @@ Use it when you need to:
 
 - The source document must be released when it is an unposted sales, purchase, or transfer document.
 - Source lines must still have remaining quantity that can be assigned to transport.
-- Use this worksheet before creating Transport Orders if one source document must become several requests.
+- Use this worksheet before creating a Transport Order if one source document must become several requests.
 - Existing requests must be **Open** before you add or move quantities to them.
 
 ## How the page is organized

@@ -75,7 +75,9 @@ Use one of these methods:
 
 When a request is added, Shipper TMS creates the related load and unload route lines automatically.
 
-When you use **Create Transport Orders** on a source document, Shipper TMS creates one Transport Order per eligible released Transport Request. Use the planning pages when several requests should travel on the same trip.
+When you use **Create Transport Order** on a source document or a selected document list, Shipper TMS creates one Transport Order for the action run and includes all eligible Transport Requests in that order. If **Create Transport Requests Before Transport Orders** is enabled in [TMS Setup](setup.md), missing Transport Requests are created first in **Released** status, and existing **Open** requests are released and included. If the setting is disabled, only existing **Released** requests are used, and **Open** requests must be released manually.
+
+This source-document action is a fast creation flow. It does not split or filter requests by route, transportation conditions, or vehicle capabilities. Create a Transport Order manually when those factors must drive which Transport Requests are selected.
 
 ## How to work in this window
 
@@ -187,6 +189,7 @@ After posting, use [Posted Transport Orders](posted-transport-orders.md) for rea
 | You cannot edit the order | The order must be **Open** for planning changes. Choose **Reopen** if the order is **Released**. |
 | **Add Transport Requests** is unavailable | The order must be **Open**. |
 | Released requests do not appear | Confirm the requests are **Released** and not already assigned to another Transport Order. |
+| **Create Transport Order** is unavailable on a source document | If **Create Transport Requests Before Transport Orders** is off, the source document needs at least one existing **Released** unassigned Transport Request. If the setting is on, check that the source document still has eligible transportable quantities or an existing **Open** or **Released** unassigned Transport Request. |
 | Distance or duration does not update | The order must be **Open**, the mode of transport must be filled, map provider setup must be complete, and route points must have usable map locations. |
 | Carrier Selection is unavailable | Carrier Selection must be enabled in TMS Setup and the order must be **Open**. |
 | Auto charge lines are not created | Check **Auto Create Charge Line**, carrier source vendor, and [Carrier Rate Type Mapping](carrier-rate-type-mapping.md). |

@@ -55,6 +55,39 @@ A Transport Request can contain:
 
 For supported document types, see [Source Documents](source-documents.md).
 
+## How load and unload points are selected
+
+Every Transport Request needs a load point and an unload point. When a request is created from a source document, Shipper TMS derives those endpoints from the document line and header.
+
+| Source scenario | Load point | Unload point |
+|---|---|---|
+| Sales shipment or sales invoice line with **Location Code** | Location | Customer or ship-to address |
+| Sales shipment or sales invoice line without **Location Code** | Company Information | Customer or ship-to address |
+| Sales return or sales credit memo line with **Location Code** | Customer or ship-to address | Location |
+| Sales return or sales credit memo line without **Location Code** | Customer or ship-to address | Company Information |
+| Purchase receipt or purchase invoice line with **Location Code** | Vendor or order address | Location |
+| Purchase receipt or purchase invoice line without **Location Code** | Vendor or order address | Company Information |
+| Purchase return or purchase credit memo line with **Location Code** | Location | Vendor or order address |
+| Purchase return or purchase credit memo line without **Location Code** | Company Information | Vendor or order address |
+
+If the source line does not have a **Location Code**, Shipper TMS uses the company address as the company-side endpoint. This supports companies that do not use Business Central locations on sales or purchase lines.
+
+To use this scenario, fill **Default Map Location** on **Company Information** with a Map Location whose source type is **Company**. This Map Location is used for route display, distance, and duration. It does not create or require a Business Central warehouse location and does not change inventory or warehouse posting behavior.
+
+## Drop shipment
+
+For **Drop Shipment** Sales Order lines, Shipper TMS creates the Transport Request from the Sales Order, not from the Purchase Order.
+
+The route is:
+
+```text
+Vendor or order address -> Customer or ship-to address
+```
+
+The Sales Line **Location Code** is not used for this route. Shipper TMS uses the linked Purchase Order line to identify the vendor pickup point. If the drop shipment Sales Line is not linked to a Purchase Order line, request creation stops and asks you to create or link the Purchase Order first.
+
+Purchase Order lines marked **Drop Shipment** are skipped during Transport Request creation. This prevents duplicate requests for the same vendor-to-customer movement.
+
 ## Statuses
 
 | Status | Meaning |
@@ -151,6 +184,8 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 | **Assign to Transport Order** is unavailable | The request must be **Released**. |
 | **Show Route** fails | Check shipper and consignee map locations, coordinates, and map provider setup. |
 | Distance or duration is empty | Configure a map provider and verify that both route endpoints can be geocoded. |
+| Requests from lines without **Location Code** fail | Fill **Default Map Location** on **Company Information** and make sure that Map Location has source type **Company**. |
+| A drop shipment Sales Order does not create a request | Make sure the Sales Line is linked to the related Purchase Order line. |
 | You cannot delete the request | Requests in **Assigned** status must be removed from the Transport Order first. |
 
 ## Related

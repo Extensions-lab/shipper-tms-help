@@ -19,7 +19,8 @@ Use this flow when your company controls the inbound transportation from the ven
 
 - The Purchase Order has eligible item lines.
 - The Purchase Order is **Released**.
-- Vendor, order address, and receiving location addresses are complete.
+- Vendor, order address, receiving location, and company address data are complete for the endpoints you use.
+- If a line has no **Location Code**, **Company Information** has a **Default Map Location**.
 - Receiving locations are configured if warehouse receipts will be created.
 
 ## Steps
@@ -49,6 +50,8 @@ Start execution, publish to telematics if used, or process the warehouse receipt
 | Problem | What to check |
 |---|---|
 | No request is created | Purchase Order status, item lines, remaining quantities, and address setup |
+| A line without Location Code fails | Company Information default Map Location |
+| Drop shipment lines are skipped | Create the Transport Request from the Sales Order for drop shipment demand |
 | Warehouse receipt is not created | Transport Order status, source line support, location receive handling, and outstanding warehouse quantity |
 | Distance is blank | Map provider setup and map locations for both endpoints |
 

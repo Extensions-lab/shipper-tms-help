@@ -11,15 +11,16 @@ Move released Sales Order demand into transportation planning and prepare the de
 
 ## When to use it
 
-Use this flow for customer deliveries where Sales Order item lines must be delivered from a warehouse or shipping location.
+Use this flow for customer deliveries where Sales Order item lines must be delivered from a warehouse, shipping location, or the company address.
 
 ![Sales Order source document actions for Shipper TMS](resources/source-documents/screenshot-sales-order-create-transport-request-action.png)
 
 ## Before you start
 
-- The Sales Order has eligible item lines and a **Location Code**.
+- The Sales Order has eligible item lines.
+- If a line has no **Location Code**, **Company Information** has a **Default Map Location**.
 - The Sales Order is **Released**.
-- Customer, ship-to, and location addresses are complete.
+- Customer, ship-to, location, and company address data are complete for the endpoints you use.
 - TMS Setup has Transport Request and Transport Order number series.
 
 ## Steps
@@ -48,7 +49,9 @@ Use [Carrier Selection](carrierselection.md), [Warehouse Documents](warehouse-do
 
 | Problem | What to check |
 |---|---|
-| Create Transport Request is unavailable | Sales Order status, item lines, remaining quantities, and Location Code |
+| Create Transport Request is unavailable | Sales Order status, item lines, remaining quantities, and endpoint setup |
+| A line without Location Code fails | Company Information default Map Location |
+| A drop shipment line fails | Linked Purchase Order line exists |
 | Request cannot be released | Load and unload date/time values |
 | Request does not appear in planning | Request status must be **Released** and not already **Assigned** |
 

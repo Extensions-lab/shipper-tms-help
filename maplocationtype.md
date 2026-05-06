@@ -9,6 +9,7 @@ Use **Map Location Types** to classify locations by business purpose, such as:
 
 - customer delivery point,
 - vendor pickup point,
+- company address,
 - warehouse,
 - hub,
 - port,
@@ -47,6 +48,7 @@ Use the default flags carefully:
 | **Default for Ship-to Address** | Used when created from a ship-to address |
 | **Default for Order Address** | Used when created from an order address |
 | **Default for Contact** | Used when created from a contact |
+| **Default for Company** | Used when created from the company address |
 
 Only one type should normally be the default for each source type.
 

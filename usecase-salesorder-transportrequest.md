@@ -16,17 +16,17 @@ Use this process for a normal outbound customer delivery when the whole remainin
 ## Before you start
 
 - The Sales Order must contain eligible item lines.
-- The item lines must have **Location Code**.
+- Item lines can have **Location Code**. If they do not, **Company Information** must have a **Default Map Location**.
 - For an unposted Sales Order card, the document must be **Released** before **Create Transport Request** is available.
 - [TMS Setup](setup.md) must have **Transport Request Nos.** filled.
-- Customer, ship-to, and location address data should be complete.
+- Customer, ship-to, location, and company address data should be complete for the endpoints you use.
 - Map locations should be configured if the planner needs distance, duration, or route display.
 
 ## Steps
 
 1. Open **Sales Order**.
 2. Create or review the item lines that need transportation.
-3. Verify that each relevant line has **Location Code**.
+3. Verify that each relevant line has either **Location Code** or that **Company Information** has a **Default Map Location**.
 4. Release the Sales Order.
    The **Create Transport Request** action becomes available if eligible quantities remain.
 5. Open the **Shipper TMS** action group.
@@ -58,9 +58,11 @@ Choose one of these paths:
 | Problem | What to check |
 |---|---|
 | **Create Transport Request** is unavailable | The Sales Order must be **Released** and must contain remaining eligible quantities. |
-| No request is created | Check item lines, remaining quantities, location code, and whether the quantities were already assigned to another Transport Request. |
+| No request is created | Check item lines, remaining quantities, endpoint setup, and whether the quantities were already assigned to another Transport Request. |
+| A line without Location Code fails | Company Information default Map Location. |
+| A drop shipment line fails | The Sales Line must be linked to the related Purchase Order line. |
 | The request cannot be released | Fill **Load Date And Time** and **Unload Date And Time** on the Transport Request. |
-| The route is incomplete | Check customer, ship-to, location, and map location setup. |
+| The route is incomplete | Check customer, ship-to, location, company, and map location setup. |
 
 ## Related
 

@@ -65,6 +65,12 @@ The request leaves the planning pool, shows as **Assigned**, and points to the l
 
 Create it directly when you already know the trip structure and just need to attach requests and execute the load.
 
+### Why is **Create Transport Order** unavailable on a source document?
+
+If **Create Transport Requests Before Transport Orders** is turned off in **Shipper TMS Setup**, the source document must already have at least one **Released** Transport Request that is not assigned to another Transport Order. **Open** requests stay under user control and must be released manually.
+
+If the setting is turned on, Shipper TMS can create missing Transport Requests first, creates them in **Released** status, releases existing **Open** Transport Requests, and then creates Transport Orders.
+
 ### Why can I not edit the Transport Order?
 
 Most planning changes require the order to be in **Open** status.
