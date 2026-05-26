@@ -1,6 +1,6 @@
 ---
 title: "Execution Entries"
-description: "Review transport execution statuses, proof-of-delivery data, pictures, and attachments."
+description: "Review Shipper TMS execution entries for status updates, proof-of-delivery details, photos, attachments, integration payloads, and posted delivery history."
 ---
 
 # Execution Entries

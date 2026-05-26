@@ -1,6 +1,6 @@
 ---
 title: "Zones"
-description: "Use Zones to group locations geographically and connect internal zone logic with telematics geofences in Shipper TMS."
+description: "Create Shipper TMS zones for planning, rating, maps, routing, geofences, location grouping, geometry setup, and links to map locations and telematics."
 ---
 
 # Zones

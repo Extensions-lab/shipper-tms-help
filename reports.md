@@ -1,6 +1,6 @@
 ---
 title: "Reports and Documents"
-description: "Print operational transport documents such as Loading Manifest, Packing List, Bill Of Lading, Delivery Note, and CMR Blank."
+description: "Print Shipper TMS transport documents from orders and posted orders, including loading manifests, packing lists, bills of lading, delivery notes, and CMR forms."
 ---
 
 # Reports and documents

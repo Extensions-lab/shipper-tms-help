@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Complete and Post a Transport Order"
-description: "Move a Transport Order through execution and post it to history."
+description: "Follow this Shipper TMS use case to complete Transport Order execution, confirm delivery results, post the order to history, and review final records."
 ---
 
 # Use case: Complete and post a Transport Order

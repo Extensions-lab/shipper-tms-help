@@ -1,6 +1,6 @@
 ---
 title: "Shipper TMS"
-description: "User documentation for Shipper TMS, a transportation management extension for Microsoft Dynamics 365 Business Central."
+description: "Start with Shipper TMS help for Business Central, including setup, daily planning, transport requests, orders, carrier selection, telematics, and user guides."
 ---
 
 # Shipper TMS Help
@@ -56,7 +56,7 @@ Do this before configuring advanced carrier rates, telematics, or truck-first pl
 | Role | Start with | Why |
 |---|---|---|
 | Transportation manager | [TMS Setup](setup.md), [Carriers](carrier.md), [Carrier Rates](carrier-rates.md), [Transport Charges](transport-charges.md) | Configure the rules, rates, defaults, and cost behavior. |
-| Dispatcher or planner | [Transport Requests](transportrequest.md), [Transport Request Load Planning](loadmanagement.md), [Transport Orders](transportorder.md) | Turn demand into executable trips. |
+| Dispatcher or planner | [Dispatcher Role Center](dispatcher-role-center.md), [Transport Requests](transportrequest.md), [Transport Request Load Planning](loadmanagement.md), [Transport Orders](transportorder.md) | Turn demand into executable trips and monitor daily dispatch exceptions. |
 | Fleet planner | [Truck Load Management](truckloadmanagement.md), [Driver Load Management](driverloadmanagement.md), [Vehicles](vehicle.md), [Drivers](driver.md) | Plan own-fleet capacity, driver assignment, and slot conflicts. |
 | Warehouse user | [Warehouse Documents](warehouse-documents.md), [Reports and Documents](reports.md) | Create or open warehouse shipments and receipts connected to a trip. |
 | Delivery coordinator | [Execution Entries](execution-entries.md), [Posted Transport Orders](posted-transport-orders.md) | Track delivery events, attachments, PoD facts, and completed trip history. |
@@ -66,7 +66,9 @@ Do this before configuring advanced carrier rates, telematics, or truck-first pl
 
 | Need | Use |
 |---|---|
+| I want one screen for daily dispatch work and exceptions. | [Dispatcher Role Center](dispatcher-role-center.md) |
 | I have released demand and need to decide which requests go together. | [Transport Request Load Planning](loadmanagement.md) |
+| I need to sketch customer-stop sequence for an existing trip. | [Customer Stop Pre-Planner](customerstoppreplanning.md) |
 | I plan own-fleet work by truck, date, and time slot. | [Truck Load Management](truckloadmanagement.md) |
 | I need to check driver workload, assigned vehicles, or driver conflicts. | [Driver Load Management](driverloadmanagement.md) |
 | I want a calendar or timeline view of requests and orders. | [Visual Scheduler](visualscheduler.md) |
@@ -78,6 +80,7 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 
 | Job | Start here |
 |---|---|
+| Start the dispatch day and review exceptions | [Dispatcher Role Center](dispatcher-role-center.md) |
 | Create transport demand from Business Central documents | [Source Documents](source-documents.md) |
 | Split one document into several transport requests | [Transport Request Planning](transport-request-planning.md) |
 | Prepare and release a request | [Transport Request](transportrequest.md) |
@@ -107,7 +110,9 @@ Do not start with Truck Load Management if you do not manage vehicles or truck s
 
 | Tool | Best for |
 |---|---|
+| [Dispatcher Role Center](dispatcher-role-center.md) | Daily dispatch workspace and exception monitoring |
 | [Transport Request Load Planning](loadmanagement.md) | Request-first planning |
+| [Customer Stop Pre-Planner](customerstoppreplanning.md) | Customer-stop sequence planning on an existing Transport Order |
 | [Truck Load Management](truckloadmanagement.md) | Truck-first planning |
 | [Driver Load Management](driverloadmanagement.md) | Driver-first planning |
 | [Visual Scheduler](visualscheduler.md) | Timeline-based planning |

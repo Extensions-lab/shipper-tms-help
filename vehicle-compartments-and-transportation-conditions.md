@@ -1,6 +1,6 @@
 ---
 title: "Vehicle Compartments and Transportation Conditions"
-description: "Plan separated cargo by combining vehicle compartments, logistic unit capacity, and transportation conditions."
+description: "Plan separated cargo in Shipper TMS by combining vehicle compartments, logistic unit capacity, and transportation conditions for frozen and ambient goods."
 ---
 
 # Vehicle Compartments and Transportation Conditions

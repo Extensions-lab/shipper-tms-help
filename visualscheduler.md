@@ -1,6 +1,6 @@
 ---
 title: "Visual Scheduler"
-description: "Use Visual Scheduler to review transportation demand on a timeline and adjust requests and orders visually."
+description: "Use the Shipper TMS Visual Scheduler to review demand on a timeline, adjust requests and orders, inspect conflicts, and coordinate daily dispatch work."
 ---
 
 # Visual Scheduler

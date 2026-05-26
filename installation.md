@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "Install Shipper TMS from AppSource into Microsoft Dynamics 365 Business Central."
+description: "Install Shipper TMS from Microsoft AppSource into Dynamics 365 Business Central, check prerequisites, verify the extension, and continue with core setup."
 ---
 
 # Installation

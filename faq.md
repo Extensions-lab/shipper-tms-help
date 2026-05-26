@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Find quick answers to common installation, setup, planning, and execution questions for Shipper TMS."
+description: "Find answers to common Shipper TMS questions about installation, licensing, permissions, setup, planning tools, execution workflows, maps, and troubleshooting."
 ---
 
 # Frequently asked questions

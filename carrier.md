@@ -1,6 +1,6 @@
 ---
 title: "Carriers"
-description: "Set up carriers in Shipper TMS for default resources, rate comparison, scheduling, and telematics."
+description: "Set up carriers in Shipper TMS with default resources, rate comparison options, scheduling data, telematics links, and values used on Transport Orders."
 ---
 
 # Carriers

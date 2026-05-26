@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Review Delivery Execution and Posted History"
-description: "Review execution entries, attachments, and posted Transport Order history after delivery."
+description: "Follow this Shipper TMS use case to review delivery execution entries, proof-of-delivery attachments, posted Transport Order history, and final results."
 ---
 
 # Use case: Review delivery execution and posted history

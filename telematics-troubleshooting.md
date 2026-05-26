@@ -1,6 +1,6 @@
 ---
 title: "Telematics Troubleshooting"
-description: "Resolve common telematics setup, dispatch, mapping, webhook, and synchronization issues."
+description: "Troubleshoot Shipper TMS telematics setup, dispatch publishing, provider mappings, webhooks, synchronization failures, retries, and escalation details."
 ---
 
 # Telematics Troubleshooting

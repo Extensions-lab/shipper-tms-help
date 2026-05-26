@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Plan a Delivery with an External Carrier"
-description: "Plan a Transport Order that will be executed by an external carrier."
+description: "Follow this Shipper TMS use case to plan a delivery with an external carrier, compare costs, assign the carrier, release the order, and confirm results."
 ---
 
 # Use case: Plan a delivery with an external carrier

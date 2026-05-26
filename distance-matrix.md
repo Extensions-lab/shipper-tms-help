@@ -1,6 +1,6 @@
 ---
 title: "Distance Matrix"
-description: "Use Distance Matrix and Route Distance Matrix to store distance and duration values used by route planning and charge allocation."
+description: "Maintain distance and duration values for routes and location pairs in Shipper TMS, supporting planning, routing, carrier rates, and charge allocation."
 ---
 
 # Distance Matrix

@@ -1,6 +1,6 @@
 ---
 title: "Carrier Rate Type Mapping"
-description: "Map carrier rate components to Business Central item charges so Carrier Selection can create transport charge lines automatically."
+description: "Map carrier rate components to Business Central item charges so Shipper TMS can automatically create transport charge lines during Carrier Selection runs."
 ---
 
 # Carrier Rate Type Mapping

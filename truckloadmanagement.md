@@ -1,9 +1,11 @@
 ---
 title: "Truck Load Management"
-description: "Use Truck Load Management to plan by truck slot, review candidate requests, and release loads by vehicle, date, and time slot."
+description: "Plan loads by truck slot in Shipper TMS, review candidate requests, sequence customer stops, check capacity, release loads, and create Transport Orders."
 ---
 
 # Truck Load Management
+
+Customer-stop route sketching for an already created trip is handled by [Customer Stop Pre-Planner](customerstoppreplanning.md). Truck Load Management remains the vehicle-first tool for capacity, time slot, driver, and truck-slot checks.
 
 Use **Truck Load Management** when your planner wants to work from the truck side first.
 
@@ -68,6 +70,19 @@ Do not start here if you only need to choose an external carrier. Use [Carrier S
 8. Open the load with **Next Step**, **Load %**, or **Open Transport Order**.
 9. When the load is ready, choose **Release Load**.
    The linked Transport Order changes from **Open** to **Released** when validation succeeds.
+
+## Customer stop pre-planning from a truck slot
+
+Choose **Customer Stop Pre-Plan** when you want to sketch the delivery sequence at customer-stop level before adding requests to the selected truck.
+
+- If the slot already has a Transport Order, Customer Stop Pre-Planner opens the existing trip.
+- If the slot is empty, it shows released, unassigned Transport Requests grouped by consignee and unload point.
+- Use **Sequence**, **Move Up**, **Move Down**, **Renumber Sequence**, or **Auto-sequence by Map Coordinates** to prepare the stop order.
+- Select stops and choose **Assign Selected Stops to Truck Slot** to assign all underlying Transport Requests through the existing Truck Load Management candidate checks.
+
+The assignment is all-or-nothing at customer-stop level. A selected stop is not split by transport condition from this worksheet.
+
+After a load is created, Customer Stop Pre-Planner can also move selected customer stops to another truck slot. The move uses the same target-slot selection and eligibility checks as Truck Load Management, but keeps each customer stop together as one planning unit.
 
 ## Candidate modes
 

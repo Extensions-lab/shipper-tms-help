@@ -1,6 +1,6 @@
 ---
 title: "Azure Maps Integration"
-description: "Create an Azure Maps account, get the subscription key, and configure Azure Maps in Shipper TMS."
+description: "Configure Azure Maps for Shipper TMS in Business Central, including account creation, subscription keys, truck-aware routing, verification, and troubleshooting."
 ---
 
 # Azure Maps integration

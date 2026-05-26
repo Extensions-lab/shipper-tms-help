@@ -1,6 +1,6 @@
 ---
 title: "Source Documents"
-description: "Use supported sales, purchase, transfer, and posted Business Central documents as the source of transport demand in Shipper TMS."
+description: "Create Shipper TMS transport demand from sales, purchase, transfer, and posted Business Central documents, including split lines and location handling."
 ---
 
 # Source documents

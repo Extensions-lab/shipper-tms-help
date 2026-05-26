@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Plan an Inbound Pickup from a Purchase Order"
-description: "Create transport demand from a Purchase Order and plan the inbound pickup."
+description: "Follow this Shipper TMS use case to create transport demand from a Purchase Order, plan the inbound pickup, build a Transport Order, and verify results."
 ---
 
 # Use case: Plan an inbound pickup from a Purchase Order

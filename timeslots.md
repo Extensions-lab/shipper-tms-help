@@ -1,6 +1,6 @@
 ---
 title: "Time Slots and Delivery Schedules"
-description: "Use Time Slot Profiles and Delivery Schedules to calculate planned load and unload dates and times automatically."
+description: "Use Shipper TMS time slot profiles and delivery schedules to calculate planned load and unload dates, assign windows, and automate transport timing rules."
 ---
 
 # Time slots and delivery schedules

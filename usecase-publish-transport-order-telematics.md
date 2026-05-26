@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Publish a Transport Order to Telematics"
-description: "Send a Transport Order dispatch to a connected telematics provider."
+description: "Follow this Shipper TMS use case to publish a Transport Order to a connected telematics provider, review dispatch status, and troubleshoot provider responses."
 ---
 
 # Use case: Publish a Transport Order to telematics

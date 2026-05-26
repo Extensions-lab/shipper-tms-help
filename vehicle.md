@@ -1,6 +1,6 @@
 ---
 title: "Vehicles"
-description: "Maintain vehicles in Shipper TMS for capacity checks, depot defaults, driver defaults, scheduling, and telematics."
+description: "Maintain Shipper TMS vehicle records for capacity checks, compartments, depot defaults, driver defaults, scheduling, telematics mappings, and Transport Orders."
 ---
 
 # Vehicles

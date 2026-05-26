@@ -1,6 +1,6 @@
 ---
 title: "Google Maps Integration"
-description: "Create a Google Maps API key and enter it in Shipper TMS for geocoding, route display, and distance calculation."
+description: "Configure Google Maps for Shipper TMS, including required APIs, API key creation, Business Central setup, connection verification, routing, and geocoding."
 ---
 
 # Google Maps integration

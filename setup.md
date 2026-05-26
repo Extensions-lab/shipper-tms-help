@@ -1,6 +1,6 @@
 ---
 title: "TMS Setup"
-description: "Complete the core Shipper TMS setup for numbering, planning controls, map services, carrier selection, and execution."
+description: "Complete Shipper TMS setup in Business Central, including numbering, planning controls, map services, carrier selection, execution, and readiness checks."
 ---
 
 # TMS Setup

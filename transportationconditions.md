@@ -1,6 +1,6 @@
 ---
 title: "Transportation Conditions"
-description: "Use transportation conditions to keep incompatible cargo in separate Transport Requests, loads, and compartments."
+description: "Set up transportation conditions in Shipper TMS to separate incompatible cargo, guide load planning, support compartments, and validate frozen or ambient goods."
 ---
 
 # Transportation conditions

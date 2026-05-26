@@ -1,6 +1,6 @@
 ---
 title: "Carrier Rates"
-description: "Maintain carrier rate records used by Carrier Selection on Transport Orders."
+description: "Create and maintain carrier rate records for Shipper TMS Carrier Selection, including base prices, lane matching, distance fees, stop fees, and troubleshooting."
 ---
 
 # Carrier Rates

@@ -1,6 +1,6 @@
 ---
 title: "Transport Request Planning"
-description: "Distribute source document lines across one or more Transport Requests."
+description: "Distribute Business Central source document lines across one or more Shipper TMS Transport Requests, split quantities, move lines, and verify assigned demand."
 ---
 
 # Transport Request Planning

@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Plan an Outbound Delivery from a Sales Order"
-description: "Create transport demand from a Sales Order and plan it into a Transport Order."
+description: "Follow this Shipper TMS use case to create transport demand from a Sales Order, plan the outbound delivery, build a Transport Order, and verify results."
 ---
 
 # Use case: Plan an outbound delivery from a Sales Order

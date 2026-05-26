@@ -1,6 +1,6 @@
 ---
 title: "Route Sequence"
-description: "Use Route Sequence to control the planned delivery order of stops on the same route in Shipper TMS."
+description: "Control the planned delivery order of stops on the same Shipper TMS route, define customer sequences, and carry route sequence values into planning rules."
 ---
 
 # Route Sequence

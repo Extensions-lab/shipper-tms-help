@@ -1,6 +1,6 @@
 ---
 title: "Driver Load Management"
-description: "Use Driver Load Management to plan work by driver, assign vehicles, review current loads, and resolve driver conflicts."
+description: "Plan transportation work by driver in Shipper TMS, assign vehicles, review current loads, resolve conflicts, and release driver-based operational plans."
 ---
 
 # Driver Load Management

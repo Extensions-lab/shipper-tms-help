@@ -1,6 +1,6 @@
 ---
 title: "Telematics Setup"
-description: "Create and maintain telematics setup records, provider credentials, and synchronization options."
+description: "Create Shipper TMS telematics setup records, enter provider credentials securely, configure synchronization options, and prepare dispatch and logging features."
 ---
 
 # Telematics Setup

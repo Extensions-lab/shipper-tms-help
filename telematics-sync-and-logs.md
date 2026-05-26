@@ -1,6 +1,6 @@
 ---
 title: "Telematics Sync and Logs"
-description: "Review telematics sync streams, inbound messages, logs, sync state, and retry information."
+description: "Review Shipper TMS telematics sync streams, inbound messages, logs, state fields, retry guidance, provider responses, and integration troubleshooting data."
 ---
 
 # Telematics Sync and Logs

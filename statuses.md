@@ -1,6 +1,6 @@
 ---
 title: "Statuses and Status Profiles"
-description: "Use Status Profiles and Statuses to define execution stages for transport processes such as proof of delivery."
+description: "Configure Shipper TMS status profiles and statuses for transport execution stages, proof of delivery, process controls, integration updates, and posting flows."
 ---
 
 # Statuses and Status Profiles

@@ -1,6 +1,6 @@
 ---
 title: "Posted Transport Orders"
-description: "Review posted Transport Orders, posted lines, route stops, charges, and execution history after a trip is posted."
+description: "Review posted Transport Orders in Shipper TMS, including completed route stops, posted lines, charges, execution history, related records, and read-only data."
 ---
 
 # Posted Transport Orders

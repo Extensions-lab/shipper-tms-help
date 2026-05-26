@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Create Warehouse Documents from a Transport Order"
-description: "Create warehouse shipments or receipts from a Released Transport Order."
+description: "Follow this Shipper TMS use case to create warehouse shipments or receipts from a released Transport Order and verify links back to source document records."
 ---
 
 # Use case: Create warehouse documents from a Transport Order

@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Create Your First Transport Order"
-description: "Create a new Transport Order from released Transport Requests in Shipper TMS."
+description: "Follow this Shipper TMS use case to create a first Transport Order from released Transport Requests, assign route details, release the order, and verify status."
 ---
 
 # Use case: Create your first Transport Order

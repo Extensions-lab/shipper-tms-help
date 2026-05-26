@@ -1,6 +1,6 @@
 ---
 title: "Drivers"
-description: "Maintain driver records for planning, default assignments, proof of delivery, and telematics in Shipper TMS."
+description: "Maintain driver records for Shipper TMS planning, default assignments, availability, compliance dates, proof of delivery, and telematics dispatch integration."
 ---
 
 # Drivers

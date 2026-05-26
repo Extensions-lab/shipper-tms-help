@@ -1,6 +1,6 @@
 ---
 title: "Telematics Dispatch"
-description: "Publish, cancel, refresh, and review Transport Order dispatches sent to a telematics provider."
+description: "Publish, cancel, refresh, and review Shipper TMS Transport Order dispatches sent to telematics providers, including statuses, provider IDs, and results."
 ---
 
 # Telematics Dispatch

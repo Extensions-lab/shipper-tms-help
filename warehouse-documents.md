@@ -1,6 +1,6 @@
 ---
 title: "Warehouse Documents"
-description: "Create and review warehouse shipments and warehouse receipts from a Released Transport Order."
+description: "Create and review Business Central warehouse shipments and receipts from released Shipper TMS Transport Orders, then verify source links and document status."
 ---
 
 # Warehouse Documents

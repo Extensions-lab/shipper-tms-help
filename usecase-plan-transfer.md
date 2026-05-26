@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Plan a Transfer Between Locations"
-description: "Create transport demand from a Transfer Order and plan movement between company locations."
+description: "Follow this Shipper TMS use case to create transport demand from a Transfer Order, plan movement between locations, release the order, and verify results."
 ---
 
 # Use case: Plan a transfer between locations

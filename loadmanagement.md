@@ -1,6 +1,6 @@
 ---
 title: "Transport Request Load Planning"
-description: "Use Transport Request Load Planning to assign released Transport Requests to Transport Orders or compartments in a request-first planning worksheet."
+description: "Use Transport Request Load Planning to assign released requests to Transport Orders or vehicle compartments in a request-first Shipper TMS planning worksheet."
 ---
 
 # Transport Request Load Planning
@@ -21,6 +21,8 @@ Transport Request Load Planning is best when:
 - you want to move requests between Transport Orders in one worksheet.
 
 Use Truck Load Management instead when the planner starts from a specific vehicle, date, and time slot.
+
+Use [Customer Stop Pre-Planner](customerstoppreplanning.md) when the trip already exists and the dispatcher needs to review or adjust the sequence at customer-stop level.
 
 ## Which planning tool should I use?
 
@@ -84,6 +86,7 @@ Use this page instead of Truck Load Management when the planner thinks "which re
 |---|---|
 | **Assign to New Transport Order** | Create a new Transport Order from the selected pending requests |
 | **Assign to Selected Transport Order/Compartment** | Add the selected pending requests to the selected Transport Order or compartment |
+| **Customer Stop View** | Open Customer Stop Pre-Planner for the selected Transport Order, or for unassigned requests in the current planning period |
 | **Refresh** | Rebuild both sections |
 | **Visual Scheduler** | Open the scheduler for the same planning period |
 
@@ -111,6 +114,7 @@ Use this page instead of Truck Load Management when the planner thinks "which re
 
 - This page works with **Released** requests.
 - The lower tree can show compartment-based planning when the vehicle configuration supports it.
+- Use **Customer Stop View** when the dispatcher wants to see the same planning period grouped by customer stop before or after requests are assigned.
 - Use this page when you think in documents first.
 - Use [Truck Load Management](truckloadmanagement.md) when you think in truck slots first.
 

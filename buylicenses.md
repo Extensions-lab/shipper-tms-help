@@ -1,6 +1,6 @@
 ---
 title: "Buy Licenses"
-description: "Purchase Shipper TMS licenses and assign them to the users who work with transportation tasks."
+description: "Buy and assign Shipper TMS licenses for Business Central users who plan transport, manage setup, run dispatch tasks, or work with integration features."
 ---
 
 # Buy licenses

@@ -1,6 +1,6 @@
 ---
 title: "Carrier Selection"
-description: "Compare carrier rates for a Transport Order and apply the best carrier to the order."
+description: "Compare carrier rates for a Shipper TMS Transport Order, review cost components, select the best carrier, and create automatic freight charge lines quickly."
 ---
 
 # Carrier Selection

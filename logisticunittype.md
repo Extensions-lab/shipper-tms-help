@@ -1,6 +1,6 @@
 ---
 title: "Logistic Unit Types"
-description: "Use Logistic Unit Types to define standard container and equipment capacity profiles that support Shipper TMS planning."
+description: "Define logistic unit types for Shipper TMS capacity planning, equipment profiles, container dimensions, vehicle routing constraints, and load calculations."
 ---
 
 # Logistic Unit Types

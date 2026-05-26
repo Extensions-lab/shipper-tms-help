@@ -1,6 +1,6 @@
 ---
 title: "Telematics Overview"
-description: "Understand the Shipper TMS telematics subsystem, supported providers, and data flows."
+description: "Understand the Shipper TMS telematics subsystem, supported providers, dispatch flow, synchronization points, mapping requirements, and operational data."
 ---
 
 # Telematics Overview

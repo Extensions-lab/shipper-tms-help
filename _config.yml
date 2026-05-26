@@ -1,5 +1,5 @@
 title: Shipper TMS Documentation
-description: User guide for Shipper TMS for Microsoft Dynamics 365 Business Central
+description: "User documentation for Shipper TMS in Dynamics 365 Business Central, covering setup, transport planning, dispatch, carrier selection, telematics, and reporting."
 theme: minima
 markdown: kramdown
 plugins:

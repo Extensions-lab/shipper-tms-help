@@ -1,6 +1,6 @@
 ---
 title: "Transport Charges"
-description: "Use Transport Charges to record carrier cost, rebill customers, and allocate freight cost across Transport Requests and source document lines."
+description: "Record, allocate, and review Shipper TMS transport charges for carrier costs, customer rebilling, freight allocation, purchase charges, and posting controls."
 ---
 
 # Transport Charges

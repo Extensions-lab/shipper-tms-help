@@ -1,6 +1,6 @@
 ---
 title: "Telematics"
-description: "Connect Shipper TMS to telematics providers such as Geotab, Samsara, and Webfleet."
+description: "Connect Shipper TMS with telematics providers such as Geotab, Samsara, and Webfleet to publish dispatches, sync execution facts, and review activity logs."
 ---
 
 # Telematics

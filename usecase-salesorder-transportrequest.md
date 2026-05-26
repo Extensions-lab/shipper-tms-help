@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Sales Order to Transport Request"
-description: "Create a released Transport Request from a released Sales Order in Shipper TMS."
+description: "Follow this Shipper TMS use case to create a released Transport Request from a Business Central Sales Order, verify demand, and continue into planning."
 ---
 
 # Use case: Create a Transport Request from a Sales Order

@@ -1,6 +1,6 @@
 ---
 title: "Map Locations"
-description: "Create and maintain Map Locations for geocoding, route display, distance calculations, zones, and planning in Shipper TMS."
+description: "Create and maintain Shipper TMS map locations for customers, vendors, depots, geocoding, route display, zones, distance calculations, and planning workflows."
 ---
 
 # Map Locations

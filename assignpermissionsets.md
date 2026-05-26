@@ -1,6 +1,6 @@
 ---
 title: "Assign Permission Sets"
-description: "Assign the correct Shipper TMS permission sets to users, administrators, and integration accounts."
+description: "Assign Shipper TMS permission sets to planners, administrators, and integration users in Business Central, then verify access and solve common security issues."
 ---
 
 # Assign permission sets

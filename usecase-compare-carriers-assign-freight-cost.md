@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Compare Carriers and Assign Freight Cost"
-description: "Compare carrier rates, apply a carrier, and allocate freight cost on a Transport Order."
+description: "Follow this Shipper TMS use case to compare carrier rates, apply the selected carrier, create freight charges, allocate cost, and resolve common rate errors."
 ---
 
 # Use case: Compare carriers and assign freight cost

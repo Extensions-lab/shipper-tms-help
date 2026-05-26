@@ -1,6 +1,6 @@
 ---
 title: "Use Case: Plan a Delivery with Your Own Fleet"
-description: "Use vehicle and driver planning tools to plan a delivery with company fleet resources."
+description: "Follow this Shipper TMS use case to plan a delivery with your own fleet, assign vehicles and drivers, check conflicts, release the order, and review results."
 ---
 
 # Use case: Plan a delivery with your own fleet

@@ -1,6 +1,6 @@
 ---
 title: "Map Location Types"
-description: "Create Map Location Types to classify customer, vendor, depot, port, hub, and airport locations in Shipper TMS."
+description: "Create map location types in Shipper TMS to classify customers, vendors, depots, ports, hubs, airports, and default mapping behavior for location records."
 ---
 
 # Map Location Types

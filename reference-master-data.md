@@ -1,6 +1,6 @@
 ---
 title: "Reference Master Data"
-description: "Maintain supporting Shipper TMS reference data such as modes of transport, package types, fuel cards, IATA airports, and time zones."
+description: "Maintain Shipper TMS reference master data for transport modes, package types, fuel cards, airports, time zones, statuses, routes, and supporting setup."
 ---
 
 # Reference Master Data

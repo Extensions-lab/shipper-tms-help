@@ -1,6 +1,6 @@
 ---
 title: "Map Providers"
-description: "Choose and configure Google Maps or Azure Maps for geocoding, routing, and distance calculations in Shipper TMS."
+description: "Choose and configure Google Maps or Azure Maps in Shipper TMS for geocoding, route display, distance calculations, routing behavior, and secure API keys."
 ---
 
 # Map providers

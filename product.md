@@ -1,6 +1,6 @@
 ---
 title: "Products"
-description: "Maintain TMS product records for freight classification, weight, and volume when your process uses the Products list in Shipper TMS."
+description: "Maintain Shipper TMS product records for freight classification, weight, volume, and planning data when products are used on transport requests and orders."
 ---
 
 # Products

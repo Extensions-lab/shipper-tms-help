@@ -1,6 +1,6 @@
 ---
 title: "Telematics Provider Mapping"
-description: "Map provider vehicles, drivers, zones, and map locations to internal Shipper TMS records."
+description: "Map telematics provider vehicles, drivers, zones, and locations to Shipper TMS records so dispatch, synchronization, execution data, and logs connect reliably."
 ---
 
 # Telematics Provider Mapping

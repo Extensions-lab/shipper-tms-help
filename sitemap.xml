@@ -51,6 +51,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://stms.extensions-lab.com/dispatcher-role-center.html</loc>
+    <lastmod>2026-05-07T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://stms.extensions-lab.com/driver.html</loc>
     <lastmod>2026-04-23T19:39:10+00:00</lastmod>
     <priority>0.80</priority>

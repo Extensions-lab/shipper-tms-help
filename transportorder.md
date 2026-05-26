@@ -15,6 +15,8 @@ Use it to define the actual trip:
 - which requests are on the load,
 - which charges and documents belong to the trip.
 
+Use **Customer Stop Planning** on an Open Transport Order when the dispatcher needs to review or adjust the route at customer-stop level. See [Customer Stop Pre-Planner](customerstoppreplanning.md).
+
 ![Transport Order with route and assignments](resources/transportorder/screenshot-transport-order-route-assignments.png)
 
 ## Before you start

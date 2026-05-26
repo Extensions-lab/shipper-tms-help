@@ -1,6 +1,6 @@
 ---
 title: "Transport Request"
-description: "Use Transport Requests to capture what must be moved, from where, to where, and when in Shipper TMS."
+description: "Use Shipper TMS Transport Requests to capture what must be moved, source documents, load and unload points, dates, quantities, statuses, and planning rules."
 ---
 
 # Transport Request
@@ -110,6 +110,28 @@ Released -> Open
 - If the request is removed from the Transport Order, it can return to **Released**.
 - For unposted source documents, manual creation from the document card requires the source document to be **Released**.
 
+## Reschedule requests
+
+Use **Reschedule Date/Time** when one or more Transport Requests must be moved to another loading or unloading date/time after planning has started.
+
+The action is available from:
+
+- the **Transport Request** card,
+- the **Transport Requests** list,
+- **Customer Stop Pre-Planner** for selected customer-stop rows.
+
+The wizard can update **Load Date And Time**, **Unload Date And Time**, or both. It works with **Open** and **Released** requests. Requests in **Assigned** status are shown in the review step and skipped.
+
+For **New Load Time** and **New Unload Time**, use lookup to choose a value from the time-slot profiles used by the selected Transport Requests. If several requests are selected, the lookup combines the unique load or unload profiles from the selection. The time field is still editable, so the dispatcher can type any time manually when the change is intentional.
+
+Before applying the change, the wizard shows:
+
+- the current and new load/unload date/time values,
+- requests that will be skipped,
+- warnings when the new load or unload time is outside the related time-slot profile.
+
+Time-slot warnings do not block the change. If the dispatcher decides that the new date/time is intentional, choose **Apply**. The wizard still preserves standard date validation, so **Unload Date And Time** cannot be earlier than **Load Date And Time**.
+
 ## Before you release a request
 
 Use this checklist before choosing **Release**:
@@ -163,6 +185,7 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 | **Transport Time & Distance** | Endpoints and map provider are valid | Calculates distance and duration |
 | **Release** | Request is **Open** | Makes the request available for planning |
 | **Reopen** | Request is **Released** and not assigned to a Transport Order | Returns the request to editing |
+| **Reschedule Date/Time** | Request is **Open** or **Released** | Updates load and/or unload date/time after a warning review |
 | **Assign to Transport Order** | Request is **Released** | Assigns the request to a new or existing Transport Order |
 | **Show Transport** | Request is **Assigned** | Opens the linked Transport Order |
 | **Estimate** | Request has lines | Rebuilds estimated logistic units |
@@ -182,6 +205,7 @@ Use the list page when you want to release, reopen, or assign multiple requests 
 | **Get Source Documents** is unavailable | The request must be **Open**. |
 | The request does not appear in planning pages | Only **Released** requests are available for planning. A request in **Assigned** status is already assigned. |
 | **Assign to Transport Order** is unavailable | The request must be **Released**. |
+| **Reschedule Date/Time** skips a request | The request is already **Assigned** to a Transport Order. Remove it from the order first if it must be changed as a request. |
 | **Show Route** fails | Check shipper and consignee map locations, coordinates, and map provider setup. |
 | Distance or duration is empty | Configure a map provider and verify that both route endpoints can be geocoded. |
 | Requests from lines without **Location Code** fail | Fill **Default Map Location** on **Company Information** and make sure that Map Location has source type **Company**. |

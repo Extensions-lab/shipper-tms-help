@@ -1,6 +1,6 @@
 ---
 title: "API"
-description: "Use Shipper TMS API pages for integrations with carriers, vehicles, transport orders, execution entries, telematics, and attachments."
+description: "Use the Shipper TMS API reference to integrate carriers, vehicles, transport orders, execution entries, telematics data, and attachments with Business Central."
 ---
 
 # API

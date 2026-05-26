@@ -1,6 +1,6 @@
 ---
 title: "Routes"
-description: "Use routes to group transportation work by geography and to default resources in Shipper TMS."
+description: "Create Shipper TMS routes to group transportation work by geography, assign default resources to master data, and support planning on Transport Orders."
 ---
 
 # Routes

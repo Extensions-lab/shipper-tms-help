@@ -1,6 +1,6 @@
 ---
 title: "Vehicle Routing Profiles"
-description: "Use Vehicle Routing Profiles to define Azure Maps truck-routing constraints for logistic unit types."
+description: "Define Shipper TMS vehicle routing profiles for Azure Maps truck routing, including height, weight, hazmat, toll, tunnel, and logistic unit constraints."
 ---
 
 # Vehicle Routing Profiles
